@@ -1,0 +1,2 @@
+class IdiomsController < ApplicationController
+end
