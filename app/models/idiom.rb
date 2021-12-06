@@ -1,0 +1,2 @@
+class Idiom < ApplicationRecord
+end
