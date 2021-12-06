@@ -1,0 +1,10 @@
+<% @idioms.each do |idiom| %>
+    <br>
+    Français : <%=idiom.title_fr%><br>
+    Franglais : <%=idiom.title_en%><br>
+    Grammatical type : <%=idiom.grammatical_type%><br>
+    Body : <%=idiom.body%><br>
+    Example : <%=idiom.example%><br>
+    Alias : <%=idiom.user.alias%><br><br>
+    -----------------------------------------------------
+<%end%>

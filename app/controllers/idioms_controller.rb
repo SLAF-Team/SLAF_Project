@@ -21,4 +21,8 @@ class IdiomsController < ApplicationController
 
   end
 
-end
+    def index
+        @idioms = Idiom.all
+    end
+
+  end

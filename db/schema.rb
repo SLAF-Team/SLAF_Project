@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_160626) do
+ActiveRecord::Schema.define(version: 2021_12_06_151013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,12 +28,12 @@ ActiveRecord::Schema.define(version: 2021_12_06_160626) do
   create_table "idioms", force: :cascade do |t|
     t.string "title_en"
     t.string "title_fr"
+    t.string "grammatical_type"
     t.text "body"
     t.text "example"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "grammatical_type"
     t.index ["user_id"], name: "index_idioms_on_user_id"
   end
 
