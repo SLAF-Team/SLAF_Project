@@ -1105,3 +1105,403 @@ Migrating to CreateLikes (20211206140730)
   [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
   [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+Started GET "/" for ::1 at 2021-12-06 16:53:22 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.6) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1301751432327217305)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddDeviseToUsers (20211206151013)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20211206151013_add_devise_to_users.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1301751432327217305)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1301751432327217305)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateLikes (20211206140730)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.9ms)[0m  [1m[35mDROP TABLE "likes"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20211206140730"]]
+  ↳ bin/rails:4
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1301751432327217305)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1301751432327217305)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateLikes (20211206140730)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint, "idiom_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211206140730_create_likes.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_user_id" ON "likes"  ("user_id")[0m
+  ↳ db/migrate/20211206140730_create_likes.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_idiom_id" ON "likes"  ("idiom_id")[0m
+  ↳ db/migrate/20211206140730_create_likes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211206140730"]]
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddDeviseToUsers (20211206151013)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  ↳ db/migrate/20211206151013_add_devise_to_users.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  ↳ db/migrate/20211206151013_add_devise_to_users.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  ↳ db/migrate/20211206151013_add_devise_to_users.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20211206151013_add_devise_to_users.rb:38
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20211206151013_add_devise_to_users.rb:39
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211206151013"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1301751432327217305)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-12-06 16:55:00 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for IdiomsController):
+  
+actionpack (5.2.6) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:55:31 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (54.5ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x0000000151fce6b0>):
+    1: <%= form_with model: Idiom.new do |f| %>
+    2: <%= f.input :title_en %>
+    3: <%= form.label :title_en, "L'ignoble mot en franglais" %>
+    4: <%= f.input :title_fr %>
+    5: <%= form.label :title_fr, "La belle traduction française" %>
+  
+app/views/idioms/new.html.erb:2:in `block in _app_views_idioms_new_html_erb__789987192827408892_18020'
+app/views/idioms/new.html.erb:1:in `_app_views_idioms_new_html_erb__789987192827408892_18020'
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:56:24 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (108.6ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x0000000122094020>:0x0000000141902418>
+Did you mean?  for
+               fork):
+    1: <%= form_with model: Idiom.new do |f| %>
+    2: <%= f.text_area :title_en %>
+    3: <%= form.label :title_en, "L'ignoble mot en franglais" %>
+    4: <%= f.text_area :title_fr %>
+    5: <%= form.label :title_fr, "La belle traduction française" %>
+    6: <%= f.text_area :body %>
+  
+app/views/idioms/new.html.erb:3:in `block in _app_views_idioms_new_html_erb__789987192827408892_18740'
+app/views/idioms/new.html.erb:1:in `_app_views_idioms_new_html_erb__789987192827408892_18740'
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:56:56 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (14.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+     6: <%= f.text_area :body %>
+     7: <%= f.text_area :example %>
+     8: 
+     9: <%= f.radio_button :grammatical_type %>
+    10: <%= f.label :grammatical_type_verb, "verb" %>
+    11: <%= f.radio_button :grammatical_type, "Verbe" %>
+    12: <%= f.label :grammatical_type_adverb, "adverb" %>
+  
+app/views/idioms/new.html.erb:9:in `block in _app_views_idioms_new_html_erb__789987192827408892_19360'
+app/views/idioms/new.html.erb:1:in `_app_views_idioms_new_html_erb__789987192827408892_19360'
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:56:57 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+     6: <%= f.text_area :body %>
+     7: <%= f.text_area :example %>
+     8: 
+     9: <%= f.radio_button :grammatical_type %>
+    10: <%= f.label :grammatical_type_verb, "verb" %>
+    11: <%= f.radio_button :grammatical_type, "Verbe" %>
+    12: <%= f.label :grammatical_type_adverb, "adverb" %>
+  
+app/views/idioms/new.html.erb:9:in `block in _app_views_idioms_new_html_erb__789987192827408892_19880'
+app/views/idioms/new.html.erb:1:in `_app_views_idioms_new_html_erb__789987192827408892_19880'
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:57:12 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 230ms (Views: 228.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:58:39 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:58:59 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:59:07 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-06 16:59:19 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-06 17:00:26 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-06 17:00:39 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-06 17:02:09 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/idioms" for ::1 at 2021-12-06 17:02:18 +0100
+Processing by IdiomsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YmtbzebN1sboAm0YNRdz4MFrlsbwCgVzguxkv8KgruZjkO2KeIOaAwEnJwdBttvNX2jVHgah9uXSSUsbuCkM0g==", "idiom"=>{"title_en"=>"test", "title_fr"=>"test", "body"=>"test", "example"=>"test", "grammatical_type"=>"Verbe"}, "button"=>""}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'grammatical_type' for Idiom.):
+  
+app/controllers/idioms_controller.rb:8:in `create'
+Started GET "/idioms/new" for ::1 at 2021-12-06 17:05:24 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 17.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/idioms" for ::1 at 2021-12-06 17:05:31 +0100
+Processing by IdiomsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jfuRl4W06JmF77m/Zr8AeF4cDcwFj3GJk1v1LjI9oWWMACfQG/qkXGzK86ASHqhVwB9OFPMkgh/D/tqKSLQDUQ==", "idiom"=>{"title_en"=>"test", "title_fr"=>"test", "body"=>"test", "example"=>"test", "grammatical_type_adverb"=>"Adverbe"}, "button"=>""}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'grammatical_type' for Idiom.):
+  
+app/controllers/idioms_controller.rb:17:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1301751432327217305)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddGrammaticalType (20211206160626)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "idioms" DROP COLUMN "type"[0m
+  ↳ db/migrate/20211206160626_add_grammatical_type.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "idioms" ADD "grammatical_type" character varying[0m
+  ↳ db/migrate/20211206160626_add_grammatical_type.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (3.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211206160626"]]
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1301751432327217305)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started POST "/idioms" for ::1 at 2021-12-06 17:09:28 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jfuRl4W06JmF77m/Zr8AeF4cDcwFj3GJk1v1LjI9oWWMACfQG/qkXGzK86ASHqhVwB9OFPMkgh/D/tqKSLQDUQ==", "idiom"=>{"title_en"=>"test", "title_fr"=>"test", "body"=>"test", "example"=>"test", "grammatical_type_adverb"=>"Adverbe", "grammatical_type_adj"=>"Adjectif"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/idioms_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/idioms_controller.rb:20
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 710ms (Views: 34.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-06 17:10:25 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/idioms" for ::1 at 2021-12-06 17:10:34 +0100
+Processing by IdiomsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"os7twqgZ5QUHE/Zk1qkj+3nhd3M0iMADep5JdaDAxeSjNVuFNlepwO42vHuiCIvW5+I0q8IjM5UqO2bR2kln0A==", "idiom"=>{"title_en"=>"test", "title_fr"=>"test", "body"=>"test", "example"=>"test", "grammatical_type"=>"Adverbe"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/idioms_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/idioms_controller.rb:20
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
