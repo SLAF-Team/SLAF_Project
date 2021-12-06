@@ -1,5 +1,5 @@
 
-<%= form_with model: Idiom.new do |f| %>
+<%= form_for(:idioms, url:(idioms_path), action: "create", method: :post) do |f| %>
 <br><%= f.label :title_en, "L'ignoble mot en franglais" %>
 <br><%= f.text_area :title_en %>
 <br><%= f.label :title_fr, "La belle traduction française" %>
@@ -16,5 +16,5 @@
 <%= f.radio_button :grammatical_type, "Adjectif" %>
 <%= f.label :grammatical_type, "noun" %>
 <%= f.radio_button :grammatical_type, "Nom" %>
-<br><%= f.button :submit %>
+<br><%= f.submit %>
 <% end %>
