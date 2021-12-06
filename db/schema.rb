@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_140730) do
   create_table "idioms", force: :cascade do |t|
     t.string "title_en"
     t.string "title_fr"
-    t.string "type"
+    t.string "grammatical_type"
     t.text "body"
     t.text "example"
     t.bigint "user_id"
