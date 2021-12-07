@@ -6,5 +6,6 @@
     Body : <%=idiom.body%><br>
     Example : <%=idiom.example%><br>
     Alias : <%=idiom.user.alias%><br><br>
+    <%= link_to 'voir', idiom_path(idiom.id)%>
     -----------------------------------------------------
 <%end%>
