@@ -15,7 +15,8 @@ Like.destroy_all
     User.create(first_name: Faker::Name.first_name,
                 last_name: Faker::Name.last_name,
                 email: Faker::Internet.email,
-                encrypted_password: Faker::Number.number(digits: 10),
+                password: 'test123',
+                password_confirmation: 'test123',
                 alias: Faker::Artist.name,
                 admin: false
             )
@@ -25,7 +26,8 @@ end
 User.create(first_name: 'Armand',
     last_name: 'Richelieu',
     email: 'richelieu.armand@yopmail.com',
-    encrypted_password: '123soleil',
+    password: '123soleil',
+    password_confirmation: '123soleil',
     alias: 'Le recteur',
     admin: true
 )
