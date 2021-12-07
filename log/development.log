@@ -8320,6 +8320,125 @@ Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.5ms)
 =======
 >>>>>>> 576c38b56480e8ca509531f61eff5fb5a0cd42a4
 >>>>>>> f79f42e08a61c1b0025ba18c1fca00c30bfbaae2
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2021-12-07 11:11:05 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  Rendered idioms/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 165ms (Views: 158.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:11:12 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  Rendered idioms/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:11:12 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  Rendered idioms/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:11:12 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  Rendered idioms/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "seymour_romaguera@hodkiewicz-harris.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Tasia"], ["last_name", "Frami"], ["email", "seymour_romaguera@hodkiewicz-harris.co"], ["encrypted_password", "$2a$12$scwCO.G1mGKrYmaDLDP7HOVeYr/0A2YSlyKTYbMYARDfsZgSJtvIW"], ["alias", "Titian"], ["admin", false], ["created_at", "2021-12-07 10:11:18.877882"], ["updated_at", "2021-12-07 10:11:18.877882"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "phylis@mayert.io"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Rosario"], ["last_name", "Hintz"], ["email", "phylis@mayert.io"], ["encrypted_password", "$2a$12$xhSbWrKyB8XLA2LGu4xeEu7LmFROfGqSsDXtCGSauWPxKGVrtlXXK"], ["alias", "Chagall"], ["admin", false], ["created_at", "2021-12-07 10:11:19.075786"], ["updated_at", "2021-12-07 10:11:19.075786"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tim@moen.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Rema"], ["last_name", "Nader"], ["email", "tim@moen.net"], ["encrypted_password", "$2a$12$5jW13JQn/owYUxmzuM0U0.pDFPLTp91wTK7YX9YuJt2tpBNwszeyy"], ["alias", "Monet"], ["admin", false], ["created_at", "2021-12-07 10:11:19.267040"], ["updated_at", "2021-12-07 10:11:19.267040"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonas@wilkinson.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Douglas"], ["last_name", "Macejkovic"], ["email", "jonas@wilkinson.org"], ["encrypted_password", "$2a$12$duWeeqyINL.f5RzBYEwXXuHFzlDTvUS9Bu5htuKnqRKafpnV90wpy"], ["alias", "Michelangelo"], ["admin", false], ["created_at", "2021-12-07 10:11:19.465653"], ["updated_at", "2021-12-07 10:11:19.465653"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "giuseppe@trantow.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Collen"], ["last_name", "McKenzie"], ["email", "giuseppe@trantow.com"], ["encrypted_password", "$2a$12$B5VS9ycxrka9yhrDvkMG2ebcLDKIFt8ujz62jD02Key6mpOH3wXxO"], ["alias", "Degas"], ["admin", false], ["created_at", "2021-12-07 10:11:19.655852"], ["updated_at", "2021-12-07 10:11:19.655852"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "waldo_jaskolski@schiller.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Williams"], ["last_name", "McCullough"], ["email", "waldo_jaskolski@schiller.com"], ["encrypted_password", "$2a$12$T7sKqEQUKWLpjnOddIO/seW9AmbmjX4jIlO7ItJrk.lKOmpbgkRS6"], ["alias", "Winslow Homer"], ["admin", false], ["created_at", "2021-12-07 10:11:19.844691"], ["updated_at", "2021-12-07 10:11:19.844691"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gilberto@mcclure.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Rea"], ["last_name", "Feil"], ["email", "gilberto@mcclure.co"], ["encrypted_password", "$2a$12$vbtbIR3nvxykZAZmA39NOuxK4cdkDUe3yQRso2d59OQjHXNiDjH/."], ["alias", "Picasso"], ["admin", false], ["created_at", "2021-12-07 10:11:20.034861"], ["updated_at", "2021-12-07 10:11:20.034861"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "violet.muller@feeney-toy.info"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Clemente"], ["last_name", "Altenwerth"], ["email", "violet.muller@feeney-toy.info"], ["encrypted_password", "$2a$12$AHhkbO23wsGNajNZGdIBK.qq8f6cHvBqNbae47KwnRAVWjnwNwrIG"], ["alias", "Magritte"], ["admin", false], ["created_at", "2021-12-07 10:11:20.223582"], ["updated_at", "2021-12-07 10:11:20.223582"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rex_gerlach@leannon.name"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Sharleen"], ["last_name", "Padberg"], ["email", "rex_gerlach@leannon.name"], ["encrypted_password", "$2a$12$1m/i68oi6G7xMfePR.pJZO1mVSkDp3CUh5CwJOr2p4vPk7rDxa66i"], ["alias", "Durer"], ["admin", false], ["created_at", "2021-12-07 10:11:20.418160"], ["updated_at", "2021-12-07 10:11:20.418160"]]
+=======
 >>>>>>> 4aa8abf5f451f2363e86b66c5c66af5486b441d0
   [1m[35m (1.8ms)[0m  [1m[35mCREATE DATABASE "SLAF_Project_development" ENCODING = 'unicode'[0m
   ↳ bin/rails:4
@@ -8438,11 +8557,179 @@ FOREIGN KEY ("blob_id")
   [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "burl@padberg-heidenreich.biz"], ["LIMIT", 1]]
   ↳ db/seeds.rb:15
   [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Desirae"], ["last_name", "Hayes"], ["email", "burl@padberg-heidenreich.biz"], ["encrypted_password", "$2a$12$..bIYd4rWdI1KwgZsT8jrua6F0JDLZyA6mPTnO7C2Kv5FqK/BTqP."], ["alias", "Vincent"], ["admin", false], ["created_at", "2021-12-07 10:14:00.008272"], ["updated_at", "2021-12-07 10:14:00.008272"]]
+>>>>>>> ba302c0c12e25549ca5f7002798700657a337dc9
   ↳ db/seeds.rb:15
   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:15
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:15
+<<<<<<< HEAD
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "felipe.zboncak@jakubowski.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Keren"], ["last_name", "Pollich"], ["email", "felipe.zboncak@jakubowski.biz"], ["encrypted_password", "$2a$12$i9yB.pANhGG3Ff3zATDF7u7p48GCW3RxupsA4pWfnJQYRvWLcyyAO"], ["alias", "Botticelli"], ["admin", false], ["created_at", "2021-12-07 10:11:20.611977"], ["updated_at", "2021-12-07 10:11:20.611977"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "richelieu.armand@yopmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Armand"], ["last_name", "Richelieu"], ["email", "richelieu.armand@yopmail.com"], ["encrypted_password", "$2a$12$l2NMxtKFCJK4C9EFG2D6zONYNI3RK0bZU.OL3CBCWbTNnWjGPkBrS"], ["alias", "Le recteur"], ["admin", true], ["created_at", "2021-12-07 10:11:20.800581"], ["updated_at", "2021-12-07 10:11:20.800581"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.4ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"quae\"]"], ["title_fr", "[\"quasi\"]"], ["grammatical_type", "[\"cumque\"]"], ["body", "Harum eum rem."], ["example", "Ex curto abstergo."], ["user_id", 25], ["created_at", "2021-12-07 10:11:20.813141"], ["updated_at", "2021-12-07 10:11:20.813141"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.2ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"assumenda\"]"], ["title_fr", "[\"et\"]"], ["grammatical_type", "[\"possimus\"]"], ["body", "Facilis accusantium sed."], ["example", "Sopor aqua ut."], ["user_id", 28], ["created_at", "2021-12-07 10:11:20.826963"], ["updated_at", "2021-12-07 10:11:20.826963"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.2ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"a\"]"], ["title_fr", "[\"aspernatur\"]"], ["grammatical_type", "[\"dolor\"]"], ["body", "Sed quasi iste."], ["example", "Vox aliqua ut."], ["user_id", 24], ["created_at", "2021-12-07 10:11:20.830752"], ["updated_at", "2021-12-07 10:11:20.830752"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.2ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"autem\"]"], ["title_fr", "[\"ut\"]"], ["grammatical_type", "[\"et\"]"], ["body", "Ea natus esse."], ["example", "Altus conscendo desolo."], ["user_id", 24], ["created_at", "2021-12-07 10:11:20.834540"], ["updated_at", "2021-12-07 10:11:20.834540"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.3ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"et\"]"], ["title_fr", "[\"sit\"]"], ["grammatical_type", "[\"veniam\"]"], ["body", "Temporibus sed in."], ["example", "Venia commodo aspernatur."], ["user_id", 25], ["created_at", "2021-12-07 10:11:20.838337"], ["updated_at", "2021-12-07 10:11:20.838337"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.3ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"tempora\"]"], ["title_fr", "[\"cum\"]"], ["grammatical_type", "[\"ea\"]"], ["body", "Esse a officiis."], ["example", "Curatio claudeo amo."], ["user_id", 30], ["created_at", "2021-12-07 10:11:20.842911"], ["updated_at", "2021-12-07 10:11:20.842911"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.4ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"et\"]"], ["title_fr", "[\"fugit\"]"], ["grammatical_type", "[\"vitae\"]"], ["body", "Doloribus debitis ut."], ["example", "Subnecto suscipio enim."], ["user_id", 31], ["created_at", "2021-12-07 10:11:20.848109"], ["updated_at", "2021-12-07 10:11:20.848109"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.4ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"vitae\"]"], ["title_fr", "[\"eum\"]"], ["grammatical_type", "[\"odio\"]"], ["body", "Consectetur alias perferendis."], ["example", "Itaque sufficio angulus."], ["user_id", 31], ["created_at", "2021-12-07 10:11:20.852760"], ["updated_at", "2021-12-07 10:11:20.852760"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.3ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"enim\"]"], ["title_fr", "[\"vel\"]"], ["grammatical_type", "[\"qui\"]"], ["body", "Velit aut praesentium."], ["example", "Decumbo aer degusto."], ["user_id", 27], ["created_at", "2021-12-07 10:11:20.857170"], ["updated_at", "2021-12-07 10:11:20.857170"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mIdiom Create (0.3ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "[\"modi\"]"], ["title_fr", "[\"fuga\"]"], ["grammatical_type", "[\"aut\"]"], ["body", "Ea nisi at."], ["example", "Acies defungo tametsi."], ["user_id", 24], ["created_at", "2021-12-07 10:11:20.862369"], ["updated_at", "2021-12-07 10:11:20.862369"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Autem iusto consequatur."], ["user_id", 24], ["idiom_id", 28], ["created_at", "2021-12-07 10:11:20.871846"], ["updated_at", "2021-12-07 10:11:20.871846"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Adhaero deprimo annus."], ["user_id", 30], ["idiom_id", 26], ["created_at", "2021-12-07 10:11:20.877552"], ["updated_at", "2021-12-07 10:11:20.877552"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Unde thema theologus."], ["user_id", 25], ["idiom_id", 30], ["created_at", "2021-12-07 10:11:20.882121"], ["updated_at", "2021-12-07 10:11:20.882121"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Conventus decens accedo."], ["user_id", 27], ["idiom_id", 26], ["created_at", "2021-12-07 10:11:20.886149"], ["updated_at", "2021-12-07 10:11:20.886149"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:48
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Circumvenio conor dignissimos."], ["user_id", 30], ["idiom_id", 23], ["created_at", "2021-12-07 10:11:20.890426"], ["updated_at", "2021-12-07 10:11:20.890426"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 34], ["idiom_id", 31], ["created_at", "2021-12-07 10:11:20.899273"], ["updated_at", "2021-12-07 10:11:20.899273"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 30], ["idiom_id", 31], ["created_at", "2021-12-07 10:11:20.903476"], ["updated_at", "2021-12-07 10:11:20.903476"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+=======
   [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leighann.volkman@champlin.name"], ["LIMIT", 1]]
   ↳ db/seeds.rb:15
   [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Omega"], ["last_name", "Tillman"], ["email", "leighann.volkman@champlin.name"], ["encrypted_password", "$2a$12$RWtXrie3WNar1lqEOa4pKewb8JCQLdI67Ajdu2Z0CURPcIuVHosD6"], ["alias", "Vincent"], ["admin", false], ["created_at", "2021-12-07 10:14:00.253997"], ["updated_at", "2021-12-07 10:14:00.253997"]]
@@ -8608,11 +8895,192 @@ FOREIGN KEY ("blob_id")
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:54
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+>>>>>>> ba302c0c12e25549ca5f7002798700657a337dc9
   ↳ db/seeds.rb:54
   [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
   ↳ db/seeds.rb:55
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:54
+<<<<<<< HEAD
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 29], ["idiom_id", 27], ["created_at", "2021-12-07 10:11:20.907327"], ["updated_at", "2021-12-07 10:11:20.907327"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 32], ["idiom_id", 30], ["created_at", "2021-12-07 10:11:20.911818"], ["updated_at", "2021-12-07 10:11:20.911818"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:54
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 33], ["idiom_id", 29], ["created_at", "2021-12-07 10:11:20.915714"], ["updated_at", "2021-12-07 10:11:20.915714"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+Started GET "/" for ::1 at 2021-12-07 11:11:22 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 74ms (Views: 65.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/users/10" for ::1 at 2021-12-07 11:18:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=10):
+  
+app/controllers/users_controller.rb:3:in `show'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Started GET "/" for ::1 at 2021-12-07 11:32:55 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 200ms (Views: 188.9ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/comments/new" for ::1 at 2021-12-07 11:33:00 +0100
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (212.3ms)
+Completed 200 OK in 239ms (Views: 228.1ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:33:13 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U9uUH+EaUWeWRaZRgHdTiQ/wsalxQ+k480BXpOmhjzY/RhOy/ysboTpdHXuM5EvtLIZ40sMHGvurhV6/F0tG/w==", "comments"=>{"body"=>"test"}, "commit"=>"Save Comments"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'idiom' for Idiom.):
+  
+app/controllers/comments_controller.rb:7:in `create'
+Started POST "/comments" for ::1 at 2021-12-07 11:33:49 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U9uUH+EaUWeWRaZRgHdTiQ/wsalxQ+k480BXpOmhjzY/RhOy/ysboTpdHXuM5EvtLIZ40sMHGvurhV6/F0tG/w==", "comments"=>{"body"=>"test"}, "commit"=>"Save Comments"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+No template found for CommentsController#create, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:34:16 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 51ms (Views: 40.4ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:34:17 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U9uUH+EaUWeWRaZRgHdTiQ/wsalxQ+k480BXpOmhjzY/RhOy/ysboTpdHXuM5EvtLIZ40sMHGvurhV6/F0tG/w==", "comments"=>{"body"=>"test"}, "commit"=>"Save Comments"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:7:in `create'
+Started GET "/comments/new" for ::1 at 2021-12-07 11:34:42 +0100
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 17.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:34:43 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PZLCmol+HkxKtxMEVFjB+1tsPaXcj5uyCvoLQivuXIhRD0U3l09UiuavqC5Yy9mfeBr03m7LaHFSPwJZ1QSVQQ==", "comments"=>{"body"=>"dddd"}, "commit"=>"Save Comments"}
+=======
   [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["idiom_id", 8], ["created_at", "2021-12-07 10:14:00.547505"], ["updated_at", "2021-12-07 10:14:00.547505"]]
   ↳ db/seeds.rb:54
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
@@ -8760,10 +9228,2271 @@ Processing by IdiomsController#show as HTML
   Parameters: {"id"=>"1"}
   Rendering idioms/show.html.erb within layouts/application
   Rendered idioms/show.html.erb within layouts/application (0.6ms)
+>>>>>>> ba302c0c12e25549ca5f7002798700657a337dc9
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
   
+<<<<<<< HEAD
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:7:in `create'
+Started GET "/comments/new" for ::1 at 2021-12-07 11:35:08 +0100
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 29ms (Views: 19.7ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:35:09 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyskC957vlmZLiOyt7Tut08X2hAnFnqLJDW9qRLNNBM3tqOmwEr0nzU2mJi7J/bTbGETa5VSiUh88LSy7Cf92g==", "comments"=>{"body"=>"dddd"}, "commit"=>"Save Comments"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+No template found for CommentsController#create, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/comments/new" for ::1 at 2021-12-07 11:35:23 +0100
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 18.2ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:35:25 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aJdPd5lP1sGCFBOfXq0NIxmMWbYE3fdYBIF+aT9IgeoECsjah36cBy4MqLVSPhVHOvqQzbaZBJtcRHdywaJIIw==", "comments"=>{"body"=>"ddddddddddddd"}, "commit"=>"Save Comments"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+No template found for CommentsController#create, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/comments/new" for ::1 at 2021-12-07 11:36:16 +0100
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 15.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:36:18 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"64PImXsMwF2tzK5cYCXiyJ5KFpGsUm5ZsdOv3/qd1qiHHk80ZT2KmwHUFXZstvqsvTzf6h4WnZrpFqbEBHcfYQ==", "comments"=>{"body"=>"et'erggre"}, "commit"=>"Save Comments"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+No template found for CommentsController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sign_in" for ::1 at 2021-12-07 11:36:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sign_in"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sign_up" for ::1 at 2021-12-07 11:36:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2021-12-07 11:36:57 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 22.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-12-07 11:37:03 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-12-07 11:37:13 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NSDmKFf4HY6iOI9RvkMQSNEP6HUJbyqogupZoyic2O5ZvWGFSclXSA4gNHuy0Ags8nkhDrsr2WvaL1C41nYRJw==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test@gmail.com"], ["encrypted_password", "$2a$12$ysGjA/socFNfg7iZMVJG5uxOZ4xv0gAlusTOamScNS60Fk8axtiYq"], ["created_at", "2021-12-07 10:37:13.859649"], ["updated_at", "2021-12-07 10:37:13.859649"]]
+  ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 200ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:37:13 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/come" for ::1 at 2021-12-07 11:37:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/come"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/comments/new" for ::1 at 2021-12-07 11:37:20 +0100
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:37:22 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ROz55ftgV6wFMvKx6mPwofDm/K3p4wTqHVmwliNJzp8ocX5I5VEdaqkqSZvm8OjF05A11lun9ylFnLmN3aMHVg==", "comments"=>{"body"=>"cdscds"}, "commit"=>"Save Comments"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+No template found for CommentsController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/comments/new" for ::1 at 2021-12-07 11:37:39 +0100
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 16.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:37:50 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eh1lDutbdEQO+qmJqyPUWW/61wTHF40HctGSXgkBI2RdfI5JZwnF7wjUYwqP5c1RskiJ6FYrfdFDk9Shs7NRA==", "comments"=>{"body"=>"dqzdzq"}, "commit"=>"Save Comments"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:37:50 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:40:19 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 52ms (Views: 41.5ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/Comment" for ::1 at 2021-12-07 11:40:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/Comment"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+Started GET "/Comment" for ::1 at 2021-12-07 11:40:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/Comment"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/idioms/22/comments/new" for ::1 at 2021-12-07 11:41:24 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"idiom_id"=>"22"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 21.2ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:41:32 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QrdqDoqptaResfsWy/rmWUHAQmfRBe0OyQfdNV7Hs2wuKu2jlJj/YvKpQDzHaf49YraLHGNBHs2RwtQuoC16pQ==", "comments"=>{"body"=>"testttttttttt\r\n"}, "commit"=>"Save Comments"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:41:32 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:42:16 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 62ms (Views: 49.0ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/Comment" for ::1 at 2021-12-07 11:42:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/Comment"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/idioms/22/comments/new" for ::1 at 2021-12-07 11:42:23 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"idiom_id"=>"22"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 15.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:42:27 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bVg1F9SvmmLLBtl7IIe0hU6voQ7aLGvdJ8auFF+9vgkBxbK6yp7QpGceYlEsFKzhbdlodWhomB5/A6cPoVd3wA==", "comments"=>{"body"=>"super\r\n"}, "commit"=>"Save Comments"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:42:27 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/idioms/22/comments/new" for ::1 at 2021-12-07 11:44:42 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"idiom_id"=>"22"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 18.7ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:44:48 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EcdXKNp++CM9I8T844tGTig3qkIyZHQCixZlz37Stwh9WtCFxE+y5ZE7f9bvGF4qC0FjOYAgh8HT02zUgDh+wQ==", "comments"=>{"body"=>"testttt"}, "commit"=>"Save Comments"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:44:48 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 54ms (Views: 48.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:46:32 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/Comment" for ::1 at 2021-12-07 11:46:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/Comment"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/Comment" for ::1 at 2021-12-07 11:46:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/Comment"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-12-07 11:47:51 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:47:52 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"22"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_88560'
+Started GET "/" for ::1 at 2021-12-07 11:47:57 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:48:00 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"22"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_89160'
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:48:30 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"22"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_97120'
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:48:31 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"22"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_97640'
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:48:31 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"22"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_98160'
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:48:31 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"22"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_98680'
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:48:32 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"22"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_99200'
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:48:32 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"22"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_99720'
+Started GET "/idioms/23" for ::1 at 2021-12-07 11:48:36 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"comments", :id=>"23"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(new_idiom_comment_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_100240'
+Started GET "/idioms/23" for ::1 at 2021-12-07 11:49:15 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:49:17 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tmw4HCF4Zr3EHGpGb2lNo9yO8b34EhPcULcnHnteNbja8b+xP0kse2gE0Wxj+lXH//g4xkpW4B8Ici4FhbT8cQ==", "comments"=>{"body"=>"dzqzdzdq"}, "commit"=>"Save Comments"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:49:17 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.7ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 46ms (Views: 39.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 11:52:07 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 62ms (Views: 48.5ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:52:08 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comments" for ::1 at 2021-12-07 11:52:10 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lBnrzp5WaMTVe3SLuIMlj4dIYccaM52PHEcJ5SK9exP4hGxjgGciAnljz6G0ED3rpD6ovKh3bkxEggD+3Fey2g==", "comments"=>{"body"=>"dzadzqdqz"}, "commit"=>"Save Comments"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:7:in `create'
+Started GET "/idioms/22" for ::1 at 2021-12-07 11:53:22 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (161.9ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comments_path' for #<#<Class:0x00007fe548adeaf0>:0x00007fe548adccf0>
+Did you mean?  font_path):
+    1: <%= form_for(:comments, url:(comments_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_115580'
+Started GET "/idioms/24" for ::1 at 2021-12-07 11:53:26 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"24"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (142.9ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comments_path' for #<#<Class:0x00007fe548adeaf0>:0x00007fe53c2ac258>
+Did you mean?  font_path):
+    1: <%= form_for(:comments, url:(comments_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_116260'
+Started GET "/idioms/24" for ::1 at 2021-12-07 11:54:54 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"24"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"comments", :id=>"24"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(idiom_comments_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_116820'
+Started GET "/idioms/24" for ::1 at 2021-12-07 11:54:55 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"24"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"comments", :id=>"24"}, missing required keys: [:idiom_id]):
+    1: <%= form_for(:comments, url:(idiom_comments_path), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_117340'
+Started GET "/idioms/24" for ::1 at 2021-12-07 11:55:35 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"24"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= form_for(:comments, url:(idiom_comments_path(@idiom.id)), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_117860'
+Started GET "/idioms/24" for ::1 at 2021-12-07 11:55:36 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"24"}
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= form_for(:comments, url:(idiom_comments_path(@idiom.id)), action: "create", method: :post) do |f| %>
+    2: <br><%= f.label :body, "Commentaire : " %>
+    3: <br><%= f.text_area :body %>
+    4: <br><%= f.submit %>
+  
+app/views/idioms/show.html.erb:1:in `_app_views_idioms_show_html_erb__2260256879458968728_118380'
+Started GET "/" for ::1 at 2021-12-07 11:56:54 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (71.2ms)
+Completed 200 OK in 206ms (Views: 187.5ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/idioms/23" for ::1 at 2021-12-07 11:56:55 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (219.2ms)
+Completed 200 OK in 241ms (Views: 238.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/idioms/23/comments" for ::1 at 2021-12-07 11:57:01 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRJMbxM8+w2wPmKu5AzcI8NRymOOAD+ASNlmwzAOZq5dj8vCDQ2xyxwm2YTon8RH4CcDGDxEzEMQHG/YzuSvZw==", "comments"=>{"body"=>"test"}, "commit"=>"Save Comments", "idiom_id"=>"23"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:7:in `create'
+Started GET "/idioms/23" for ::1 at 2021-12-07 11:57:27 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 41ms (Views: 22.3ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/idioms/23/comments" for ::1 at 2021-12-07 11:57:29 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bQXpD7XKG87oUcqcbMog3bL/pvljLxkRXayUY0Wtfs0BmG6iq/tRCERJcbZgWTi5kYlvgtFr6tIFaZ14u0e3BA==", "comments"=>{"body"=>"reggrgegr"}, "commit"=>"Save Comments", "idiom_id"=>"23"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 7.1ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Idiom(#24740) expected, got "23" which is an instance of String(#2500)):
+  
+app/controllers/comments_controller.rb:7:in `create'
+Started GET "/idioms/23" for ::1 at 2021-12-07 11:58:11 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 20.8ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/idioms/23/comments" for ::1 at 2021-12-07 11:58:13 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lKBwPgALQ5kRunyrR9IzVL+2EO8L1qkaK8H2L38JTiz4PfeTHjoJX72ix4FLQSswnMDZlLmSWtlzBP80geOH5Q==", "comments"=>{"body"=>"dfbbd"}, "commit"=>"Save Comments", "idiom_id"=>"23"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:7
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.6ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Idiom(#31840) expected, got "23" which is an instance of String(#2500)):
+  
+app/controllers/comments_controller.rb:7:in `create'
+Started GET "/idioms/23" for ::1 at 2021-12-07 11:58:37 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.8ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 38ms (Views: 20.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/idioms/23/comments" for ::1 at 2021-12-07 11:58:39 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/HPqCAmDrOcxThQVCZOgdJj8FV++DcfUfymggvPuYn6Q7m2lF7LmIZ1Wrz8FALgQu4rcJAxJNBcn7KmZDQSrtw==", "comments"=>{"body"=>"fzefeza"}, "commit"=>"Save Comments", "idiom_id"=>"23"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:8:in `create'
+Started GET "/idioms/23" for ::1 at 2021-12-07 12:00:09 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.7ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 17.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/idioms/23" for ::1 at 2021-12-07 12:00:09 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.7ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/idioms/23" for ::1 at 2021-12-07 12:00:09 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/idioms/23/comments" for ::1 at 2021-12-07 12:00:11 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2usalqPYhm00jB/owzn5cQS7Pnbri54alPtk+D7rpxm2dp07venMq5iUpMLPquEVJ833DVnPbdnMPm3jwAFu0A==", "comments"=>{"body"=>"zdd"}, "commit"=>"Save Comments", "idiom_id"=>"23"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.7ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Idiom(#45940) expected, got "23" which is an instance of String(#2500)):
+  
+app/controllers/comments_controller.rb:10:in `create'
+Started GET "/idioms/23" for ::1 at 2021-12-07 12:01:02 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 19.6ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/idioms/23/comments" for ::1 at 2021-12-07 12:01:03 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ja+En4yLlhtG5ZNZc6dsWaGk6oViSpwb9wD8Hfo0IqRJMgMykrrc3er9KHN/NHQ9gtIj/tAOb9ivxfUGBN7rbQ==", "comments"=>{"body"=>"dfvfvf"}, "commit"=>"Save Comments", "idiom_id"=>"23"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:28
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 6.5ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Idiom(#53180) expected, got "23" which is an instance of String(#2500)):
+  
+app/controllers/comments_controller.rb:9:in `create'
+Started GET "/idioms/22" for ::1 at 2021-12-07 12:01:42 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 23.6ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/idioms/22/comments" for ::1 at 2021-12-07 12:01:43 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8zFCL7NarYfxD2qRQlIlch6L1CFr0AAX5SeuPhtmzgyfrMWCrWvnQV0X0btOwT0WPf0dWtmU89S94qcl5YwHxQ==", "comments"=>{"body"=>"fff"}, "commit"=>"Save Comments", "idiom_id"=>"22"}
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:28
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:01:43 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.7ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/idioms/24" for ::1 at 2021-12-07 12:02:54 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 23.9ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/idioms/24/comments" for ::1 at 2021-12-07 12:02:55 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"72cM58L7UH2ejj3Y+Gpdn0sZEqGLX21Ef1SnVe14ocqD+otK3MoauzKWhvL0+UX7aG/b2jkbnocnka5OE5JoAw==", "comments"=>{"body"=>"dqdzzqd"}, "commit"=>"Save Comments", "idiom_id"=>"24"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:02:55 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/idioms/25" for ::1 at 2021-12-07 12:03:06 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 40ms (Views: 22.9ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/idioms/25/comments" for ::1 at 2021-12-07 12:03:08 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jPj1yqZtb/7/Ya6v/MpnOJ9MEckVvePtCtXGFhNzrfHgZXJnuFwlOFN5FYXwWX9cvDrYsqf5EC5SEM8N7ZlkOA==", "comments"=>{"body"=>"dqsdqsd"}, "commit"=>"Save Comments", "idiom_id"=>"25"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 46ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:03:08 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-12-07 12:03:27 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:03:27 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/idioms/26" for ::1 at 2021-12-07 12:03:46 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 22.8ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/idioms/26/comments" for ::1 at 2021-12-07 12:03:48 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f0m2q8YEt9EUVWjp9a6QCdN7lH6vvz3xLOi6NdaqA1gT1DEG2DX9F7hN08P5PYht8A1dBR37zjJ0LbMuKEDKkQ==", "comments"=>{"body"=>"cdscd"}, "commit"=>"Save Comments", "idiom_id"=>"26"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:30
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:03:48 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-07 12:04:36 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (81.2ms)
+Completed 200 OK in 103ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/idioms" for ::1 at 2021-12-07 12:04:40 +0100
+Processing by IdiomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wYoOByzZPrRk0phqqWH7WyptJKO6uB+bL3/oudaYmbatF4mqMuh0csjKI0Cl8uM/CRvt2Aj87Fh3uuGiKHJQfw==", "idioms"=>{"title_en"=>"qdssqdsd", "title_fr"=>"sdqsdqsdq", "body"=>"sqdsqdsdsqd", "example"=>"sqdsdsdq", "grammatical_type"=>"Verbe"}, "commit"=>"Save Idioms"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/idioms_controller.rb:9
+  [1m[36mIdiom Create (0.5ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "qdssqdsd"], ["title_fr", "sdqsdqsdq"], ["grammatical_type", "Verbe"], ["body", "sqdsqdsdsqd"], ["example", "sqdsdsdq"], ["user_id", 35], ["created_at", "2021-12-07 11:04:40.866749"], ["updated_at", "2021-12-07 11:04:40.866749"]]
+  ↳ app/controllers/idioms_controller.rb:9
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/idioms_controller.rb:9
+No template found for IdiomsController#create, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:04:46 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:04:51 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/idioms/32/comments" for ::1 at 2021-12-07 12:04:54 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eY3k2NFmQKInlvi0g0IFM8AgG285Yre+eF1Cbz92xTcVEGN1z1cKZIuOQ56P0R1X41bSFIsmRH0gmEt0wZwM/g==", "comments"=>{"body"=>"rgregr"}, "commit"=>"Save Comments", "idiom_id"=>"32"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:04:54 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:05:46 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.7ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 92ms (Views: 76.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:05:48 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/idioms/32/comments" for ::1 at 2021-12-07 12:05:50 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VSOh6gKYVd2ij5aFIitbuKJ3te76QkASJu4Yx1h3T9Q5viZHHKkfGw6XLa8uuEPcgQF8lUgGs9F+KxHcpp2GHQ==", "comments"=>{"body"=>"dsdsd"}, "commit"=>"Save Comments", "idiom_id"=>"32"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:30
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "dsdsd"], ["user_id", 35], ["idiom_id", 32], ["created_at", "2021-12-07 11:05:50.578865"], ["updated_at", "2021-12-07 11:05:50.578865"]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:05:50 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:07:09 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 45ms (Views: 29.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:08:10 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 50ms (Views: 44.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:12 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for #<Idiom:0x00007f27188700f0>
+Did you mean?  comments
+               comments=):
+    4: <br><%= f.submit %>
+    5: <% end %>
+    6: 
+    7: <% @idiom.comment.each do |comment|%>
+    8:     <%=comment.body%>
+    9: <%end%>
+  
+app/views/idioms/show.html.erb:7:in `_app_views_idioms_show_html_erb__990375070043559170_94700'
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:18 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.8ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  Rendered idioms/show.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for #<Idiom:0x00007f270c34f5f0>
+Did you mean?  comments
+               comments=):
+    4: <br><%= f.submit %>
+    5: <% end %>
+    6: 
+    7: <% @idiom.comment.each do |comment|%>
+    8:     <%=comment.body%>
+    9: <%end%>
+  
+app/views/idioms/show.html.erb:7:in `_app_views_idioms_show_html_erb__990375070043559170_95220'
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:19 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 32]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 47ms (Views: 41.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:19 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 32]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:20 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 32]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:20 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 32]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/idioms/32/comments" for ::1 at 2021-12-07 12:08:24 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KA9bP9IzGGjFojM2vA3hPo2IsZ0aTBGp/I4XDIN9dlVEktySzAJSrmm6iBywnvlarv545qgI4mqkSx4XfZe/nA==", "comments"=>{"body"=>"fbngngf"}, "commit"=>"Save Comments", "idiom_id"=>"32"}
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "fbngngf"], ["user_id", 35], ["idiom_id", 32], ["created_at", "2021-12-07 11:08:24.658506"], ["updated_at", "2021-12-07 11:08:24.658506"]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:08:24 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:26 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.7ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 32]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:32 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 32]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/idioms/32" for ::1 at 2021-12-07 12:08:33 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 32]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/idioms/23" for ::1 at 2021-12-07 12:08:53 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 23]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/idioms/27" for ::1 at 2021-12-07 12:08:57 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 27]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/idioms/27/comments" for ::1 at 2021-12-07 12:08:59 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O0qGs86sOwadG4O8MtPAoHCO+mvcB8dir4UzXAK45ZhX1wEe0J1xwDEDOJY+QNjEU/gzEG5DNKH3QDpH/FIsUQ==", "comments"=>{"body"=>"efzfezefefz"}, "commit"=>"Save Comments", "idiom_id"=>"27"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "efzfezefefz"], ["user_id", 35], ["idiom_id", 27], ["created_at", "2021-12-07 11:08:59.852455"], ["updated_at", "2021-12-07 11:08:59.852455"]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 12:08:59 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  Rendered idioms/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/idioms/27" for ::1 at 2021-12-07 12:09:02 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 27]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/idioms/27" for ::1 at 2021-12-07 12:10:47 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 27]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 59ms (Views: 39.1ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/idioms/22" for ::1 at 2021-12-07 12:10:50 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 22]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/idioms/22/comments" for ::1 at 2021-12-07 12:10:52 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PH+8p4a051WEPL4+ZOo52nfcfGawNqcJsSCzZBpQd64bHlfgCuZW/oISdL1ALCDSqm4iiiEKV9+AYvWboOIFw==", "comments"=>{"body"=>"test"}, "commit"=>"Save Comments", "idiom_id"=>"22"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "test"], ["user_id", 35], ["idiom_id", 22], ["created_at", "2021-12-07 11:10:52.080712"], ["updated_at", "2021-12-07 11:10:52.080712"]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/idioms/22/comments
+Completed 302 Found in 21ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/idioms/22/comments" for ::1 at 2021-12-07 12:10:52 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CommentsController):
+  
+actionpack (5.2.6) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/idioms/22/comments" for ::1 at 2021-12-07 12:11:18 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CommentsController):
+  
+actionpack (5.2.6) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/idioms/22" for ::1 at 2021-12-07 12:11:19 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 22]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 57ms (Views: 37.3ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/idioms/22/comments" for ::1 at 2021-12-07 12:11:21 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Kf3Y9O6KtZrelGElihB4r2FLrfiaJnu/v6n/VrbmmS0OnDOzYtgEMdi6q6au1mGnvPnzFAsai2mO67mpDFTrQ==", "comments"=>{"body"=>"dzqd"}, "commit"=>"Save Comments", "idiom_id"=>"22"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "dzqd"], ["user_id", 35], ["idiom_id", 22], ["created_at", "2021-12-07 11:11:21.434595"], ["updated_at", "2021-12-07 11:11:21.434595"]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/idioms/22
+Completed 302 Found in 34ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/idioms/22" for ::1 at 2021-12-07 12:11:21 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 22]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/idioms/22/comments" for ::1 at 2021-12-07 12:11:24 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VU+qmwyKe6q81gfk0pyS0U6if3SC9NypMJPT7+TJSFo50i02ErsxbBDOvM7eD4q1bdS2DzCwL2poVtr0GiOBkw==", "comments"=>{"body"=>"dddd"}, "commit"=>"Save Comments", "idiom_id"=>"22"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "dddd"], ["user_id", 35], ["idiom_id", 22], ["created_at", "2021-12-07 11:11:24.153742"], ["updated_at", "2021-12-07 11:11:24.153742"]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/idioms/22
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/idioms/22" for ::1 at 2021-12-07 12:11:24 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mIdiom Load (0.9ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 22]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/idioms/22/comments" for ::1 at 2021-12-07 12:11:24 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s9NsQmmeFzbHBEwr4JI9pWZvtGIiKDjItjiZT76l1KDfTuvvd69d8Gsc9wHsASXBRRl9GZBsywvu/ZBUQE8daQ==", "comments"=>{"body"=>""}, "commit"=>"Save Comments", "idiom_id"=>"22"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", ""], ["user_id", 35], ["idiom_id", 22], ["created_at", "2021-12-07 11:11:24.632916"], ["updated_at", "2021-12-07 11:11:24.632916"]]
+  ↳ app/controllers/comments_controller.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:9
+Redirected to http://localhost:3000/idioms/22
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/idioms/22" for ::1 at 2021-12-07 12:11:24 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:30
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 22]]
+  ↳ app/views/idioms/show.html.erb:7
+  Rendered idioms/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+=======
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"likes", :id=>"1", :idiom_id=>nil}, possible unmatched constraints: [:idiom_id]):
     1: 
     2: <%= button_to 'Like', idiom_like_path(@idiom), method: :post %>
@@ -12380,5 +15109,6 @@ Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9J
 Processing by ActiveStorage::DiskController#show as JPEG
   Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"richelieu.jpeg\"; filename*=UTF-8''richelieu.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRVRXR6Wm5kUmIwVk1kMjAyUlRKRFltRk5TelJhT0UwekJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljbWxqYUdWc2FXVjFMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozSnBZMmhsYkdsbGRTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0xMi0wN1QxMzozNzo0NC42NTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--ad96fa90b36be793e56c37bbb074fca2653a2420", "filename"=>"richelieu"}
 Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+>>>>>>> ba302c0c12e25549ca5f7002798700657a337dc9
 
 

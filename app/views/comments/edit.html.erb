@@ -1,0 +1,9 @@
+
+<%= @comment.body%>
+
+
+<%= form_with model: @comment, url: (idiom_comment_path(@idiom.id, @comment.id)), method: :patch do |form|%>
+<br><%= form.label :body, 'body' %>
+<br><%= form.text_field :body %>
+<br><%= form.submit 'Envoyez' %>
+<% end %>
