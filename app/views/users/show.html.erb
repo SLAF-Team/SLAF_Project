@@ -1,15 +1,15 @@
 
 <h1>Bienvenue <%=@user.alias%></h1>
-<%= form_tag user_avatars_path(@user), multipart: true do %>
-  <%= file_field_tag :avatar %>
-  <%= submit_tag "uploader l'avatar" %>
-<% end %>
-
 <%if @user.avatar.attached?%>
 <%= image_tag @user.avatar%>
 <%else%>
   <p>Il n'y a pas encore d'avatar lié à cet utilisateur</p>
 <%end%>
+<%= form_tag user_avatars_path(@user), multipart: true do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "uploader l'avatar" %>
+<% end %>
+<br><%= link_to "Editer ou supprimer mon profil", edit_user_registration_path %>
 
 <h2>Mes expressions</h2>
 <% @idioms.each do |idiom| %>

@@ -1,8 +1,22 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alias %><br />
+    <%= f.text_field :alias, autofocus: true, autocomplete: "alias" %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -28,8 +42,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <%= f.label :current_password %> <i>Entrez votre mot de passe pour confirmer</i><br />
+    <%= f.password_field :current_password, autocomplete: "Mot de passe" %>
   </div>
 
   <div class="actions">
