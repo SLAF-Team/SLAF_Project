@@ -16,7 +16,20 @@ class CommentsController < ApplicationController
     end
 
     def edit
+        @comment = Comment.find(params[:id])
+    end
 
+    def update
+        @comment = Comment.find(params[:id])
+        puts '$'*80
+        puts params
+        puts '$'*80
+     
+        if @comment.update('body' => params[:comment][:body])
+          redirect_to root_path
+        else
+          puts 'nop'
+        end
     end
 
     private
@@ -24,6 +37,7 @@ class CommentsController < ApplicationController
     def find_idiom
         @idiom = Idiom.find(params[:idiom_id])
     end
+
 
 end
 
