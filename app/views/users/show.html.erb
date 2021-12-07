@@ -13,9 +13,11 @@
 
 <h2>Mes expressions</h2>
 <% @idioms.each do |idiom| %>
-<br><%= idiom.title_en %>
-<br><%= idiom.title_fr %>
-<br><%= link_to "Voir", idiom_path(idiom.id) %>
+  <br><%= idiom.title_en %>
+  <br><%= idiom.title_fr %>
+  <br><%= link_to "Voir", idiom_path(idiom.id) %>
+  <br><%= link_to "Mettre à jour", edit_idiom_path(idiom.id) %>
+  <br><%= link_to "Supprimer", idiom_path(idiom.id), :method => :delete, remote: 'true', data: { confirm: 'Sûr?' } %>
 <% end %>
 
 <h2>J'aime</h2>
