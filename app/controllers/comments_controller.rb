@@ -21,14 +21,11 @@ class CommentsController < ApplicationController
 
     def update
         @comment = Comment.find(params[:id])
-        puts '$'*80
-        puts params
-        puts '$'*80
      
         if @comment.update('body' => params[:comment][:body])
           redirect_to root_path
         else
-          puts 'nop'
+          render :edit
         end
     end
 
