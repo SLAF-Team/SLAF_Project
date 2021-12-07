@@ -1,6 +1,5 @@
-yo 
 
-<%=@user.email%>
+<h1>Bienvenue <%=@user.alias%></h1>
 <%= form_tag user_avatars_path(@user), multipart: true do %>
   <%= file_field_tag :avatar %>
   <%= submit_tag "uploader l'avatar" %>
@@ -13,6 +12,13 @@ yo
 <%end%>
 
 <h2>Mes expressions</h2>
+<% @idioms.each do |idiom| %>
+<br><%= idiom.title_en %>
+<br><%= idiom.title_fr %>
+<br><%= link_to "Voir", idiom_path(idiom.id) %>
+<% end %>
+
+<h2>J'aime</h2>
 <% @likes.each do |like| %>
 <br>Expression numéro <%= @likes.index(like) + 1 %>
 <br><%= like.idiom.title_en %>

@@ -11763,3 +11763,622 @@ Processing by IdiomsController#show as HTML
 Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for ::1 at 2021-12-07 14:29:40 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  Rendered idioms/index.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 125ms (Views: 107.7ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 14:29:47 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms" WHERE "idioms"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:23
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  Rendered users/show.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 38ms (Views: 28.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/idioms/new" for ::1 at 2021-12-07 14:30:12 +0100
+Processing by IdiomsController#new as HTML
+  Rendering idioms/new.html.erb within layouts/application
+  Rendered idioms/new.html.erb within layouts/application (191.1ms)
+Completed 200 OK in 201ms (Views: 199.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/idioms" for ::1 at 2021-12-07 14:30:18 +0100
+Processing by IdiomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Ee6Sivtz1+bAKEZaWZ7tr9vnqLbY2I3f1DMNea7ECSIkZ+g3QKKT8hu6ZSa2a9CjV37TZRkPbTZTOp0iFnRaA==", "idioms"=>{"title_en"=>"test", "title_fr"=>"test", "body"=>"test", "example"=>"test", "grammatical_type"=>"Adverbe"}, "commit"=>"Save Idioms"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/idioms_controller.rb:16
+  [1m[36mIdiom Create (1.4ms)[0m  [1m[32mINSERT INTO "idioms" ("title_en", "title_fr", "grammatical_type", "body", "example", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title_en", "test"], ["title_fr", "test"], ["grammatical_type", "Adverbe"], ["body", "test"], ["example", "test"], ["user_id", 11], ["created_at", "2021-12-07 13:30:18.350457"], ["updated_at", "2021-12-07 13:30:18.350457"]]
+  ↳ app/controllers/idioms_controller.rb:16
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/idioms_controller.rb:16
+No template found for IdiomsController#create, rendering head :no_content
+Completed 204 No Content in 43ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/idioms" for ::1 at 2021-12-07 14:30:22 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (2.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:9
+  Rendered idioms/index.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 75ms (Views: 64.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 14:30:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms" WHERE "idioms"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:23
+  [1m[36mIdiom Load (0.9ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  Rendered users/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 28ms (Views: 22.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 14:31:04 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms" WHERE "idioms"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 14:31:22 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms" WHERE "idioms"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users/11/avatars" for ::1 at 2021-12-07 14:31:48 +0100
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vbac/446tbfULOn81zUd5+RSqD6pmekDvZ/hj5euyCANYLkVeNXwp4dCoXEkiskT1mDN0eaetoAbg8fO+UwJbA==", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x000000013524e718 @tempfile=#<Tempfile:/var/folders/vg/j5y53ymj42v02jhxcr3_z7sh0000gn/T/RackMultipart20211207-46874-135pelj.jpeg>, @original_filename="salgado 1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"salgado 1.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "commit"=>"uploader l'avatar", "user_id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:3
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:4
+[36m  Disk Storage (4.4ms) [0m[32mUploaded file to key: wm7XYVRxz7zxmwLsqWDK1ipW (checksum: 2joL/3JTQW2KZqPGRKTGMA==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Blob Create (1.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "wm7XYVRxz7zxmwLsqWDK1ipW"], ["filename", "salgado 1.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 752016], ["checksum", "2joL/3JTQW2KZqPGRKTGMA=="], ["created_at", "2021-12-07 13:31:48.337822"]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Attachment Create (4.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 11], ["blob_id", 1], ["created_at", "2021-12-07 13:31:48.347062"]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2021-12-07 13:31:48.351879"], ["id", 11]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/avatars_controller.rb:4
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 001d7bf4-da99-4204-958a-12a3b2f3338e) to Async(default) with arguments: #<GlobalID:0x0000000124f73c60 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 73ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 14:31:48 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms" WHERE "idioms"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e] Performing ActiveStorage::AnalyzeJob (Job ID: 001d7bf4-da99-4204-958a-12a3b2f3338e) from Async(default) with arguments: #<GlobalID:0x0000000124f48e48 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e] [36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: wm7XYVRxz7zxmwLsqWDK1ipW[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [001d7bf4-da99-4204-958a-12a3b2f3338e] Performed ActiveStorage::AnalyzeJob (Job ID: 001d7bf4-da99-4204-958a-12a3b2f3338e) from Async(default) in 7.19ms
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11473c7629ee024c1d2daf5fbf7e611e66018b03/salgado%201.jpeg" for ::1 at 2021-12-07 14:31:48 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11473c7629ee024c1d2daf5fbf7e611e66018b03", "filename"=>"salgado 1"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: wm7XYVRxz7zxmwLsqWDK1ipW (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkMjAzV0ZsV1VuaDZOM3A0YlhkTWMzRlhSRXN4YVhCWEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkphVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljMkZzWjJGa2J5QXhMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmhiR2RoWkc4bE1qQXhMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMTItMDdUMTM6MzY6NDguNTA1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec50d59d12839c850dada69f046b15e46c81f5d4/salgado%201.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22salgado+1.jpeg%22%3B+filename%2A%3DUTF-8%27%27salgado%25201.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkMjAzV0ZsV1VuaDZOM3A0YlhkTWMzRlhSRXN4YVhCWEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkphVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljMkZzWjJGa2J5QXhMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmhiR2RoWkc4bE1qQXhMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMTItMDdUMTM6MzY6NDguNTA1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec50d59d12839c850dada69f046b15e46c81f5d4/salgado%201.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22salgado+1.jpeg%22%3B+filename%2A%3DUTF-8%27%27salgado%25201.jpeg
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkMjAzV0ZsV1VuaDZOM3A0YlhkTWMzRlhSRXN4YVhCWEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkphVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljMkZzWjJGa2J5QXhMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmhiR2RoWkc4bE1qQXhMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMTItMDdUMTM6MzY6NDguNTA1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec50d59d12839c850dada69f046b15e46c81f5d4/salgado%201.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22salgado+1.jpeg%22%3B+filename%2A%3DUTF-8%27%27salgado%25201.jpeg" for ::1 at 2021-12-07 14:31:48 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"salgado 1.jpeg\"; filename*=UTF-8''salgado%201.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkMjAzV0ZsV1VuaDZOM3A0YlhkTWMzRlhSRXN4YVhCWEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkphVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljMkZzWjJGa2J5QXhMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozTmhiR2RoWkc4bE1qQXhMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMTItMDdUMTM6MzY6NDguNTA1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec50d59d12839c850dada69f046b15e46c81f5d4", "filename"=>"salgado 1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/11/avatars" for ::1 at 2021-12-07 14:31:59 +0100
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DrQW9cy0Ni9BBzt8fZ+3AIpG189rhozpMvjzJ2gUFvtWYjMfOltzPxJpc/GOIGP0uHSyICSB02qU5NVmBvbXtw==", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x0000000113c1d608 @tempfile=#<Tempfile:/var/folders/vg/j5y53ymj42v02jhxcr3_z7sh0000gn/T/RackMultipart20211207-46874-1lxgm2d.jpg>, @original_filename="Collage_jake_lee2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"Collage_jake_lee2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "commit"=>"uploader l'avatar", "user_id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:3
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:4
+[36m  Disk Storage (4.9ms) [0m[32mUploaded file to key: oApRnSrA7gKqanmcoYxjvtVj (checksum: EsUFF3FsHKRg7E2VOAkq+w==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "oApRnSrA7gKqanmcoYxjvtVj"], ["filename", "Collage_jake_lee2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 658012], ["checksum", "EsUFF3FsHKRg7E2VOAkq+w=="], ["created_at", "2021-12-07 13:31:59.196762"]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 11], ["blob_id", 2], ["created_at", "2021-12-07 13:31:59.201362"]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2021-12-07 13:31:59.202945"], ["id", 11]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/avatars_controller.rb:4
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8) to Async(default) with arguments: #<GlobalID:0x0000000113c0c510 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/2>>
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 0020bec5-e8b8-4fa2-971a-c5cdbf60ea51) to Async(default) with arguments: #<GlobalID:0x000000010632eae0 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users/11
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8] Performing ActiveStorage::AnalyzeJob (Job ID: 01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8) from Async(default) with arguments: #<GlobalID:0x00000001351fc8a0 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/2>>
+Completed 302 Found in 31ms (ActiveRecord: 4.2ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: oApRnSrA7gKqanmcoYxjvtVj[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8] Performed ActiveStorage::AnalyzeJob (Job ID: 01d2e2ed-ff0c-4c55-9c4c-6a2b07f0e3c8) from Async(default) in 6.97ms
+Started GET "/users/11" for ::1 at 2021-12-07 14:31:59 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51] Performing ActiveStorage::PurgeJob (Job ID: 0020bec5-e8b8-4fa2-971a-c5cdbf60ea51) from Async(default) with arguments: #<GlobalID:0x0000000124fb2028 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mIdiom Load (0.8ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms" WHERE "idioms"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:15
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   [1m[36mActiveStorage::Attachment Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:22
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   [1m[36mActiveStorage::Blob Destroy (0.5ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (8.1ms)
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: wm7XYVRxz7zxmwLsqWDK1ipW[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/wm7XYVRxz7zxmwLsqWDK1ipW/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0020bec5-e8b8-4fa2-971a-c5cdbf60ea51] Performed ActiveStorage::PurgeJob (Job ID: 0020bec5-e8b8-4fa2-971a-c5cdbf60ea51) from Async(default) in 11.22ms
+Completed 200 OK in 26ms (Views: 19.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--123bd97dc9e72f08a0e4d9d999e47c64ec4cc8e5/Collage_jake_lee2.jpg" for ::1 at 2021-12-07 14:31:59 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--123bd97dc9e72f08a0e4d9d999e47c64ec4cc8e5", "filename"=>"Collage_jake_lee2"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: oApRnSrA7gKqanmcoYxjvtVj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRiMEZ3VW01VGNrRTNaMHR4WVc1dFkyOVplR3AyZEZacUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSlZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlRMjlzYkdGblpWOXFZV3RsWDJ4bFpUSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkRGIyeHNZV2RsWDJwaGEyVmZiR1ZsTWk1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTEyLTA3VDEzOjM2OjU5LjMwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--29e3149362f97453d4d98a12a8936f10924c9de1/Collage_jake_lee2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22Collage_jake_lee2.jpg%22%3B+filename%2A%3DUTF-8%27%27Collage_jake_lee2.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRiMEZ3VW01VGNrRTNaMHR4WVc1dFkyOVplR3AyZEZacUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSlZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlRMjlzYkdGblpWOXFZV3RsWDJ4bFpUSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkRGIyeHNZV2RsWDJwaGEyVmZiR1ZsTWk1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTEyLTA3VDEzOjM2OjU5LjMwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--29e3149362f97453d4d98a12a8936f10924c9de1/Collage_jake_lee2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22Collage_jake_lee2.jpg%22%3B+filename%2A%3DUTF-8%27%27Collage_jake_lee2.jpg
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRiMEZ3VW01VGNrRTNaMHR4WVc1dFkyOVplR3AyZEZacUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSlZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlRMjlzYkdGblpWOXFZV3RsWDJ4bFpUSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkRGIyeHNZV2RsWDJwaGEyVmZiR1ZsTWk1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTEyLTA3VDEzOjM2OjU5LjMwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--29e3149362f97453d4d98a12a8936f10924c9de1/Collage_jake_lee2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22Collage_jake_lee2.jpg%22%3B+filename%2A%3DUTF-8%27%27Collage_jake_lee2.jpg" for ::1 at 2021-12-07 14:31:59 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"Collage_jake_lee2.jpg\"; filename*=UTF-8''Collage_jake_lee2.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRiMEZ3VW01VGNrRTNaMHR4WVc1dFkyOVplR3AyZEZacUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSlZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlRMjlzYkdGblpWOXFZV3RsWDJ4bFpUSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkRGIyeHNZV2RsWDJwaGEyVmZiR1ZsTWk1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTEyLTA3VDEzOjM2OjU5LjMwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--29e3149362f97453d4d98a12a8936f10924c9de1", "filename"=>"Collage_jake_lee2"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/11/avatars" for ::1 at 2021-12-07 14:32:09 +0100
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zkaUVbCCtn5b8NZEmZqbjOvbeQrBV4QRHy4bJ3GrAPCWkLG/Rm3zbgienslqJU942ekc5Y5Q25K5Mj1mH0nBvA==", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x0000000123ef5550 @tempfile=#<Tempfile:/var/folders/vg/j5y53ymj42v02jhxcr3_z7sh0000gn/T/RackMultipart20211207-46874-16mj7hh.jpg>, @original_filename="photo signature.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo signature.jpg\"\r\nContent-Type: image/jpeg\r\n">, "commit"=>"uploader l'avatar", "user_id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:3
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:4
+[36m  Disk Storage (2.7ms) [0m[32mUploaded file to key: 4Ly8X9Cy352Uvhxgn2X8WNKW (checksum: QEwmBWlZLxvlIJaMr8tUtQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "4Ly8X9Cy352Uvhxgn2X8WNKW"], ["filename", "photo signature.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 22582], ["checksum", "QEwmBWlZLxvlIJaMr8tUtQ=="], ["created_at", "2021-12-07 13:32:09.553333"]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Attachment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 11], ["blob_id", 3], ["created_at", "2021-12-07 13:32:09.559105"]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2021-12-07 13:32:09.561013"], ["id", 11]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/avatars_controller.rb:4
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bd4908be-8a05-4cff-b96a-0f8ce2d53d59) to Async(default) with arguments: #<GlobalID:0x0000000123e6c930 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/3>>
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 6f4a2c99-dddf-444b-8ac5-73ac6ec851a9) to Async(default) with arguments: #<GlobalID:0x0000000123e643e8 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/2>>
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 25ms (ActiveRecord: 4.6ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59] Performing ActiveStorage::AnalyzeJob (Job ID: bd4908be-8a05-4cff-b96a-0f8ce2d53d59) from Async(default) with arguments: #<GlobalID:0x0000000123e4dcb0 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9] Performing ActiveStorage::PurgeJob (Job ID: 6f4a2c99-dddf-444b-8ac5-73ac6ec851a9) from Async(default) with arguments: #<GlobalID:0x0000000123e45ad8 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: 4Ly8X9Cy352Uvhxgn2X8WNKW[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59] Skipping image analysis because the mini_magick gem isn't installed
+Started GET "/users/11" for ::1 at 2021-12-07 14:32:09 +0100
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   [1m[36mActiveStorage::Attachment Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+Processing by UsersController#show as HTML
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   [1m[36mActiveStorage::Blob Destroy (0.9ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Parameters: {"id"=>"11"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd4908be-8a05-4cff-b96a-0f8ce2d53d59] Performed ActiveStorage::AnalyzeJob (Job ID: bd4908be-8a05-4cff-b96a-0f8ce2d53d59) from Async(default) in 8.79ms
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  ↳ app/controllers/users_controller.rb:4
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9] [36m  Disk Storage (0.8ms) [0m[31mDeleted file from key: oApRnSrA7gKqanmcoYxjvtVj[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/oApRnSrA7gKqanmcoYxjvtVj/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6f4a2c99-dddf-444b-8ac5-73ac6ec851a9] Performed ActiveStorage::PurgeJob (Job ID: 6f4a2c99-dddf-444b-8ac5-73ac6ec851a9) from Async(default) in 10.98ms
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms" WHERE "idioms"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d7b3724e33ecba2b478b7a1b8350df6b5a7e9a36/photo%20signature.jpg" for ::1 at 2021-12-07 14:32:09 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d7b3724e33ecba2b478b7a1b8350df6b5a7e9a36", "filename"=>"photo signature"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: 4Ly8X9Cy352Uvhxgn2X8WNKW (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORXg1T0ZnNVEza3pOVEpWZG1oNFoyNHlXRGhYVGt0WEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSlRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR2h2ZEc4Z2MybG5ibUYwZFhKbExtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dodmRHOGxNakJ6YVdkdVlYUjFjbVV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjEtMTItMDdUMTM6Mzc6MDkuNjU5WiIsInB1ciI6ImJsb2Jfa2V5In19--09789ec4ed02c4d898d48c42c3ab54e30da7db4c/photo%20signature.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22photo+signature.jpg%22%3B+filename%2A%3DUTF-8%27%27photo%2520signature.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORXg1T0ZnNVEza3pOVEpWZG1oNFoyNHlXRGhYVGt0WEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSlRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR2h2ZEc4Z2MybG5ibUYwZFhKbExtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dodmRHOGxNakJ6YVdkdVlYUjFjbVV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjEtMTItMDdUMTM6Mzc6MDkuNjU5WiIsInB1ciI6ImJsb2Jfa2V5In19--09789ec4ed02c4d898d48c42c3ab54e30da7db4c/photo%20signature.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22photo+signature.jpg%22%3B+filename%2A%3DUTF-8%27%27photo%2520signature.jpg
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORXg1T0ZnNVEza3pOVEpWZG1oNFoyNHlXRGhYVGt0WEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSlRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR2h2ZEc4Z2MybG5ibUYwZFhKbExtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dodmRHOGxNakJ6YVdkdVlYUjFjbVV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjEtMTItMDdUMTM6Mzc6MDkuNjU5WiIsInB1ciI6ImJsb2Jfa2V5In19--09789ec4ed02c4d898d48c42c3ab54e30da7db4c/photo%20signature.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22photo+signature.jpg%22%3B+filename%2A%3DUTF-8%27%27photo%2520signature.jpg" for ::1 at 2021-12-07 14:32:09 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"photo signature.jpg\"; filename*=UTF-8''photo%20signature.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORXg1T0ZnNVEza3pOVEpWZG1oNFoyNHlXRGhYVGt0WEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSlRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR2h2ZEc4Z2MybG5ibUYwZFhKbExtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dodmRHOGxNakJ6YVdkdVlYUjFjbVV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjEtMTItMDdUMTM6Mzc6MDkuNjU5WiIsInB1ciI6ImJsb2Jfa2V5In19--09789ec4ed02c4d898d48c42c3ab54e30da7db4c", "filename"=>"photo signature"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/11/avatars" for ::1 at 2021-12-07 14:32:44 +0100
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gtia0GWZ9fMI8VTqUthqGt+uVp5E6gafFxEJqalxP2/aDr86k3aw41ufHGehZ77u7ZwzcQvtWRyxDS/ox5P+Iw==", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00000001264b12d0 @tempfile=#<Tempfile:/var/folders/vg/j5y53ymj42v02jhxcr3_z7sh0000gn/T/RackMultipart20211207-46874-gu4ew3.jpeg>, @original_filename="richelieu.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"richelieu.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "commit"=>"uploader l'avatar", "user_id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:3
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/avatars_controller.rb:4
+[36m  Disk Storage (3.3ms) [0m[32mUploaded file to key: PKsfwQoELwm6E2CbaMK4Z8M3 (checksum: 51DDQUWCYyXJhkDuF7mVdA==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "PKsfwQoELwm6E2CbaMK4Z8M3"], ["filename", "richelieu.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 29835], ["checksum", "51DDQUWCYyXJhkDuF7mVdA=="], ["created_at", "2021-12-07 13:32:44.530148"]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Attachment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 11], ["blob_id", 4], ["created_at", "2021-12-07 13:32:44.535878"]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2021-12-07 13:32:44.537553"], ["id", 11]]
+  ↳ app/controllers/avatars_controller.rb:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/avatars_controller.rb:4
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b55d37fb-9e6d-451f-b154-831ccc51b930) to Async(default) with arguments: #<GlobalID:0x00000001255812d8 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/4>>
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 528fea2a-40c9-4b75-91f2-1f771b14ed9c) to Async(default) with arguments: #<GlobalID:0x0000000125578f70 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/3>>
+Redirected to http://localhost:3000/users/11
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 302 Found in 23ms (ActiveRecord: 3.8ms)
+
+
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930] Performing ActiveStorage::AnalyzeJob (Job ID: b55d37fb-9e6d-451f-b154-831ccc51b930) from Async(default) with arguments: #<GlobalID:0x0000000125562e78 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/4>>
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c] Performing ActiveStorage::PurgeJob (Job ID: 528fea2a-40c9-4b75-91f2-1f771b14ed9c) from Async(default) with arguments: #<GlobalID:0x000000012555a0e8 @uri=#<URI::GID gid://slaf-project/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930] [36m  Disk Storage (1.2ms) [0m[34mDownloaded file from key: PKsfwQoELwm6E2CbaMK4Z8M3[0m
+Started GET "/users/11" for ::1 at 2021-12-07 14:32:44 +0100
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   [1m[36mActiveStorage::Attachment Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   [1m[36mActiveStorage::Blob Destroy (0.9ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 3]]
+  Parameters: {"id"=>"11"}
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering users/show.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: 4Ly8X9Cy352Uvhxgn2X8WNKW[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/4Ly8X9Cy352Uvhxgn2X8WNKW/[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [528fea2a-40c9-4b75-91f2-1f771b14ed9c] Performed ActiveStorage::PurgeJob (Job ID: 528fea2a-40c9-4b75-91f2-1f771b14ed9c) from Async(default) in 11.75ms
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms" WHERE "idioms"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 2.1ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930]   [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930]   ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b55d37fb-9e6d-451f-b154-831ccc51b930] Performed ActiveStorage::AnalyzeJob (Job ID: b55d37fb-9e6d-451f-b154-831ccc51b930) from Async(default) in 44.27ms
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91fc48383382db28d208653eb437701f5e3672ed/richelieu.jpeg" for ::1 at 2021-12-07 14:32:44 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91fc48383382db28d208653eb437701f5e3672ed", "filename"=>"richelieu"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: PKsfwQoELwm6E2CbaMK4Z8M3 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRVRXR6Wm5kUmIwVk1kMjAyUlRKRFltRk5TelJhT0UwekJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljbWxqYUdWc2FXVjFMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozSnBZMmhsYkdsbGRTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0xMi0wN1QxMzozNzo0NC42NTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--ad96fa90b36be793e56c37bbb074fca2653a2420/richelieu.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22richelieu.jpeg%22%3B+filename%2A%3DUTF-8%27%27richelieu.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRVRXR6Wm5kUmIwVk1kMjAyUlRKRFltRk5TelJhT0UwekJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljbWxqYUdWc2FXVjFMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozSnBZMmhsYkdsbGRTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0xMi0wN1QxMzozNzo0NC42NTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--ad96fa90b36be793e56c37bbb074fca2653a2420/richelieu.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22richelieu.jpeg%22%3B+filename%2A%3DUTF-8%27%27richelieu.jpeg
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRVRXR6Wm5kUmIwVk1kMjAyUlRKRFltRk5TelJhT0UwekJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljbWxqYUdWc2FXVjFMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozSnBZMmhsYkdsbGRTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0xMi0wN1QxMzozNzo0NC42NTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--ad96fa90b36be793e56c37bbb074fca2653a2420/richelieu.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22richelieu.jpeg%22%3B+filename%2A%3DUTF-8%27%27richelieu.jpeg" for ::1 at 2021-12-07 14:32:44 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"richelieu.jpeg\"; filename*=UTF-8''richelieu.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRVRXR6Wm5kUmIwVk1kMjAyUlRKRFltRk5TelJhT0UwekJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljbWxqYUdWc2FXVjFMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozSnBZMmhsYkdsbGRTNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0xMi0wN1QxMzozNzo0NC42NTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--ad96fa90b36be793e56c37bbb074fca2653a2420", "filename"=>"richelieu"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
