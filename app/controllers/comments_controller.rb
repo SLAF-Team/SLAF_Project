@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
         @comment = Comment.find(params[:id])
      
         if @comment.update('body' => params[:comment][:body])
-          redirect_to root_path
+          redirect_to idiom_path(@idiom)
         else
           render :edit
         end
