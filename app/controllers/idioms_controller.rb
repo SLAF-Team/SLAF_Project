@@ -5,7 +5,7 @@ class IdiomsController < ApplicationController
   end
 
   def index
-    @pagy, @idioms = pagy(Idiom.order(created_at: :desc), items: 8)
+    @pagy, @idioms = pagy(Idiom.order(created_at: :desc))
   end
 
   def new
