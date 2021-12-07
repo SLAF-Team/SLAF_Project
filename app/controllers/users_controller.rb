@@ -5,7 +5,6 @@ class UsersController < ApplicationController
         @likes = Like.where(user: @user)
         @idioms = Idiom.where(user: @user)
     end
-
 end
 
 private
