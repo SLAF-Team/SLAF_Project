@@ -5,7 +5,9 @@
     Grammatical type : <%=idiom.grammatical_type%><br>
     Body : <%=idiom.body%><br>
     Example : <%=idiom.example%><br>
-    Alias : <%=idiom.user.alias%><br><br>
-    <%= link_to 'voir', idiom_path(idiom.id)%>
+    Alias : <%=idiom.user.alias%><br>
+    <%= idiom.likes.count %> <%= (idiom.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+    <%= link_to "Lien vers l'idiome", idiom_path(idiom.id) %><br>
+
     -----------------------------------------------------
 <%end%>

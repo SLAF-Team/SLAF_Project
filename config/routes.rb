@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   end
   resources :team, only: [:show]
   resources :faq, only: [:show]
+  resources :idioms do
+    resources :likes
+  end
 end
