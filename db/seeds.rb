@@ -37,7 +37,7 @@ User.create(first_name: 'Armand',
     Idiom.create(title_en: Faker::Lorem.words(number: 1),
                  title_fr: Faker::Lorem.words(number: 1),
                  grammatical_type: Faker::Lorem.words(number: 1),
-                 body:Faker::Lorem.sentence(word_count: 3, supplemental: true),
+                 body: Faker::Lorem.sentence(word_count: 3),
                  example:Faker::Lorem.sentence(word_count: 3, supplemental: true),
                  user: User.all.sample
 )
