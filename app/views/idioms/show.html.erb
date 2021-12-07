@@ -5,5 +5,7 @@
 <% end %>
 
 <% @idiom.comments.each do |comment|%>
-    <%=comment.body%> <br>
+    <%=comment.body%>
+    <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %>
+    <%=comment.id%><br>
 <%end%>

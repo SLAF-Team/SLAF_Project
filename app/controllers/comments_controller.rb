@@ -11,7 +11,8 @@ class CommentsController < ApplicationController
     end
 
     def destroy
-
+        @idiom.comments.find(params[:id]).destroy
+        redirect_to root_path
     end
 
     def edit
