@@ -68,213 +68,57 @@ Migrating to CreateLikes (20211206140730)
   ↳ bin/rails:4
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
-  [1m[35m (83.1ms)[0m  [1m[35mCREATE DATABASE "SLAF_Project_development" ENCODING = 'unicode'[0m
-  ↳ bin/rails:4
-  [1m[35m (30.3ms)[0m  [1m[35mCREATE DATABASE "SLAF_Project_test" ENCODING = 'unicode'[0m
-  ↳ bin/rails:4
-  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
-  ↳ bin/rails:4
-  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  ↳ bin/rails:4
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1301751432327217305)[0m
-  ↳ bin/rails:4
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:4
-Migrating to CreateUsers (20211206140628)
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ bin/rails:4
-  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "encrypted_password" character varying, "alias" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  ↳ db/migrate/20211206140628_create_users.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211206140628"]]
-  ↳ bin/rails:4
-  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
-  ↳ bin/rails:4
-Migrating to CreateIdioms (20211206140702)
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ bin/rails:4
-  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "idioms" ("id" bigserial primary key, "title_en" character varying, "title_fr" character varying, "type" character varying, "body" text, "example" text, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  ↳ db/migrate/20211206140702_create_idioms.rb:3
-  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_idioms_on_user_id" ON "idioms"  ("user_id")[0m
-  ↳ db/migrate/20211206140702_create_idioms.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211206140702"]]
-  ↳ bin/rails:4
-  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
-  ↳ bin/rails:4
-Migrating to CreateComments (20211206140709)
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ bin/rails:4
-  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "body" text, "user_id" bigint, "idiom_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  ↳ db/migrate/20211206140709_create_comments.rb:3
-  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
-  ↳ db/migrate/20211206140709_create_comments.rb:3
-  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_idiom_id" ON "comments"  ("idiom_id")[0m
-  ↳ db/migrate/20211206140709_create_comments.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211206140709"]]
-  ↳ bin/rails:4
-  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
-  ↳ bin/rails:4
-Migrating to CreateLikes (20211206140730)
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ bin/rails:4
-  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint, "idiom_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
-  ↳ db/migrate/20211206140730_create_likes.rb:3
-  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_user_id" ON "likes"  ("user_id")[0m
-  ↳ db/migrate/20211206140730_create_likes.rb:3
-  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_idiom_id" ON "likes"  ("idiom_id")[0m
-  ↳ db/migrate/20211206140730_create_likes.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211206140730"]]
-  ↳ bin/rails:4
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  ↳ bin/rails:4
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  ↳ bin/rails:4
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ bin/rails:4
-  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-06 14:29:07.481868"], ["updated_at", "2021-12-06 14:29:07.481868"]]
-  ↳ bin/rails:4
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  ↳ bin/rails:4
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1301751432327217305)[0m
-  ↳ bin/rails:4
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:4
-  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" LIMIT $1[0m  [["LIMIT", 11]]
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:4
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ db/seeds.rb:9
-  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
-  ↳ db/seeds.rb:10
-  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
-  ↳ db/seeds.rb:11
-  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
-  ↳ db/seeds.rb:12
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Evelyne"], ["last_name", "Dach"], ["email", "houston@bashirian.name"], ["encrypted_password", "9026070420"], ["alias", "Da Vinci"], ["admin", false], ["created_at", "2021-12-06 14:50:21.399249"], ["updated_at", "2021-12-06 14:50:21.399249"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Solomon"], ["last_name", "Hand"], ["email", "horacio.raynor@kohler.name"], ["encrypted_password", "7297976424"], ["alias", "Durer"], ["admin", false], ["created_at", "2021-12-06 14:50:21.403462"], ["updated_at", "2021-12-06 14:50:21.403462"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Lloyd"], ["last_name", "Mann"], ["email", "cruz@oberbrunner.org"], ["encrypted_password", "9289444145"], ["alias", "Da Vinci"], ["admin", false], ["created_at", "2021-12-06 14:50:21.406664"], ["updated_at", "2021-12-06 14:50:21.406664"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Johnnie"], ["last_name", "Jones"], ["email", "reggie@ryan-jacobs.com"], ["encrypted_password", "4031796966"], ["alias", "Caravaggio"], ["admin", false], ["created_at", "2021-12-06 14:50:21.410090"], ["updated_at", "2021-12-06 14:50:21.410090"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Keneth"], ["last_name", "Grimes"], ["email", "caroyln@sauer-collins.net"], ["encrypted_password", "1254100984"], ["alias", "Chagall"], ["admin", false], ["created_at", "2021-12-06 14:50:21.413120"], ["updated_at", "2021-12-06 14:50:21.413120"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Lanora"], ["last_name", "Oberbrunner"], ["email", "wesley@rodriguez.org"], ["encrypted_password", "2863872360"], ["alias", "Bernini"], ["admin", false], ["created_at", "2021-12-06 14:50:21.416287"], ["updated_at", "2021-12-06 14:50:21.416287"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Eldon"], ["last_name", "Bayer"], ["email", "emmitt@bins.com"], ["encrypted_password", "4245030488"], ["alias", "Degas"], ["admin", false], ["created_at", "2021-12-06 14:50:21.419088"], ["updated_at", "2021-12-06 14:50:21.419088"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Aura"], ["last_name", "Boyle"], ["email", "suk@kozey.io"], ["encrypted_password", "3318317822"], ["alias", "Kahlo"], ["admin", false], ["created_at", "2021-12-06 14:50:21.422089"], ["updated_at", "2021-12-06 14:50:21.422089"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Concepcion"], ["last_name", "Effertz"], ["email", "terrilyn@stoltenberg.net"], ["encrypted_password", "3389696019"], ["alias", "Manet"], ["admin", false], ["created_at", "2021-12-06 14:50:21.425136"], ["updated_at", "2021-12-06 14:50:21.425136"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:15
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Tamera"], ["last_name", "Bosco"], ["email", "ossie_pollich@durgan.name"], ["encrypted_password", "8453483766"], ["alias", "Michelangelo"], ["admin", false], ["created_at", "2021-12-06 14:50:21.428438"], ["updated_at", "2021-12-06 14:50:21.428438"]]
-  ↳ db/seeds.rb:15
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:15
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:25
-  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "alias", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Armand"], ["last_name", "Richelieu"], ["email", "richelieu.armand@yopmail.com"], ["encrypted_password", "123soleil"], ["alias", "Le recteur"], ["admin", true], ["created_at", "2021-12-06 14:50:21.430902"], ["updated_at", "2021-12-06 14:50:21.430902"]]
-  ↳ db/seeds.rb:25
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:25
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   ↳ db/seeds.rb:9
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
-  ↳ db/seeds.rb:9
-  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:9
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
-  ↳ db/seeds.rb:9
-  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:9
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
-  ↳ db/seeds.rb:9
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:9
-  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
-  ↳ db/seeds.rb:9
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  ↳ db/seeds.rb:9
-  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
-  ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
   ↳ db/seeds.rb:9
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:9
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
   ↳ db/seeds.rb:9
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:9
-  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
   ↳ db/seeds.rb:9
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:9
-  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
   ↳ db/seeds.rb:9
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:9
-  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
-  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
   ↳ db/seeds.rb:9
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:9
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
+<<<<<<< HEAD
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+=======
   [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
   ↳ db/seeds.rb:9
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
@@ -366,11 +210,15 @@ Migrating to CreateLikes (20211206140730)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
   [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+>>>>>>> 576c38b56480e8ca509531f61eff5fb5a0cd42a4
   ↳ db/seeds.rb:9
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:9
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
+<<<<<<< HEAD
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+=======
   [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
   ↳ db/seeds.rb:9
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
@@ -396,11 +244,144 @@ Migrating to CreateLikes (20211206140730)
   [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
   [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+>>>>>>> 576c38b56480e8ca509531f61eff5fb5a0cd42a4
   ↳ db/seeds.rb:9
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:9
   [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
   ↳ db/seeds.rb:9
+<<<<<<< HEAD
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.1ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mIdiom Destroy (0.2ms)[0m  [1m[31mDELETE FROM "idioms" WHERE "idioms"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mComment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mComment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mComment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mComment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mComment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mLike Destroy (0.2ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mLike Destroy (0.2ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mLike Destroy (0.2ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mLike Destroy (0.3ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mLike Destroy (0.2ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+=======
   [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
   ↳ db/seeds.rb:9
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
@@ -3458,6 +3439,7 @@ Migrating to AddGrammaticalType (20211206160626)
   ↳ db/seeds.rb:52
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   ↳ db/seeds.rb:52
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2021-12-06 18:07:03 +0100
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/lucas/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
@@ -8083,3 +8065,6 @@ app/controllers/users_controller.rb:3:in `show'
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   ↳ db/seeds.rb:54
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+=======
+>>>>>>> 576c38b56480e8ca509531f61eff5fb5a0cd42a4
+>>>>>>> f79f42e08a61c1b0025ba18c1fca00c30bfbaae2
