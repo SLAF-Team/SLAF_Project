@@ -10960,3 +10960,806 @@ Processing by IdiomsController#index as HTML
 Completed 200 OK in 53ms (Views: 44.2ms | ActiveRecord: 7.4ms)
 
 
+Started GET "/" for ::1 at 2021-12-07 13:24:27 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/violettemarquis/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  Rendered idioms/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 134ms (Views: 118.3ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/idioms/1" for ::1 at 2021-12-07 13:24:30 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (38.2ms)
+  Rendered idioms/show.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 65ms (Views: 50.2ms | ActiveRecord: 11.9ms)
+
+
+Started DELETE "/idioms/1/likes/15" for ::1 at 2021-12-07 13:24:32 +0100
+Processing by LikesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/xTBASWMgNXAIR7i7nJTnjNvKT7UiW6RDDSiWd3icHqnwuTr02PFxZNPVm8dzYdqAV1M0ZuOMRKqKIQYswCxNg==", "idiom_id"=>"1", "id"=>"15"}
+  [1m[36mIdiom Load (1.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:25
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1 AND "likes"."id" = $2 LIMIT $3[0m  [["idiom_id", 1], ["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:33
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:29
+  [1m[36mLike Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."idiom_id" = $2 LIMIT $3[0m  [["user_id", 11], ["idiom_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/likes_controller.rb:18
+  [1m[36mLike Destroy (0.4ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/likes_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/likes_controller.rb:18
+Redirected to http://localhost:3000/idioms/1
+Completed 302 Found in 19ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/idioms/1" for ::1 at 2021-12-07 13:24:32 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (4.2ms)
+  Rendered idioms/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/idioms/1/likes" for ::1 at 2021-12-07 13:24:34 +0100
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"mPcs65ahue95rXax0d8oyJEaIVaj5u0JsFlVUHj4XS7AIQkBYE78/yrDPjwiYPw8oyhEuezhsooWRXMRFhqcYg==", "idiom_id"=>"1"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:29
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."idiom_id" = $2 LIMIT $3[0m  [["user_id", 11], ["idiom_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/likes_controller.rb:9
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["idiom_id", 1], ["created_at", "2021-12-07 12:24:34.353683"], ["updated_at", "2021-12-07 12:24:34.353683"]]
+  ↳ app/controllers/likes_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/likes_controller.rb:9
+Redirected to http://localhost:3000/idioms/1
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/idioms/1" for ::1 at 2021-12-07 13:24:34 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (1.9ms)
+  Rendered idioms/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "richelieu.armand@yopmail.com"], ["LIMIT", 1]]
+Started GET "/users/11" for ::1 at 2021-12-07 13:25:33 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/violettemarquis/Documents/THP/semaine_11/SLAF_Project/app/views/users/show.html.erb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/show.html.erb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/11" for ::1 at 2021-12-07 13:25:46 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `idioms' for #<Like:0x00000001324a63d8>
+Did you mean?  idiom
+               idiom=):
+    14: 
+    15: <h2>Mes expressions</h2>
+    16: <%= @user_likes.each do |user_like| %>
+    17: <%= user_like.idioms.title_en %>
+    18: <%end%>
+  
+app/views/users/show.html.erb:17:in `block in _app_views_users_show_html_erb___1078268281438202624_20920'
+app/views/users/show.html.erb:16:in `_app_views_users_show_html_erb___1078268281438202624_20920'
+Started GET "/users/11" for ::1 at 2021-12-07 13:25:56 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:26:09 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:27:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 48ms (Views: 23.3ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:27:59 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `index' for #<Like:0x000000013319bbb0>):
+    14: 
+    15: <h2>Mes expressions</h2>
+    16: <%= @likes.each do |like| %>
+    17: <%= like.index %>
+    18: <%= like.idiom.title_en %>
+    19: <%= like.idiom.title_fr %>
+    20: <%end%>
+  
+app/views/users/show.html.erb:17:in `block in _app_views_users_show_html_erb___1078268281438202624_30340'
+app/views/users/show.html.erb:16:in `_app_views_users_show_html_erb___1078268281438202624_30340'
+Started GET "/users/11" for ::1 at 2021-12-07 13:28:42 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (18.9ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `find_index' for #<Like:0x00000001335f5558>):
+    14: 
+    15: <h2>Mes expressions</h2>
+    16: <%= @likes.each do |like| %>
+    17: <%= like.find_index%>
+    18: <%= like.idiom.title_en %>
+    19: <%= like.idiom.title_fr %>
+    20: <%end%>
+  
+app/views/users/show.html.erb:17:in `block in _app_views_users_show_html_erb___1078268281438202624_30860'
+app/views/users/show.html.erb:16:in `_app_views_users_show_html_erb___1078268281438202624_30860'
+Started GET "/users/11" for ::1 at 2021-12-07 13:29:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (101.2ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `likes' for #<#<Class:0x00000001322cc2d8>:0x00000001343b8168>
+Did you mean?  like
+               @likes):
+    14: 
+    15: <h2>Mes expressions</h2>
+    16: <%= @likes.each do |like| %>
+    17: <%= likes.index(like)%>
+    18: <%= like.idiom.title_en %>
+    19: <%= like.idiom.title_fr %>
+    20: <%end%>
+  
+app/views/users/show.html.erb:17:in `block in _app_views_users_show_html_erb___1078268281438202624_31380'
+app/views/users/show.html.erb:16:in `_app_views_users_show_html_erb___1078268281438202624_31380'
+Started GET "/users/11" for ::1 at 2021-12-07 13:29:15 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:29:38 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:29:50 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:30:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:30:01 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:30:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 13:30:24 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  Rendered idioms/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/idioms/3" for ::1 at 2021-12-07 13:30:26 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (6.7ms)
+  Rendered idioms/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/idioms/3/likes" for ::1 at 2021-12-07 13:30:27 +0100
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"sb4jB8J1iGkhR8dRL132HSoFRU1QRctZHP4OfEAQJ+HpaAbtNJrNeXIpj9zc4iLpGDcgoh9ClNq64ig9LvLmrQ==", "idiom_id"=>"3"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:29
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."idiom_id" = $2 LIMIT $3[0m  [["user_id", 11], ["idiom_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/likes_controller.rb:9
+  [1m[36mLike Create (1.9ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "idiom_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["idiom_id", 3], ["created_at", "2021-12-07 12:30:27.774143"], ["updated_at", "2021-12-07 12:30:27.774143"]]
+  ↳ app/controllers/likes_controller.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/likes_controller.rb:9
+Redirected to http://localhost:3000/idioms/3
+Completed 302 Found in 14ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/idioms/3" for ::1 at 2021-12-07 13:30:27 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (8.7ms)
+  Rendered idioms/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2021-12-07 13:30:32 +0100
+Processing by IdiomsController#index as HTML
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 2]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 4]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 5]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 6]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 7]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 8]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 9]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:9
+  Rendered idioms/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 45ms (Views: 37.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:30:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:30:47 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/11" for ::1 at 2021-12-07 13:31:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `idiom_path' for #<Like:0x000000013204bb58>
+Did you mean?  idiom_id):
+    17: <br>Expression numéro <%= @likes.index(like) + 1 %>
+    18: <br><%= like.idiom.title_en %>
+    19: <br><%= like.idiom.title_fr %>
+    20: <br><%= link_to "Voir", like.idiom_path %>
+    21: <% end %>
+  
+app/views/users/show.html.erb:20:in `block in _app_views_users_show_html_erb___1078268281438202624_33080'
+app/views/users/show.html.erb:16:in `_app_views_users_show_html_erb___1078268281438202624_33080'
+Started GET "/users/11" for ::1 at 2021-12-07 13:31:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/idioms/11" for ::1 at 2021-12-07 13:31:32 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idiom with 'id'=11):
+  
+app/controllers/idioms_controller.rb:4:in `show'
+Started GET "/users/11" for ::1 at 2021-12-07 13:31:45 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mIdiom Load (0.1ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/idioms/16" for ::1 at 2021-12-07 13:31:46 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idiom with 'id'=16):
+  
+app/controllers/idioms_controller.rb:4:in `show'
+Started GET "/users/11" for ::1 at 2021-12-07 13:32:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/idioms/1" for ::1 at 2021-12-07 13:32:12 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdiom Load (0.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (9.4ms)
+  Rendered idioms/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/idioms/3" for ::1 at 2021-12-07 13:32:16 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdiom Load (0.8ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 3]]
+  ↳ app/views/idioms/_like.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (6.2ms)
+  Rendered idioms/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 1.8ms)
+
+
