@@ -12,14 +12,15 @@ Comment.destroy_all
 Like.destroy_all
 
 10.times do
-    User.create(first_name: Faker::Name.first_name,
-                last_name: Faker::Name.last_name,
-                email: Faker::Internet.email,
-                password: 'test123',
-                password_confirmation: 'test123',
-                alias: Faker::Artist.name,
-                admin: false
-            )
+    User.create(
+        first_name: Faker::Name.first_name,
+        last_name: Faker::Name.last_name,
+        email: Faker::Internet.email,
+        password: 'test123',
+        password_confirmation: 'test123',
+        alias: Faker::Artist.name,
+        admin: false
+        )
 end
 
 #Admin user
@@ -32,25 +33,28 @@ User.create(first_name: 'Armand',
     admin: true
 )
 
-20.times do
-    Idiom.create(title_en: Faker::Lorem.words(number: 1),
-                 title_fr: Faker::Lorem.words(number: 1),
-                 grammatical_type: Faker::Lorem.words(number: 1),
-                 body: Faker::Lorem.sentence(word_count: 3),
-                 example:Faker::Lorem.sentence(word_count: 3, supplemental: true),
-                 user: User.all.sample
+50.times do
+    Idiom.create(
+        title_en: Faker::Hipster.unique.word.capitalize,
+        title_fr: Faker::Space.star.capitalize,
+        grammatical_type: Faker::Lorem.word,
+        body: Faker::Lorem.sentence(word_count: 3),
+        example:Faker::Lorem.sentence(word_count: 3, supplemental: true),
+        user: User.all.sample
 )
 end
 
 5.times do
-    Comment.create(body: Faker::Lorem.sentence(word_count: 3, supplemental: true),
-                   user: User.all.sample,
-                   idiom: Idiom.all.sample
+    Comment.create(
+        body: Faker::Lorem.sentence(word_count: 3, supplemental: true),
+        user: User.all.sample,
+        idiom: Idiom.all.sample
 )
 end
 
-5.times do
-    Like.create(user: User.all.sample,
-                idiom: Idiom.all.sample
+30.times do
+    Like.create(
+        user: User.all.sample,
+        idiom: Idiom.all.sample
 )
 end
