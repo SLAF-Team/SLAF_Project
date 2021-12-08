@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :faq, only: [:show]
   resources :idioms do
     resources :likes
+    resources :unlikes
   end
 
   ### Admin

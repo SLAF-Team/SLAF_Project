@@ -1,0 +1,8 @@
+<%= @idiom.unlikes.count %> <%= (@idiom.unlikes.count) == 1 ? 'Détracteur' : 'Détracteurs'%></p>
+
+<% pre_unlike = @idiom.unlikes.find { |unlike| unlike.user_id == current_user.id} %>
+<% if pre_unlike %>
+  <%= button_to "Je ne déteste plus", idiom_unlike_path(@idiom, pre_unlike), method: :delete %>
+<% else %>
+  <%= button_to "Je déteste", idiom_unlikes_path(@idiom), method: :post %>
+<% end %>
