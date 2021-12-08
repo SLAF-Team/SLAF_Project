@@ -25189,3 +25189,175 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 218ms (Views: 138.5ms | ActiveRecord: 64.3ms)
 
 
+Started GET "/" for ::1 at 2021-12-08 17:31:35 +0100
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/laurent/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:10
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 50]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 50]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 50]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 50]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 49]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 49]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 49]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 49]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 48]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 48]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 48]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 48]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 47]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 47]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 47]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 47]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 46]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 46]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 46]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 46]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 45]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 45]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 45]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 45]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 44]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 44]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 44]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 44]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 43]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 43]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 43]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 43]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:14
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:14
+  Rendered idioms/index.html.erb within layouts/application (141.9ms)
+  Rendered layouts/_flash.html.erb (1.2ms)
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:27
+  Rendered layouts/_navbar.html.erb (16.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1398ms (Views: 1320.6ms | ActiveRecord: 58.4ms)
+
+
+Started GET "/" for ::1 at 2021-12-08 17:52:14 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:10
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 50]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 50]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 50]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 50]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 49]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 49]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 49]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 49]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 48]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 48]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 48]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 48]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 47]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 47]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 47]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 47]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 46]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 46]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 46]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 46]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 45]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 45]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 45]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 45]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 44]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 44]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 44]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 44]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 43]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 43]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 43]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "unlikes" WHERE "unlikes"."idiom_id" = $1[0m  [["idiom_id", 43]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:14
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:14
+  Rendered idioms/index.html.erb within layouts/application (76.0ms)
+  Rendered layouts/_flash.html.erb (1.4ms)
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:27
+  Rendered layouts/_navbar.html.erb (30.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 296ms (Views: 255.8ms | ActiveRecord: 36.8ms)
+
+
