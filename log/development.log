@@ -19375,3 +19375,123 @@ Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.5ms)
 >>>>>>> development
 
 
+Started GET "/" for ::1 at 2021-12-08 15:46:28 +0100
+  [1m[35m (42.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/laurent/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#index as HTML
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:17
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:17
+  Rendered idioms/index.html.erb within layouts/application (87.7ms)
+  Rendered layouts/_navbar.html.erb (5.7ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+Completed 200 OK in 2341ms (Views: 2303.1ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/idioms/17" for ::1 at 2021-12-08 15:46:34 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mIdiom Load (0.8ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (85.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/show.html.erb:7
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (5.0ms)
+  Rendered idioms/show.html.erb within layouts/application (3374.7ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+Completed 200 OK in 3458ms (Views: 3361.4ms | ActiveRecord: 92.0ms)
+
+
+Started GET "/idioms/17" for ::1 at 2021-12-08 15:48:03 +0100
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mIdiom Load (1.8ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/show.html.erb:7
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (3.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (12.0ms)
+  Rendered idioms/show.html.erb within layouts/application (24.9ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+Completed 200 OK in 154ms (Views: 142.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/idioms/17" for ::1 at 2021-12-08 15:48:25 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/laurent/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" WHERE "idioms"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/idioms_controller.rb:4
+  Rendering idioms/show.html.erb within layouts/application
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/show.html.erb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:1
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/_like.html.erb:3
+  Rendered idioms/_like.html.erb (9.8ms)
+  Rendered idioms/show.html.erb within layouts/application (784.2ms)
+  Rendered layouts/_navbar.html.erb (9.7ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+Completed 200 OK in 1437ms (Views: 1400.4ms | ActiveRecord: 16.1ms)
+
+
