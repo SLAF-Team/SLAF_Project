@@ -1,20 +1,25 @@
-
-<%= form_for(:idioms, url:(idioms_path), action: "create", method: :post) do |f| %>
-<br><%= f.label :title_en, "L'ignoble mot en franglais" %>
-<br><%= f.text_area :title_en %>
-<br><%= f.label :title_fr, "La belle traduction française" %>
-<br><%= f.text_area :title_fr %>
-<br><%= f.label :body, "Ton explication" %>
-<br><%= f.text_area :body %>
-<br><%= f.label :example, "Exemples d'utilisation" %>
-<br><%= f.text_area :example %>
-<br><%= f.label :grammatical_type, "verb" %>
-<%= f.radio_button :grammatical_type, "Verbe" %>
-<%= f.label :grammatical_type, "adverb" %>
-<%= f.radio_button :grammatical_type, "Adverbe" %>
-<%= f.label :grammatical_type, "adjective" %>
-<%= f.radio_button :grammatical_type, "Adjectif" %>
-<%= f.label :grammatical_type, "noun" %>
-<%= f.radio_button :grammatical_type, "Nom" %>
-<br><%= f.submit %>
-<% end %>
+<div class="idiom-new">
+  <div class="idiom-new-title">
+    <h1>Ajouter une expression</h1>
+  </div>
+  <div class="idiom-new-form">
+  <%= form_for(:idioms, url:(idioms_path), action: "create", method: :post) do |f| %>
+    <br><%= f.label :title_en, "L'ignoble mot en franglais" %>
+    <br><%= f.text_area :title_en %>
+    <br><%= f.label :title_fr, "La belle traduction française" %>
+    <br><%= f.text_area :title_fr %>
+    <br><%= f.label :body, "Ton explication" %>
+    <br><%= f.text_area :body %>
+    <br><%= f.label :example, "Exemples d'utilisation" %>
+    <br><%= f.text_area :example %>
+    <br><%= f.label :grammatical_type, "verb" %>
+    <%= f.radio_button :grammatical_type, "Verbe" %>
+    <%= f.label :grammatical_type, "adverb" %>
+    <%= f.radio_button :grammatical_type, "Adverbe" %>
+    <%= f.label :grammatical_type, "adjective" %>
+    <%= f.radio_button :grammatical_type, "Adjectif" %>
+    <%= f.label :grammatical_type, "noun" %>
+    <%= f.radio_button :grammatical_type, "Nom" %>
+    <br><%= f.submit %>
+  <% end %>
+  </div>
