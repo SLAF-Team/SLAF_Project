@@ -1,6 +1,9 @@
 <% if user_signed_in? %>
   <%= link_to "Profil", user_path(current_user.id) %>
   <%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %>
+  <% if current_user.admin == true %>
+    <%= link_to 'Dashboard Admin', admin_index_path%>
+  <%end%>
 <% else %>
   <%= link_to "S'inscrire", new_user_registration_path %>
   <%= link_to "Se connecter", new_user_session_path %>
