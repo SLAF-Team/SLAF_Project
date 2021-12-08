@@ -1,6 +1,8 @@
 class LikesController < ApplicationController
 before_action :find_idiom
 before_action :find_like, only: [:destroy]
+before_action :authenticate_user!, only: [:destroy, :create]
+
 
   def create
     if already_liked?
