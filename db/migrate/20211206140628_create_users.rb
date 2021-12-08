@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :encrypted_password
       t.string :alias, default: Faker::Name.unique.name
-      t.boolean :admin
+      t.boolean :admin, default: false
       t.timestamps
     end
   end
