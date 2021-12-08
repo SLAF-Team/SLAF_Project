@@ -1,5 +1,13 @@
 class IdiomsController < ApplicationController
 
+  def show
+    @idiom = Idiom.find(params[:id])
+  end
+
+  def index
+    @pagy, @idioms = pagy(Idiom.order(created_at: :desc))
+  end
+
   def new
     @idiom = Idiom.new()
   end
@@ -19,8 +27,21 @@ class IdiomsController < ApplicationController
     end
   end
 
-    def index
-        @idioms = Idiom.all
+  def update
+    @idiom = Idiom.find(params[:id])
+    puts params
+      if @idiom.update(title_en: params[:idiom][:title_en], title_fr: params[:idiom][:title_fr],
+        grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example: params[:idiom][:example], user: current_user)
+      redirect_to idiom_path(@idiom.id)
+      else
+      redirect_to idiom_path(@idiom.id)
+      end
     end
 
+  def destroy
+    @idiom = Idiom.find(params[:id])
+    @idiom.destroy
+    redirect_back(fallback_location: root_path) 
   end
+
+end

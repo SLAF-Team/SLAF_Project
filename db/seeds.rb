@@ -32,8 +32,7 @@ User.create(first_name: 'Armand',
     admin: true
 )
 
-
-10.times do
+20.times do
     Idiom.create(title_en: Faker::Lorem.words(number: 1),
                  title_fr: Faker::Lorem.words(number: 1),
                  grammatical_type: Faker::Lorem.words(number: 1),

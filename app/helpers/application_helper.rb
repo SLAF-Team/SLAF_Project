@@ -1,4 +1,5 @@
 module ApplicationHelper
+<<<<<<< HEAD
   def resource_name
     :user
   end
@@ -10,4 +11,7 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+=======
+    include Pagy::Frontend
+>>>>>>> development
 end
