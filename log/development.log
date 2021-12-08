@@ -15112,3 +15112,2076 @@ Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
 >>>>>>> ba302c0c12e25549ca5f7002798700657a337dc9
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-08 09:18:19 +0100
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/laurent/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by IdiomsController#index as HTML
+  [1m[35m (43.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (3.6ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[35m (42.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (42.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:14
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:14
+  Rendered idioms/index.html.erb within layouts/application (285.1ms)
+Completed 200 OK in 1170ms (Views: 985.6ms | ActiveRecord: 164.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-08 09:18:21 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (84.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:14
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:14
+  Rendered idioms/index.html.erb within layouts/application (130.7ms)
+Completed 200 OK in 168ms (Views: 53.7ms | ActiveRecord: 111.3ms)
+
+
+Started GET "/fff" for 127.0.0.1 at 2021-12-08 09:18:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/fff"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:18:35 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:18:58 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:19:24 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-12-08 09:19:51 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (15.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (27.2ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:14
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:14
+  Rendered idioms/index.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 337ms (Views: 283.4ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/admin/" for ::1 at 2021-12-08 09:20:02 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:20:56 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:20:58 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/" for ::1 at 2021-12-08 09:21:01 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:21:58 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:22:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins" for 127.0.0.1 at 2021-12-08 09:22:21 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminsController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins" for 127.0.0.1 at 2021-12-08 09:24:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/admins"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins" for 127.0.0.1 at 2021-12-08 09:25:14 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminsController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/" for ::1 at 2021-12-08 09:25:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-12-08 09:25:25 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:1
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:8
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:14
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:14
+  Rendered idioms/index.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 236ms (Views: 185.6ms | ActiveRecord: 41.6ms)
+
+
+Started GET "/tttt" for 127.0.0.1 at 2021-12-08 09:25:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/tttt"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins" for 127.0.0.1 at 2021-12-08 09:25:33 +0100
+  
+ActionController::RoutingError (uninitialized constant AdminsController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/admin" for 127.0.0.1 at 2021-12-08 09:26:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/admins/admin"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/dashboard" for 127.0.0.1 at 2021-12-08 09:26:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/admins/dashboard"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:28:10 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 246ms (Views: 244.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2021-12-08 09:28:14 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 80ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2021-12-08 09:30:22 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:3: syntax error, unexpected ')'
+...pend=( link_to 'gérer user', );
+...                              ^
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:5: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:7: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/admin/index.html.erb:3: syntax error, unexpected ')'
+app/views/admin/index.html.erb:5: syntax error, unexpected `ensure', expecting ')'
+app/views/admin/index.html.erb:7: syntax error, unexpected `end', expecting ')'
+Started GET "/admin/users" for 127.0.0.1 at 2021-12-08 09:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/admin/users"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-12-08 09:30:28 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (1.5ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /Users/laurent/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Idiom Load (0.0ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /Users/laurent/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Idiom Load (0.0ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /Users/laurent/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Idiom Load (0.0ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /Users/laurent/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered idioms/index.html.erb within layouts/application (137.9ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `to' for #<#<Class:0x00007fab7542d678>:0x00007fab754279d0>
+Did you mean?  t):
+    1: <% link to "admin dashboard", admin_index_path %>
+    2: 
+    3: <% @idioms.each do |idiom| %>
+    4:     <br>
+  
+app/views/idioms/index.html.erb:1:in `_app_views_idioms_index_html_erb___1899256148716320322_70140'
+Started GET "/" for ::1 at 2021-12-08 09:30:43 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (3.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:3
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:16
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:16
+  Rendered idioms/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 77ms (Views: 62.7ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-08 09:31:10 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:3
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:16
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:16
+  Rendered idioms/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 64ms (Views: 51.9ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-08 09:31:12 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.4ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:3
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:16
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:16
+  Rendered idioms/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 62ms (Views: 49.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:31:12 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+... link_to 'gérer user', path à mettre );@output_buffer.safe...
+...                             ^~
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...link_to 'gérer idiom', path à mettre );@output_buffer.safe...
+...                             ^~
+):
+  
+app/views/admin/index.html.erb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:31:13 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+... link_to 'gérer user', path à mettre );@output_buffer.safe...
+...                             ^~
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...link_to 'gérer idiom', path à mettre );@output_buffer.safe...
+...                             ^~
+):
+  
+app/views/admin/index.html.erb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:31:22 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting ')'
+...buffer.append=( link_to 'gérer idiom', #path à mettre );@o...
+...                         ^~~~~~
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:6: syntax error, unexpected '<', expecting ')'
+<h4></h4>'.freeze;
+^
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:10: unterminated regexp meets end of file
+          end
+             ^
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:10: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting ')'
+app/views/admin/index.html.erb:6: syntax error, unexpected '<', expecting ')'
+app/views/admin/index.html.erb:10: unterminated regexp meets end of file
+app/views/admin/index.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for ::1 at 2021-12-08 09:31:26 +0100
+Processing by IdiomsController#index as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/controllers/idioms_controller.rb:8
+  Rendering idioms/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.3ms)[0m  [1m[34mSELECT  "idioms".* FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:4
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 17]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 16]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 15]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 14]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 13]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 12]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 11]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."idiom_id" = $1[0m  [["idiom_id", 10]]
+  ↳ app/views/idioms/index.html.erb:11
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "idioms" ORDER BY "idioms"."created_at" DESC LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/idioms/index.html.erb:17
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/idioms/index.html.erb:17
+  Rendered idioms/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 85ms (Views: 66.5ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:31:37 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting ')'
+...buffer.append=( link_to 'gérer idiom', #path à mettre );@o...
+...                         ^~~~~~
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:6: syntax error, unexpected '<', expecting ')'
+<h4></h4>'.freeze;
+^
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:10: unterminated regexp meets end of file
+          end
+             ^
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:10: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting ')'
+app/views/admin/index.html.erb:6: syntax error, unexpected '<', expecting ')'
+app/views/admin/index.html.erb:10: unterminated regexp meets end of file
+app/views/admin/index.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:31:37 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting ')'
+...uffer.append=( #link_to 'gérer idiom', #path à mettre );@o...
+...                         ^~~~~~
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:6: syntax error, unexpected '<', expecting ')'
+<h4></h4>'.freeze;
+^
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:10: unterminated regexp meets end of file
+          end
+             ^
+/Users/laurent/Desktop/SLAF_Project/app/views/admin/index.html.erb:10: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/admin/index.html.erb:4: syntax error, unexpected local variable or method, expecting ')'
+app/views/admin/index.html.erb:6: syntax error, unexpected '<', expecting ')'
+app/views/admin/index.html.erb:10: unterminated regexp meets end of file
+app/views/admin/index.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:31:43 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:31:44 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:33:19 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:33:20 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:33:35 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  Rendered admin/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:34:27 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 62ms (Views: 49.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:34:37 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:34:48 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 47ms (Views: 42.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:34:55 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:35:03 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:35:25 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:35:38 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:37:28 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 51ms (Views: 42.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/ffdsf" for 127.0.0.1 at 2021-12-08 09:37:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/ffdsf"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/ffdsf" for 127.0.0.1 at 2021-12-08 09:37:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/ffdsf"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:38:29 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:5
+  Rendered admin/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 116ms (Views: 104.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2021-12-08 09:38:30 +0100
+Processing by Admin::UserController#index as HTML
+  Rendering admin/user/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/user/index.html.erb:1
+  Rendered admin/user/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 62ms (Views: 55.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:38:39 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:6
+  Rendered admin/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2021-12-08 09:38:40 +0100
+Processing by Admin::UserController#index as HTML
+  Rendering admin/user/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/user/index.html.erb:1
+  Rendered admin/user/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2021-12-08 09:38:50 +0100
+Processing by Admin::UserController#index as HTML
+  Rendering admin/user/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/user/index.html.erb:1
+  Rendered admin/user/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:39:33 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:6
+  Rendered admin/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 85ms (Views: 52.7ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/admin/user" for ::1 at 2021-12-08 09:39:37 +0100
+Processing by Admin::UserController#index as HTML
+  Rendering admin/user/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/user/index.html.erb:1
+  Rendered admin/user/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 65ms (Views: 58.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:40:29 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:6
+  Rendered admin/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2021-12-08 09:40:46 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:6
+  Rendered admin/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 105ms (Views: 93.4ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/admin" for ::1 at 2021-12-08 09:40:47 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:6
+  Rendered admin/index.html.erb within layouts/application (4.7ms)
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:40:47 +0100
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 2.1ms)
+
+
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for ::1 at 2021-12-08 09:40:49 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin" for ::1 at 2021-12-08 09:41:08 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:6
+  Rendered admin/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/idiom" for ::1 at 2021-12-08 09:41:09 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:30 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:30 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:31 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin" for ::1 at 2021-12-08 09:41:31 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:6
+  Rendered admin/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:31 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:31 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:31 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:32 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:32 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for ::1 at 2021-12-08 09:41:32 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:32 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:32 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:33 +0100
+Processing by Admin::IdiomController#index as HTML
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:33 +0100
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:33 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for ::1 at 2021-12-08 09:41:44 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...nd='    <p>Title fr : '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:41:55 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...    <p>Title fr :</p> '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin/idiom" for ::1 at 2021-12-08 09:42:00 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  Rendered admin/idiom/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/laurent/Desktop/SLAF_Project/app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+...    <p>Title fr :</p> '.freeze;@output_buffer.append=(idiom....
+...                              ^
+):
+  
+app/views/admin/idiom/index.html.erb:2: syntax error, unexpected ';', expecting ']'
+Started GET "/admin" for ::1 at 2021-12-08 09:42:18 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "idioms"[0m
+  ↳ app/views/admin/index.html.erb:6
+  Rendered admin/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/idiom" for ::1 at 2021-12-08 09:42:19 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.6ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/admin/idiom/index.html.erb:1
+  Rendered admin/idiom/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 80ms (Views: 69.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/admin/idiom" for 127.0.0.1 at 2021-12-08 09:42:27 +0100
+Processing by Admin::IdiomController#index as HTML
+  Rendering admin/idiom/index.html.erb within layouts/application
+  [1m[36mIdiom Load (0.5ms)[0m  [1m[34mSELECT "idioms".* FROM "idioms"[0m
+  ↳ app/views/admin/idiom/index.html.erb:1
+  Rendered admin/idiom/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.5ms)
+
+
