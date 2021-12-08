@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-    include Pagy::Backend
+  add_flash_types :success, :info, :error, :warning
+  include Pagy::Backend
 end
