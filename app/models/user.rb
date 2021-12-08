@@ -7,10 +7,10 @@ class User < ApplicationRecord
     
 
     has_one_attached :avatar
-    has_many :idioms
-    has_many :comments
-    has_many :likes, dependent: :destroy
 
+    has_many :idioms, :dependent => :destroy
+    has_many :comments, :dependent => :destroy
+    has_many :likes, :dependent => :destroy
 
     def welcome_send
         UserMailer.welcome_email(self).deliver_now
