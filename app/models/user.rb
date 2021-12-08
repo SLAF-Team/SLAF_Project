@@ -9,7 +9,7 @@ class User < ApplicationRecord
     has_one_attached :avatar
     has_many :idioms
     has_many :comments
-    has_many :likes
+    has_many :likes, dependent: :destroy
 
 
     def welcome_send
