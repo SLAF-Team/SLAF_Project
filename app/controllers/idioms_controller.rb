@@ -1,5 +1,6 @@
 class IdiomsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :new]
+  
   def show
     @idiom = Idiom.find(params[:id])
   end
