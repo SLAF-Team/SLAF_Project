@@ -1,5 +1,6 @@
 <% @idiom.each do |idiom|%>
-    <p>Title fr :</p> <%=idiom.title_fr%>
-
+    <p>Title fr : <%=idiom.title_fr%></p>
+    <p>Author : <%=idiom.user.email%></p>
+    <%= link_to 'Voir', admin_idiom_path(idiom.id) %>
 <%end%>
 
