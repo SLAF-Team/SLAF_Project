@@ -1,3 +1,7 @@
+<% @letters.each do |letter| %>
+<%= link_to letter, idioms_path(:letter => letter) %>
+<% end %>
+
 <% @idioms.each do |idiom| %>
     <br>
     Français : <%=idiom.title_fr%><br>
