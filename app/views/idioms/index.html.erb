@@ -1,9 +1,13 @@
 <%= link_to "admin dashboard", admin_index_path %>
 <br />
 
+<hr>
+
 <% @letters.each do |letter| %>
 <%= link_to letter, idioms_path(:letter => letter) %>
 <% end %>
+
+<hr>
 
 <% @idioms.each do |idiom| %>
     <br>
