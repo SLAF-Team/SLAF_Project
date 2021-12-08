@@ -58,3 +58,11 @@ end
         idiom: Idiom.all.sample
 )
 end
+
+
+20.times do
+    Unlike.create(
+        user: User.all.sample,
+        idiom: Idiom.all.sample
+)
+end

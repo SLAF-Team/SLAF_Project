@@ -3,7 +3,6 @@
 <%= @idiom.example %><br>
 <p>Une expression proposée par <%= @idiom.user_id %><p>
 
-
 <% @idiom.comments.each do |comment|%>
     <%=comment.body%>
     <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %>
@@ -19,4 +18,6 @@
     <% end %>
 
 <%= render 'like'%>
+<%= render 'unlike'%>
+
 
