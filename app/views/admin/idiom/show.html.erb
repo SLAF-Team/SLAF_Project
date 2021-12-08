@@ -1,0 +1,7 @@
+<br>
+<%= @idiom.user.email%> <br>
+<%= @idiom.title_fr %> <br>
+<%= @idiom.title_en %> <br>
+
+<%= link_to 'Edit', edit_admin_idiom_path(@idiom.id)%>
+<%= link_to "Supprimer l'idiom", admin_idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Tu veut vraiment supprimer cette idiom ?'} %>
