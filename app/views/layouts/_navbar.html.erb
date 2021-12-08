@@ -11,12 +11,11 @@
     </div>
     <div class="navbar-browse">
       <h2>Browse<h2>
+      <%# Caler un dropdown %>
       <ul class="navbar-browse-index">
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
+        <% @letters.each do |letter| %>
+        <br><%= link_to letter, idioms_path(:letter => letter) %>
+        <% end %>
       </ul>
     </div>
     <div class="navbar-buttons">

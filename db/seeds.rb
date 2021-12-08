@@ -10,6 +10,7 @@ User.destroy_all
 Idiom.destroy_all
 Comment.destroy_all
 Like.destroy_all
+Unlike.destroy_all
 
 10.times do
     User.create(
