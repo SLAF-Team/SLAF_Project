@@ -1,2 +1,6 @@
-<%= @idioms.count%> / <%= Idiom.by_letter(params[:letter]).count%>
+<% if false %>
+
+<%= @idioms.count %> / <%= Idiom.by_letter(params[:letter]).count%>
 <%== pagy_nav(@pagy) %>
+
+<% end %>
