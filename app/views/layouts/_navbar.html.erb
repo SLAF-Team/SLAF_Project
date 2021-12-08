@@ -1,31 +1,33 @@
-<div class="navbar-top">
-  <img id="navbar-logo">
-  <div class="navbar-search">
-    <form>
-      <input type="text" placeholder="Rechercher une expression" name="search">
-      <button type="submit">logo</button>
-    </form>
+<div class="navbar">
+  <div class="navbar-top">
+    <img id="navbar-logo">
+    <div class="navbar-search">
+      <form>
+        <input type="text" placeholder="Rechercher une expression" name="search">
+        <button type="submit">logo</button>
+      </form>
+    </div>
+    <div class="navbar-browse">
+      <h2>Browse<h2>
+      <ul class="navbar-browse-index">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+      </ul>
+    <div class="navbar-buttons">
+      <btn>Random</btn>
+      <btn>Top</btn>
+    </div>
   </div>
-  <div class="navbar-browse">
-    <h2>Browse<h2>
-    <ul class="navbar-browse-index">
-      <li>A</li>
-      <li>B</li>
-      <li>C</li>
-      <li>D</li>
-      <li>E</li>
-    </ul>
-  <div class="navbar-buttons">
-    <btn>Random</btn>
-    <btn>Top</btn>
+  <div class="navbar-bottom">
+    <% if user_signed_in? %>
+      <%= link_to "Profil", user_path(current_user.id) %>
+      <%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "S'inscrire", new_user_registration_path %>
+      <%= link_to "Se connecter", new_user_session_path %>
+    <% end %>
   </div>
-</div>
-<div>
-  <% if user_signed_in? %>
-    <%= link_to "Profil", user_path(current_user.id) %>
-    <%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "S'inscrire", new_user_registration_path %>
-    <%= link_to "Se connecter", new_user_session_path %>
-  <% end %>
 </div>
