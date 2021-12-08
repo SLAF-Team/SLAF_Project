@@ -13,4 +13,12 @@ Rails.application.routes.draw do
   resources :idioms do
     resources :likes
   end
+
+  ### Admin
+
+  resources :admin, only: [:index]
+    namespace :admin do
+      root to: 'admin#index'
+      resources :user, :idiom
+    end
 end
