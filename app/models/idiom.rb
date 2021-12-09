@@ -4,6 +4,13 @@ class Idiom < ApplicationRecord
     has_many :likes, dependent: :destroy
     has_many :unlikes, :dependent => :destroy
 
+    validates :title_en, presence: true, length: { minimum: 2, maximum: 50 }
+    validates :title_fr, presence: true, length: { minimum: 2, maximum: 50 }
+    validates :grammatical_type, presence: true
+    validates :body, presence: true, length: { minimum: 15, maximum: 140 }
+    validates :example, presence: true, length: { minimum: 15, maximum: 140 }
+    validates :user, presence: true
+    
     def self.search_by(search)
         if search.blank?
             all
