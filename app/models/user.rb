@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     after_create :welcome_send
+    before_create :aliases_attribution
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
     devise :database_authenticatable, :registerable,
@@ -15,5 +16,10 @@ class User < ApplicationRecord
 
     def welcome_send
         UserMailer.welcome_email(self).deliver_now
+    end
+
+    def aliases_attribution
+        self.alias = "disrupt-#{SecureRandom.hex(2)}"
+        self.avatar.attach(io: File.open(Rails.root.join('app', 'assets', 'images', "avatar-1.jpeg")), filename: "avatar-1.jpeg", content_type: 'image/jpeg')
     end
 end

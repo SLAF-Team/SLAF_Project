@@ -19,7 +19,6 @@ Unlike.destroy_all
         email: Faker::Internet.email,
         password: 'test123',
         password_confirmation: 'test123',
-        alias: Faker::Artist.name,
         admin: false
         )
 end

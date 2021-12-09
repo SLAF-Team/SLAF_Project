@@ -3,8 +3,8 @@ before_action :find_idiom
 before_action :find_unlike, only: [:destroy]
     
   def create
-    if already_unliked?
-      flash[:notice] = "Impossible"
+    if already_liked?
+      flash[:notice] = "Quelle intéressante contradiction !"
     else
       @idiom.unlikes.create(user: current_user)
     end
@@ -24,10 +24,6 @@ private
 
   def find_idiom
     @idiom = Idiom.find(params[:idiom_id])
-  end
-
-  def already_unliked?
-    Unlike.where(user: current_user, idiom: @idiom).exists?
   end
 
   def find_unlike

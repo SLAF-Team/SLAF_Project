@@ -10,11 +10,7 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
-  
-    include Pagy::Frontend
 
-  def letter
-    @letters = *('A'..'Z')
-  end
+  include Pagy::Frontend
 
 end
