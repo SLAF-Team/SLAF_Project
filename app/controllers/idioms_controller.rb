@@ -8,7 +8,8 @@ class IdiomsController < ApplicationController
   def index
       @index_idioms = Idiom.where(validated: true)
       @idioms_ = @index_idioms.search_by(params[:search])
-      @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
+      @idiom = Idiom.all
+      @pagy, @idioms = pagy(@idiom.order(created_at: :desc))
     end
 
   def new
