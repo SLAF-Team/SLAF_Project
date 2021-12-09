@@ -1,6 +1,6 @@
 // SIMPLE GRID - SASS/SCSS
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,800,900);
 
 // fonts
 $font-family: 'Lato', Helvetica, sans-serif;
@@ -22,10 +22,289 @@ $success: #81F878;
 $success-light: #B8F3B3;
 $info: #EFFF00;
 $info-light: #FBFFC5;
+$info-bis: #36F1CD;
 $background: #E7E9E2;
-$background-light: #CCCEC3;
+$background-light: #F9FBF6;
+
+// _idioms-cards
+
+.card {
+  padding: 25px;
+}
+
+.card__title {
+  margin-bottom: 1%;
+}
+
+.card__title--first {
+  font-size: 28px;
+  font-weight: 800;
+  margin-right: 6px;
+  color: $underline;
+}
+
+.card__body {
+  margin-bottom: 2%;
+}
+
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__row {
+  display: inline;
+  display: flex;
+  align-items: center;
+}
+
+.card__row svg {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+// _footer
+
+footer {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  height: 80px;
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//_content
+
+.content {
+  overflow: scroll;
+  width: 80%;
+
+}
+
+.card {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  background-color: $background;
+}
+
+// navbar
+
+.navbar {
+  width: 260px;
+  padding: 16px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  background-color: $background;
+}
+
+.navbar__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 22px;
+}
+
+.list__unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar__bottom {
+  font-size: 16px;
+}
+// buttons
+
+.button__search {
+  display: inline-block;
+  font-weight: 400;
+  margin-left: -44px;
+  display: inline;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 45px;
+  min-width: 45px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.575rem 0.575rem 0.375rem 0.575rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button__small {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.175rem 0.475rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button__normal {
+  display: inline-block;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.275rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button__letter {
+  display: inline-block;
+  line-height: 1.6;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 32px;
+  min-width: 32px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 10px;
+  padding: 0.125rem 0.425rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button__large {
+  display: inline-block;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -6px -6px 0px #112233;
+  border-radius: 9px;
+  padding: 1.1rem 0.550rem;
+  min-width: 110px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button__info {
+  background-color: $info;
+}
+
+.button__info {
+  background-color: $info;
+}
+
+.button__info--bis {
+  background-color: $info-bis;
+}
+
+.button__danger {
+  background-color: $danger;
+}
+
+.button__success {
+  background-color: $success;
+}
+
+.button__small:hover {
+  box-shadow: none;
+}
+
+.button__normal:hover {
+  box-shadow: none;
+}
+
+.button__letter:hover {
+  box-shadow: none;
+}
+
+.button__large:hover {
+  box-shadow: none;
+}
+
+.button__search:hover {
+  box-shadow: none;
+}
 
 
+// forms
+
+.form__control {
+    display: inline-block;
+    width: 88%;
+    height: 36px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: $background-light;
+    background-clip: padding-box;
+    border-radius: 9px;
+    border: 1px solid #000000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.search__form {
+  display: block;
+}
 
 // universal
 
@@ -38,6 +317,7 @@ body {
   left: 0;
   top: 0;
   font-size: 99%;
+  background-color: $background-light;
 }
 
 * {
@@ -76,6 +356,10 @@ p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
 }
 
 .font-light {
