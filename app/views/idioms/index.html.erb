@@ -5,6 +5,9 @@
     Grammatical type : <%=idiom.grammatical_type%><br>
     Body : <%=idiom.body%><br>
     Example : <%=idiom.example%><br>
-    Alias : <%=idiom.user.alias%><br><br>
+    <%= idiom.likes.count %> <%= (idiom.likes.count) == 1 ? "Adorateur" : "Adorateurs"%> || <%= idiom.unlikes.count %> <%= (idiom.unlikes.count) == 1 ? "Détracteur" : "Détracteurs"%>
+    <br><%= link_to "Lien vers l'idiome", idiom_path(idiom.id) %><br>
+
     -----------------------------------------------------
 <%end%>
+<br>

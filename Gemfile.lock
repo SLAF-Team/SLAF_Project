@@ -81,6 +81,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.8.1)
     faker (2.19.0)
@@ -112,6 +116,7 @@ GEM
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pagy (5.6.5)
     pg (1.2.3)
     public_suffix (4.0.6)
     puma (3.12.6)
@@ -169,6 +174,8 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    social-share-button (1.2.4)
+      coffee-rails
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -202,7 +209,9 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  arm64-darwin-20
   x86_64-darwin-18
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
@@ -211,14 +220,17 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  dotenv-rails
   faker
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  pagy
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
   selenium-webdriver
+  social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)
   table_print
@@ -230,4 +242,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.2.29
+   2.2.31

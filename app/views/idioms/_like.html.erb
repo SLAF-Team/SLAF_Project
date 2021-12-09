@@ -1,0 +1,8 @@
+<%= @idiom.likes.count %> <%= (@idiom.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+
+<% pre_like = @idiom.likes.find { |like| like.user_id == current_user.id} %>
+<% if pre_like %>
+  <%= button_to "Je n'aime plus", idiom_like_path(@idiom, pre_like), method: :delete %>
+<% else %>
+  <%= button_to "J'aime", idiom_likes_path(@idiom), method: :post %>
+<% end %>
