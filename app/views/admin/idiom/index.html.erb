@@ -1,7 +1,10 @@
-<% @idiom.each do |idiom|%>
-    <p>Title fr : <%=idiom.title_fr%></p>
-    <p>Author : <%=idiom.user.email%></p>
-    <%= link_to 'Voir', admin_idiom_path(idiom.id) %>
-    <%= link_to 'Editer son statut', edit_admin_idiom_path(idiom.id)%></button>
-<%end%>
+<h1>Toutes les expressions</h1>
+<% @idioms.each do |idiom| %>
+    Français : <%=idiom.title_fr%><br>
+    Franglais : <%=idiom.title_en%><br>
+    Validation : <%=idiom.validated%><br>
+    <%= link_to 'Détails', idiom_path(idiom.id) %><br>
+    <%= link_to 'Editer / Valider / Supprimer', edit_admin_idiom_path(idiom.id)%><br> 
+    <hr>   
+<% end %>
 
