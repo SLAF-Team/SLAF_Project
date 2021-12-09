@@ -21,7 +21,7 @@
     <div class="navbar-buttons">
       <btn><%= render 'application/random' %></btn>
 
-      <btn>Top</btn>
+      <%= link_to "Top", idioms_path(:search => "top") %>
     </div>
   </div>
   <div class="navbar-bottom">
