@@ -1,6 +1,4 @@
-<% @idioms.each do |idiom| %>
-    <%if idiom.validated == true %>
-        <br>
+<% @index_idioms.each do |idiom| %>
         Français : <%=idiom.title_fr%><br>
         Franglais : <%=idiom.title_en%><br>
         Grammatical type : <%=idiom.grammatical_type%><br>
@@ -9,6 +7,6 @@
         <%= idiom.likes.count %> <%= (idiom.likes.count) == 1 ? "Adorateur" : "Adorateurs"%> || <%= idiom.unlikes.count %> <%= (idiom.unlikes.count) == 1 ? "Détracteur" : "Détracteurs"%>
         <br><%= link_to "Lien vers l'idiome", idiom_path(idiom.id) %><br>
     -----------------------------------------------------
-    <% end %>
-<%end%>
+
+<% end %>
 <br>

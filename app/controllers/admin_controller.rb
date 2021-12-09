@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
-   before_action :authenticate_user!, only: [:index]
-   before_action :check_if_admin
+  before_action :authenticate_user!, only: [:index]
+  before_action :check_if_admin
 
   def index
     @user = User.all
@@ -9,11 +9,6 @@ class AdminController < ApplicationController
   end
 
   def update
-    @idiom = Idiom.find(params[:id])
-    if @idiom.update('validated' => true)
-      redirect_to root_path
-    end
-
   end
 
   private

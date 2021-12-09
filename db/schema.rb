@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2021_12_08_144452) do
     t.string "last_name"
     t.string "email"
     t.string "encrypted_password"
-    t.string "alias", default: "Adaline Breitenberg"
+    t.string "alias", default: "Howard Heidenreich"
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
