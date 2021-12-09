@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'avatars/create'
   root to: "idioms#index"
   devise_for :users
   resources :idioms do
