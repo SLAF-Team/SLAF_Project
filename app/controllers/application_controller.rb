@@ -8,6 +8,16 @@ class ApplicationController < ActionController::Base
     @letters = *('A'..'Z')
   end
 
+  private
+
+  def already_liked?
+    Like.where(user: current_user, idiom: @idiom).exists?
+  end
+  
+  def already_unliked?
+    Unlike.where(user: current_user, idiom: @idiom).exists?
+  end
+  
   protected
 
   def configure_permitted_parameters
