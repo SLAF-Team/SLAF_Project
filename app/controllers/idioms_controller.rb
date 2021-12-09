@@ -7,7 +7,7 @@ class IdiomsController < ApplicationController
 
   def index
       @index_idioms = Idiom.where(validated: true)
-      @idioms_ = Idiom.search_by(params[:search])
+      @idioms_ = @index_idioms.search_by(params[:search])
       @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
     end
 

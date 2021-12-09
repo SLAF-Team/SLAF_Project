@@ -41,6 +41,7 @@ User.create(first_name: 'Armand',
         body: Faker::Lorem.sentence(word_count: 3),
         example:Faker::Lorem.sentence(word_count: 3, supplemental: true),
         user: User.all.sample,
+        validated: [true, false].sample
 )
 end
 

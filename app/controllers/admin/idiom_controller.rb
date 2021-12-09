@@ -11,7 +11,7 @@ class Admin::IdiomController < ApplicationController
     def update
     @idiom = Idiom.find(params[:id])
     @idiom.update(validated: params[:submit])
-    redirect_to admin_idiom_index_path, success: 'Edition validé !'
+    redirect_to admin_idiom_index_path, success: 'Expression validée, cheffe !'
     end
 
     def destroy
