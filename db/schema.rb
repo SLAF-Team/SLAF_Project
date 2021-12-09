@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_12_08_144452) do
     t.string "grammatical_type"
     t.text "body"
     t.text "example"
+    t.boolean "validated", default: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,7 +82,7 @@ ActiveRecord::Schema.define(version: 2021_12_08_144452) do
     t.string "last_name"
     t.string "email"
     t.string "encrypted_password"
-    t.string "alias", default: "Willette White"
+    t.string "alias", default: "Adaline Breitenberg"
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
