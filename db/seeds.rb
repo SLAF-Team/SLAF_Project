@@ -19,7 +19,6 @@ Unlike.destroy_all
         email: Faker::Internet.email,
         password: 'test123',
         password_confirmation: 'test123',
-        alias: Faker::Artist.name,
         admin: false
         )
 end
@@ -42,7 +41,6 @@ User.create(first_name: 'Armand',
         body: Faker::Lorem.sentence(word_count: 3),
         example:Faker::Lorem.sentence(word_count: 3, supplemental: true),
         user: User.all.sample,
-        validated: false
 )
 end
 
