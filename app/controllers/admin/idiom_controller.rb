@@ -15,6 +15,7 @@ class Admin::IdiomController < ApplicationController
                         'title_fr' => params[:title_fr],
                         'body' => params[:body],
                         'example' => params[:example],
+                        'validated' => true,
                         'grammatical_type' => params[:grammatical_type])
         redirect_to admin_idiom_path(@idiom.id)
         else

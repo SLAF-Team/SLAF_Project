@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   ### Admin
 
-  resources :admin, only: [:index]
+  resources :admin, only: [:index, :update]
     namespace :admin do
       root to: 'admin#index'
       resources :user, :idiom

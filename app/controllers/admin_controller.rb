@@ -8,6 +8,13 @@ class AdminController < ApplicationController
     @admin = current_user.admin
   end
 
+  def update
+    @idiom = Idiom.find(params[:id])
+    if @idiom.update('validated' => true)
+      redirect_to root_path
+    end
+
+  end
 
   private
 
