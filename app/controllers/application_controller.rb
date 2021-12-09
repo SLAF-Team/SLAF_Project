@@ -2,13 +2,14 @@ class ApplicationController < ActionController::Base
   add_flash_types :success, :info, :error, :warning
   before_action :letter
   before_action :configure_permitted_parameters, if: :devise_controller?
+
   include Pagy::Backend
+
+  private
 
   def letter
     @letters = *('A'..'Z')
   end
-
-  private
 
   def already_liked?
     Like.where(user: current_user, idiom: @idiom).exists?

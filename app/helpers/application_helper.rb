@@ -13,8 +13,4 @@ module ApplicationHelper
 
   include Pagy::Frontend
 
-  def letter
-    @letters = *('A'..'Z')
-  end
-
 end
