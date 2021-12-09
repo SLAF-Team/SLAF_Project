@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_08_144452) do
+ActiveRecord::Schema.define(version: 2021_12_09_151234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,10 +52,10 @@ ActiveRecord::Schema.define(version: 2021_12_08_144452) do
     t.string "grammatical_type"
     t.text "body"
     t.text "example"
-    t.boolean "validated", default: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "likes_count"
     t.index ["user_id"], name: "index_idioms_on_user_id"
   end
 
@@ -82,8 +82,8 @@ ActiveRecord::Schema.define(version: 2021_12_08_144452) do
     t.string "last_name"
     t.string "email"
     t.string "encrypted_password"
-    t.string "alias", default: "Howard Heidenreich"
-    t.boolean "admin", default: false
+    t.string "alias"
+    t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "reset_password_token"

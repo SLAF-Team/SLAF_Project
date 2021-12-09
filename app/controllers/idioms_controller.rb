@@ -1,6 +1,6 @@
 class IdiomsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :new]
-  
+
   def show
     @idiom = Idiom.find(params[:id])
   end
@@ -18,7 +18,7 @@ class IdiomsController < ApplicationController
   def create
     @idiom = Idiom.create(title_en: params[:idioms][:title_en], title_fr: params[:idioms][:title_fr],
       grammatical_type: params[:idioms][:grammatical_type], body: params[:idioms][:body], example: params[:idioms][:example], user: current_user)
-      
+
     if @idiom.save
       flash[:success] = 'Ton expression est désormais en cours de validation !'
       redirect_to idiom_path(@idiom.id)
@@ -42,7 +42,7 @@ class IdiomsController < ApplicationController
   def destroy
     @idiom = Idiom.find(params[:id])
     @idiom.destroy
-    redirect_back(fallback_location: root_path) 
+    redirect_back(fallback_location: root_path)
   end
 
 private
