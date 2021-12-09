@@ -2,19 +2,19 @@
 <div class="navbar">
   <div class="navbar-top">
     <img id="navbar-logo">
+    <%= link_to "Accueil", root_path %>
     <div class="navbar-search">
-        <%= link_to "Accueil", root_path %>
-      <form>
-        <input type="text" placeholder="Rechercher une expression" name="search">
-        <button type="submit">logo</button>
-      </form>
+      <%= form_for "", url: idioms_path, role: "search", method: :get do%>
+      <%= text_field_tag :search, @search, placeholder: "Recherche une expression"%>
+      <% end%>
+      </div>
     </div>
     <div class="navbar-browse">
       <h2>Browse<h2>
       <%# Caler un dropdown %>
       <ul class="navbar-browse-index">
         <% @letters.each do |letter| %>
-        <br><%= link_to letter, idioms_path(:letter => letter) %>
+        <br><%= link_to letter, idioms_path(:search => letter) %>
         <% end %>
       </ul>
     </div>

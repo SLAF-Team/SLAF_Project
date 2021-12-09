@@ -6,10 +6,9 @@ class IdiomsController < ApplicationController
   end
 
   def index
-    @letters = *('A'..'Z')
-    @idioms_letter = Idiom.by_letter(params[:letter])
-    @pagy, @idioms = pagy(@idioms_letter.order(created_at: :desc))
-  end
+      @idioms_ = Idiom.search_by(params[:search])
+      @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
+    end
 
   def new
     @idiom = Idiom.new()
