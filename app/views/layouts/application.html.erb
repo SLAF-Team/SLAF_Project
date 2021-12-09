@@ -16,7 +16,7 @@
     <div class="content">
       <%= yield %>
       <hr>
-      <%= render 'layouts/footer'%>
+      <%= render 'layouts/footer' if @pagy != nil %>
     </div>
   </body>
 

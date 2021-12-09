@@ -1,12 +1,15 @@
-<% @index_idioms.each do |idiom| %>
-        Français : <%=idiom.title_fr%><br>
-        Franglais : <%=idiom.title_en%><br>
-        Grammatical type : <%=idiom.grammatical_type%><br>
-        Body : <%=idiom.body%><br>
-        Example : <%=idiom.example%><br>
-        <%= idiom.likes.count %> <%= (idiom.likes.count) == 1 ? "Adorateur" : "Adorateurs"%> || <%= idiom.unlikes.count %> <%= (idiom.unlikes.count) == 1 ? "Détracteur" : "Détracteurs"%>
-        <br><%= link_to "Lien vers l'idiome", idiom_path(idiom.id) %><br>
-    -----------------------------------------------------
+<% @idioms.each do |idiom| %>
+    <br>
+    Français : <%=idiom.title_fr%><br>
+    Franglais : <%=idiom.title_en%><br>
+    Grammatical type : <%=idiom.grammatical_type%><br>
+    Body : <%=idiom.body%><br>
+    Example : <%=idiom.example%><br>
+    <%= idiom.likes.count %> <%= (idiom.likes.count) == 1 ? "Adorateur" : "Adorateurs"%> || <%= idiom.unlikes.count %> <%= (idiom.unlikes.count) == 1 ? "Détracteur" : "Détracteurs"%>
+    <br><%= link_to "Lien vers l'idiome", idiom_path(idiom.id) %><br>
 
-<% end %>
+<%end%>
+
+<%= @idioms.count %> / <%= Idiom.search_by(params[:search]).count %>
+<div><%== pagy_nav(@pagy) %></div>
 <br>
