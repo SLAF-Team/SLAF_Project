@@ -10,8 +10,22 @@ $font-weight-heavy: 700;
 $font-height: 1.5;
 
 // colors
-$dark-grey: #333447;
-$dark-gray: #333447; // for the Americans
+$primary: #112233;
+$primary-light: #224364;
+$underline: #304FFF;
+$underline-light: #7085FF;
+$warning: #FFBF00;
+$warning-light: #FFE494;
+$danger: #FF005C;
+$danger-light: #ff7ead;
+$success: #81F878;
+$success-light: #B8F3B3;
+$info: #EFFF00;
+$info-light: #FBFFC5;
+$background: #E7E9E2;
+$background-light: #CCCEC3;
+
+
 
 // universal
 
@@ -23,7 +37,7 @@ body {
   padding: 0;
   left: 0;
   top: 0;
-  font-size: 100%;
+  font-size: 99%;
 }
 
 * {
