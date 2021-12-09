@@ -24,14 +24,39 @@ $info: #EFFF00;
 $info-light: #FBFFC5;
 $info-bis: #36F1CD;
 $background: #E7E9E2;
-$background-light: #CCCEC3;
+$background-light: #F9FBF6;
 
+// buttons
+
+.navbar {
+  width: 260px;
+  padding: 16px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  background-color: $background;
+}
+
+.navbar__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 22px;
+}
+
+.list__unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar__bottom {
+  font-size: 16px;
+}
 
 // buttons
 
 .button__search {
   display: inline-block;
   font-weight: 400;
+  margin-left: -44px;
   display: inline;
   line-height: 1.5;
   color: #212529;
@@ -45,8 +70,8 @@ $background-light: #CCCEC3;
   background-color: transparent;
   border: 1px solid #112233;
   box-sizing: border-box;
-  min-height: 25px;
-  min-width: 30px;
+  min-height: 45px;
+  min-width: 45px;
   box-shadow: -4px -4px 0px #112233;
   border-radius: 9px;
   padding: 0.575rem 0.575rem 0.375rem 0.575rem;
@@ -82,7 +107,6 @@ $background-light: #CCCEC3;
 
 .button__normal {
   display: inline-block;
-  font-weight: 400;
   line-height: 1.5;
   color: #212529;
   text-align: center;
@@ -105,9 +129,32 @@ $background-light: #CCCEC3;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.button__letter {
+  display: inline-block;
+  line-height: 1.6;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 32px;
+  min-width: 32px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 10px;
+  padding: 0.125rem 0.425rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
 .button__large {
   display: inline-block;
-  font-weight: 400;
   line-height: 1.5;
   color: #212529;
   text-align: center;
@@ -147,11 +194,19 @@ $background-light: #CCCEC3;
   background-color: $danger;
 }
 
+.button__success {
+  background-color: $success;
+}
+
 .button__small:hover {
   box-shadow: none;
 }
 
 .button__normal:hover {
+  box-shadow: none;
+}
+
+.button__letter:hover {
   box-shadow: none;
 }
 
@@ -168,14 +223,16 @@ $background-light: #CCCEC3;
 
 .form__control {
     display: inline-block;
-    width: 100%;
+    width: 88%;
+    height: 36px;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: #fff;
+    background-color: $background-light;
     background-clip: padding-box;
+    border-radius: 9px;
     border: 1px solid #000000;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -202,7 +259,7 @@ body {
   left: 0;
   top: 0;
   font-size: 99%;
-  background-color: $background;
+  background-color: $background-light;
 }
 
 * {
@@ -241,6 +298,10 @@ p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
 }
 
 .font-light {
