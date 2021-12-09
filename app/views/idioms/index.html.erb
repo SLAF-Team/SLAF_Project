@@ -10,6 +10,8 @@
 
 <%end%>
 
-<%= @idioms.count %> / <%= Idiom.by_letter(params[:letter]).count%>
+<%= @idioms.count %> / <%= Idiom.search_by(params[:search]).count %>
+<div><%== pagy_nav(@pagy) %></div>
+
 
 <br>
