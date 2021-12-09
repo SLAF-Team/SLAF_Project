@@ -6,5 +6,15 @@ class ApplicationController < ActionController::Base
   def letter
     @letters = *('A'..'Z')
   end
+
+  private
+
+  def already_liked?
+    Like.where(user: current_user, idiom: @idiom).exists?
+  end
+  
+  def already_unliked?
+    Unlike.where(user: current_user, idiom: @idiom).exists?
+  end
   
 end
