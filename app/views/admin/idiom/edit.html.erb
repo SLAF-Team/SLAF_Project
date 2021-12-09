@@ -1,6 +1,6 @@
   <%= form_tag url_for(action: 'update'), method: "patch" do %>
       <label>title_fr</label>
-       <%= text_field_tag 'title_fr', @idiom.title_fr, class: 'form-control' %>
+      <%= text_field_tag 'title_fr', @idiom.title_fr, class: 'form-control' %>
       <label>title_en</label>
       <%= text_field_tag 'title_en', @idiom.title_en, class: 'form-control' %>
       <label>body</label>
@@ -10,6 +10,8 @@
       <label>grammatical_type</label>
       <%= text_field_tag 'body', @idiom.grammatical_type, class: 'form-control' %>
       <%= submit_tag 'Modifier', class: 'btn btn-outline-warning btn-m' %>
+      <%= button_tag "Valider", {:name => "submit", :value => "true"} %>
+      <%= button_tag "Refuser", {:name => "submit", :value => "false"} %>   
 <% end %>
 
 

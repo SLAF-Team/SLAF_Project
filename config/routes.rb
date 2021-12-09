@@ -19,7 +19,8 @@ Rails.application.routes.draw do
 
   resources :admin, only: [:index]
     namespace :admin do
-      root to: 'admin#index'
-      resources :user, :idiom
+      root 'admin#index'
+      resources :user
+      resources :idiom
     end
 end
