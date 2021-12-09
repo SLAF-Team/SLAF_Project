@@ -1,44 +1,45 @@
 
 <div class="navbar">
-  <div class="navbar-top">
-    <img id="navbar-logo">
-    <%= link_to "Accueil", root_path %>
-    <div class="navbar-search">
-      <%= form_for "", html: {class: 'search__form'}, url: idioms_path, role: "search", method: :get do%>
-      <%= text_field_tag :search, @search, placeholder: "Rechercher une expression", class: 'form__control'%>
-      <%= button_tag(type: "submit", class: "button__search button__danger") do %>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-          </svg>
-      <% end %>
-      <% end%>
+  <div class="navbar__top">
+      <a href="/"><span style="font-size: 50px;">LOGO</span></a>
+      <ul class="list__unstyled">
+        <%= form_for "", html: {class: 'search__form'}, url: idioms_path, role: "search", method: :get do%>
+        <%= text_field_tag :search, @search, placeholder: "Rechercher une expression", class: 'form__control'%>
+        <%= button_tag(type: "submit", class: "button__search button__danger") do %>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+        <% end %>
+        <% end%>
+      </ul>
+      <div class="navbar-browse" style="font-size: 22px; font-weight: bold;">
+        <span>Browse</span>
+        <div class="row">
+            <% @letters.each do |letter| %>
+            <div class="col-2">
+              <%= link_to letter, idioms_path(:search => letter), class: 'button__letter button__info' %>
+            </div>
+            <% end %>
+        </div>
+      </div>
+      <div class="navbar__buttons">
+        <%= render 'application/random' %>
+        <%= link_to "FILTER", idioms_path(:search => "top"), class: 'button__large button__success' %>
       </div>
     </div>
-    <div class="navbar-browse">
-      <h2>Browse<h2>
-      <%# Caler un dropdown %>
-      <ul class="navbar-browse-index">
-        <% @letters.each do |letter| %>
-        <br><%= link_to letter, idioms_path(:search => letter), class: 'button__small button__info' %>
+    <div class="navbar__bottom">
+      <ul class="list__unstyled">
+        <li><%= link_to "Accueil", root_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Profil", user_path(current_user.id) %></li>
+          <li><%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %></li>
+          <%if current_user.admin == true%>
+            <li><%=link_to 'Admin dashboard', admin_index_path%></li>
+          <%end%>
+        <% else %>
+          <li><%= link_to "S'inscrire", new_user_registration_path %></li>
+          <li><%= link_to "Se connecter", new_user_session_path %></li>
         <% end %>
       </ul>
     </div>
-    <div class="navbar-buttons">
-      <btn><%= render 'application/random' %></btn>
-
-      <%= link_to "FILTER", idioms_path(:search => "top"), class: 'button__large button__danger' %>
-    </div>
-  </div>
-  <div class="navbar-bottom">
-    <% if user_signed_in? %>
-      <%= link_to "Profil", user_path(current_user.id) %>
-      <%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete %><br>
-      <%if current_user.admin == true%>
-        <%=link_to 'Admin dashboard', admin_index_path%>
-      <%end%>
-    <% else %>
-      <%= link_to "S'inscrire", new_user_registration_path %>
-      <%= link_to "Se connecter", new_user_session_path %>
-    <% end %>
-  </div>
 </div>
