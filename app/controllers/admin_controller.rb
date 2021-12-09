@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
-   before_action :authenticate_user!, only: [:index]
-   before_action :check_if_admin
+  before_action :authenticate_user!, only: [:index]
+  before_action :check_if_admin
 
   def index
     @user = User.all
@@ -8,6 +8,8 @@ class AdminController < ApplicationController
     @admin = current_user.admin
   end
 
+  def update
+  end
 
   private
 

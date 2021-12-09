@@ -2,5 +2,6 @@
     <p>Title fr : <%=idiom.title_fr%></p>
     <p>Author : <%=idiom.user.email%></p>
     <%= link_to 'Voir', admin_idiom_path(idiom.id) %>
+    <%= link_to 'Editer son statut', edit_admin_idiom_path(idiom.id)%></button>
 <%end%>
 

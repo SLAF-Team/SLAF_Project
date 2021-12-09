@@ -5,3 +5,23 @@
 <%= link_to 'Gestion des utilisateurs', admin_user_index_path %>
 <h4>Nombre d'expressions créées : </h4><%= @idiom.all.count%><br />
 <%= link_to 'Gestion des idioms', admin_idiom_index_path %>
+
+<h4>Les entrées à valider :</h4>
+
+<% @idiom.each do |idiom| %>
+    <%if idiom.validated == false %>
+        <br>
+        Français : <%=idiom.title_fr%><br>
+        Franglais : <%=idiom.title_en%><br>
+        Grammatical type : <%=idiom.grammatical_type%><br>
+        Body : <%=idiom.body%><br>
+        Example : <%=idiom.example%><br>
+        <%= idiom.likes.count %> <%= (idiom.likes.count) == 1 ? "Adorateur" : "Adorateurs"%> || <%= idiom.unlikes.count %> <%= (idiom.unlikes.count) == 1 ? "Détracteur" : "Détracteurs"%>
+        <br><%= link_to "Lien vers l'idiome", idiom_path(idiom.id) %><br>    
+    <% end %>
+<% end %>
+<br>
+
+<% if false %>
+<%= link_to 'Supprimer', idiom_path(idiom.id), method: :delete %>
+<% end %>

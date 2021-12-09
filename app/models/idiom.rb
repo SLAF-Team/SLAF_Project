@@ -4,11 +4,13 @@ class Idiom < ApplicationRecord
     has_many :likes, dependent: :destroy
     has_many :unlikes, :dependent => :destroy
 
-    def self.by_letter(letter)
-        if letter.blank?  #covers both nil and empty string
+    def self.search_by(search)
+        if search.blank?
             all
+        #pour les tops
+        # elsif params[:search] == 1
         else
-            where('title_en LIKE ?', "%#{letter}%")
+            where('title_en LIKE ?', "%#{search}%")
         end
     end
 
