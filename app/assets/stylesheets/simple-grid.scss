@@ -26,7 +26,70 @@ $info-bis: #36F1CD;
 $background: #E7E9E2;
 $background-light: #F9FBF6;
 
-// buttons
+// _idioms-cards
+
+.card {
+  padding: 25px;
+}
+
+.card__title {
+  margin-bottom: 1%;
+}
+
+.card__title--first {
+  font-size: 28px;
+  font-weight: 800;
+  margin-right: 6px;
+  color: $underline;
+}
+
+.card__body {
+  margin-bottom: 2%;
+}
+
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__row {
+  display: inline;
+  display: flex;
+  align-items: center;
+}
+
+.card__row svg {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+// _footer
+
+footer {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  height: 80px;
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//_content
+
+.content {
+  overflow: scroll;
+  width: 80%;
+
+}
+
+.card {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  background-color: $background;
+}
+
+// navbar
 
 .navbar {
   width: 260px;
@@ -241,10 +304,6 @@ $background-light: #F9FBF6;
 
 .search__form {
   display: block;
-}
-
-.form__control:focus {
-  border: 2px solid black;
 }
 
 // universal
