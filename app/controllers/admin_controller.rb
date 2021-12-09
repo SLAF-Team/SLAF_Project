@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
-  # before_action :authenticate_user!, only: [:index]
-  # before_action :check_if_admin
+   before_action :authenticate_user!, only: [:index]
+   before_action :check_if_admin
 
   def index
     @user = User.all

@@ -1,7 +1,6 @@
 class LikesController < ApplicationController
 before_action :find_idiom
 before_action :find_like, only: [:destroy]
-before_action :, only: [:destroy, :create]
 
 
   def create
