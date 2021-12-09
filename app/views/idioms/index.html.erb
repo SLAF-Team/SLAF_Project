@@ -8,6 +8,9 @@
     <%= idiom.likes.count %> <%= (idiom.likes.count) == 1 ? "Adorateur" : "Adorateurs"%> || <%= idiom.unlikes.count %> <%= (idiom.unlikes.count) == 1 ? "Détracteur" : "Détracteurs"%>
     <br><%= link_to "Lien vers l'idiome", idiom_path(idiom.id) %><br>
 
-    -----------------------------------------------------
 <%end%>
+
+<%= @idioms.count %> / <%= Idiom.by_letter(params[:letter]).count%>
+<div><%== pagy_nav(@pagy) %></div>
+
 <br>
