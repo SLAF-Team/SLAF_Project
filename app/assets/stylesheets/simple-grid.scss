@@ -138,9 +138,6 @@ footer {
   padding-left: 1rem;
 }
 
-.navbar__mobile--logo {
-}
-
 .navbar__buttons {
   display: flex;
   justify-content: space-evenly;
@@ -166,7 +163,7 @@ footer {
 
 // Profile page
 .profile__title {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
@@ -399,6 +396,8 @@ footer {
   background-color: $info-bis;
 }
 
+
+
 .button__danger {
   background-color: $danger;
 }
@@ -430,7 +429,39 @@ footer {
 .button__large:active {
   box-shadow: -3px -3px #666;
   transform: translateY(-3px) translateX(-3px);
+  animation-name: backgroundColorPalette;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function:steps(1);
 }
+
+.button__info--bis:hover {
+  animation-name: backgroundColorPalette;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function:steps(1);
+}
+
+@keyframes backgroundColorPalette {
+	0% {
+		background: $underline;
+	}
+	25% {
+		background: $warning;
+	}
+	50% {
+		background: $success;
+	}
+	75% {
+		background: $info;
+	}
+	100% {
+		background: $danger;
+	}
+}
+
 
 .button__search:active {
   box-shadow: -2px -2px #666;

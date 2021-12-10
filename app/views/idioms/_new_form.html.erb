@@ -2,16 +2,16 @@
 <div class="form">
   <div class="form__content center" style="width: 33vw;">
     <div>
-      <%= f.text_area :title_en, autofocus: true, autocomplete: "title_en", class: "form__control", placeholder: 'Mot en franglais' %>
+      <%= f.text_area :title_en, autofocus: true, autocomplete: "title_en", class: "form__control", placeholder: 'Mot en franglais (max 50 carac.)' %>
     </div>
     <div>
-      <%= f.text_area :title_fr, autofocus: true, autocomplete: "title_fr", class: "form__control", placeholder: 'Mot en beau français' %>
+      <%= f.text_area :title_fr, autofocus: true, autocomplete: "title_fr", class: "form__control", placeholder: 'Mot en beau français (max 50 carac.)' %>
     </div>
     <div>
-      <%= f.text_area :body, autofocus: true, autocomplete: "body", class: "form__control", placeholder: 'Ton explication' %>
+      <%= f.text_area :body, autofocus: true, autocomplete: "body", class: "form__control", placeholder: 'Ton explication (15 - 140 carac.)' %>
     </div>
     <div>
-      <%= f.text_area :example, autofocus: true, autocomplete: "example", class: "form__control", placeholder: "Exemples d'utilisation" %>
+      <%= f.text_area :example, autofocus: true, autocomplete: "example", class: "form__control", placeholder: "Exemples d'utilisation (15 - 140 carac.)" %>
     </div>
     <div class="row">
     <div class="col-3">

@@ -23,7 +23,7 @@ class IdiomsController < ApplicationController
       flash[:success] = 'Ton expression est désormais en cours de validation !'
       redirect_to idiom_path(@idiom.id)
     else
-    flash.now[:error] = @user.errors.full_messages.to_sentence
+    flash.now[:error] = @idiom.errors.full_messages.to_sentence
     render :new
     end
   end
