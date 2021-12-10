@@ -10,8 +10,10 @@
     <label>grammatical_type</label>
       <%= text_field_tag 'body', @idiom.grammatical_type, class: 'form-control' %><br>
       <button><%= link_to "Supprimer l'idiom", admin_idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'} %></button><br>
+      <%if @idiom.validated == false%>
       <%= button_tag "Valider", {:name => "submit", :value => "true"} %><br>
       <%= button_tag "Refuser", {:name => "submit", :value => "false"} %><br>
+      <%end%>
 <% end %>
 
 
