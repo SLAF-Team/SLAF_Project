@@ -1,10 +1,5 @@
-<h1>Toutes les expressions</h1>
-<% @idioms.each do |idiom| %>
-    Français : <%=idiom.title_fr%><br>
-    Franglais : <%=idiom.title_en%><br>
-    Validation : <%=idiom.validated%><br>
-    <%= link_to 'Détails', idiom_path(idiom.id) %><br>
-    <%= link_to 'Editer / Valider / Supprimer', edit_admin_idiom_path(idiom.id)%><br> 
-    <hr>   
-<% end %>
+<h1>Toutes les expressions à valider</h1>
+<%= render 'validate_expressions' %>
 
+<h1>Toutes les expressions</h1>
+<%= render 'all_expressions' %>

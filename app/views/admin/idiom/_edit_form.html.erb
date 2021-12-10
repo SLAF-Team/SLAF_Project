@@ -1,0 +1,17 @@
+<%= form_tag url_for(action: 'update'), method: "patch" do %><br>
+    <label>title_fr</label>
+    <%= text_field_tag 'title_fr', @idiom.title_fr, class: 'form-control' %><br>
+    <label>title_en</label>
+    <%= text_field_tag 'title_en', @idiom.title_en, class: 'form-control' %><br>
+    <label>body</label>
+    <%= text_field_tag 'body', @idiom.body, class: 'form-control' %><br>
+    <label>example</label>
+    <%= text_field_tag 'example', @idiom.example, class: 'form-control' %><br>
+    <label>grammatical_type</label>
+      <%= text_field_tag 'body', @idiom.grammatical_type, class: 'form-control' %><br>
+      <button><%= link_to "Supprimer l'idiom", admin_idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'} %></button><br>
+      <%if @idiom.validated == false%>
+      <%= button_tag "Valider", {:name => "submit", :value => "true"} %><br>
+      <%= button_tag "Refuser", {:name => "submit", :value => "false"} %><br>
+      <%end%>
+<% end %>

@@ -1,6 +1,6 @@
 // SIMPLE GRID - SASS/SCSS
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,800,900);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,500,600,700,700italic,800,900);
 
 // fonts
 $font-family: 'Lato', Helvetica, sans-serif;
@@ -8,6 +8,13 @@ $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-heavy: 700;
 $font-height: 1.5;
+
+// screen
+$width: 96%;
+$gutter: 4%;
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
 
 // colors
 $primary: #112233;
@@ -79,8 +86,12 @@ footer {
 
 .content {
   overflow: scroll;
-  width: 80%;
+}
 
+@media only screen and (max-width: $breakpoint-med) {
+  .content {
+    width: 100%;
+  }
 }
 
 .card {
@@ -94,15 +105,46 @@ footer {
 .navbar {
   width: 260px;
   padding: 16px;
+  height: 95.6vh;
   border: 1.5px solid black;
   border-radius: 5px;
   background-color: $background;
+  position: fixed;
+}
+
+@media only screen and (max-width: $breakpoint-med) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar__mobile {
+  padding: 1rem;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  background-color: $background;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (min-width: $breakpoint-med) {
+  .navbar__mobile {
+    display: none;
+  }
+}
+
+.navbar__mobile--logo {
+  padding-left: 1rem;
+}
+
+.navbar__mobile--logo {
 }
 
 .navbar__buttons {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .list__unstyled {
@@ -118,7 +160,33 @@ footer {
 .button__search {
   display: inline-block;
   font-weight: 400;
-  margin-left: -44px;
+  margin-left: -50px;
+  display: inline;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 50px;
+  min-width: 50px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.575rem 0.575rem 0.375rem 0.575rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button__likes {
+  display: inline-block;
+  font-weight: 400;
   display: inline;
   line-height: 1.5;
   color: #212529;
@@ -207,7 +275,7 @@ footer {
   box-sizing: border-box;
   min-height: 32px;
   min-width: 32px;
-  box-shadow: -4px -4px 0px #112233;
+  box-shadow: -3px -3px 0px #112233;
   border-radius: 10px;
   padding: 0.125rem 0.425rem;
   font-size: 1.1rem;
@@ -233,7 +301,7 @@ footer {
   min-width: 30px;
   box-shadow: -6px -6px 0px #112233;
   border-radius: 9px;
-  padding: 1.1rem 0.550rem;
+  padding: 1.3rem 0.550rem;
   min-width: 110px;
   font-size: 1.2rem;
   font-weight: 800;
@@ -285,7 +353,7 @@ footer {
 
 .form__control {
     display: inline-block;
-    width: 88%;
+    width: 85%;
     height: 36px;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -295,7 +363,7 @@ footer {
     background-color: $background-light;
     background-clip: padding-box;
     border-radius: 9px;
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -307,6 +375,17 @@ footer {
 }
 
 // universal
+main {
+  margin-left: 295px;
+  width: 100vw;
+}
+
+@media only screen and (max-width: $breakpoint-med) {
+  main {
+    margin-left: 0;
+    width: 100vw;
+  }
+}
 
 html,
 body {
@@ -360,6 +439,7 @@ p {
 
 a {
   text-decoration: none;
+  font-weight: bold;
 }
 
 .font-light {
@@ -400,12 +480,6 @@ a {
 
 // grid
 
-$width: 96%;
-$gutter: 4%;
-$breakpoint-small: 33.75em; // 540px
-$breakpoint-med: 45em; // 720px
-$breakpoint-large: 60em; // 960px
-
 .container {
   width: 90%;
   margin-left: auto;
@@ -428,7 +502,7 @@ $breakpoint-large: 60em; // 960px
 
 .row [class^="col"] {
   float: left;
-  margin: 0.5rem 2%;
+  margin: 0.3rem 1.9%;
   min-height: 0.125rem;
 }
 
