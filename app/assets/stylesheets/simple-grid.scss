@@ -169,7 +169,6 @@ footer {
   align-items: center;
   height: 10vh;
   background-color: $underline;
-  margin-bottom: 2vh;
 
   * {
     margin-top: 15px;
@@ -199,11 +198,14 @@ footer {
   }
 }
 
+.profile__content {
+  background-color: $background;
+}
+
 .profile__info {
   margin-left: 75px;
   margin-right: 75px;
   display: flex;
-  margin-bottom: 2vh;
   // border: 3px solid green;
 }
 
@@ -214,7 +216,7 @@ footer {
 }
 
 .profile-info-text-elt {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .pic-avatar {
