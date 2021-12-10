@@ -6,13 +6,14 @@ class CommentsController < ApplicationController
     end
 
     def create
+        @idiom = Idiom.find(params[:idiom_id])
         @comment = @idiom.comments.create(body: params[:comments][:body], user: current_user,idiom: params[@idiom])
-        redirect_to idiom_path(@idiom)
+        redirect_to idiom_path(@idiom.id)
     end
 
     def destroy
         @idiom.comments.find(params[:id]).destroy
-        redirect_to root_path
+        redirect_to idiom_path(@idiom.id)
     end
 
     def edit
@@ -20,13 +21,15 @@ class CommentsController < ApplicationController
     end
 
     def update
+        @idiom = Idiom.find(params[:idiom_id])
         @comment = Comment.find(params[:id])
-     
-        if @comment.update('body' => params[:comment][:body])
-          redirect_to idiom_path(@idiom)
+
+        if @comment.update(body: params[:comment][:body])
+        flash[:success] = 'Edition réussie !'
+        redirect_to idiom_path(@idiom.id)
         else
-          flash[:error] = 'Commentaire trop petit ou trop grand !'
-          render :edit
+        flash[:error] = 'Commentaire trop petit ou trop grand !'
+        render :edit
         end
     end
 

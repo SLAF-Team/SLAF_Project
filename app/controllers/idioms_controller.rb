@@ -34,7 +34,6 @@ class IdiomsController < ApplicationController
 
   def update
     @idiom = Idiom.find(params[:id])
-    puts params
       if @idiom.update(title_en: params[:idiom][:title_en], title_fr: params[:idiom][:title_fr],
         grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example: params[:idiom][:example], user: current_user)
       redirect_to idiom_path(@idiom.id)
