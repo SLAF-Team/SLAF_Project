@@ -1,0 +1,5 @@
+<% @user.each do |user|%>
+    <p>Email : <%=user.email%></p>
+    <p>Id : <%=user.id%></p>
+    <%=link_to 'Voir' ,admin_user_path(user.id)%>
+<%end%>
