@@ -4,7 +4,7 @@
       <a href="/"><span style="font-size: 48px;">S.L.A.F</span></a>
       <ul class="list__unstyled">
         <%if current_user%>
-          <%= link_to "Créer une expression", new_idiom_path, class: 'button__letter button__info' %>
+          <%= link_to "CRÉER UNE EXPRESSION", new_idiom_path, class: 'button__letter button__info', style: "margin-bottom: 15px;" %>
         <% end %>
         <%= form_for "", html: {class: 'search__form'}, url: idioms_path, role: "search", method: :get do%>
         <%= text_field_tag :search, @search, placeholder: "Rechercher", class: 'search__form--control'%>
@@ -27,7 +27,7 @@
       </div>
       <div class="navbar__buttons">
         <%= render 'application/random' %>
-        <%= link_to "FILTRER", idioms_path(:search => "top"), class: 'button__large button__success' %>
+        <%= link_to "FLORILÈGE", idioms_path(:search => "top"), class: 'button__large button__success' %>
       </div>
     </div>
     <div class="navbar__bottom">
