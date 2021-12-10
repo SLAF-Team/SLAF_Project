@@ -1,5 +1,12 @@
 <%= form_with model: @comment, url: (idiom_comment_path(@idiom.id, @comment.id)), method: :patch do |form|%>
-<br><%= form.label :body, 'body' %>
-<br><%= form.text_field :body %>
-<br><%= form.submit 'Envoyez' %>
+<div class="form" style="height: 88vh;">
+  <div class="form__content center">
+    <div class="field">
+    <br><%= form.text_field :body, class: "form__control" %>
+    </div>
+    <div class="right form__button">
+      <br><%= form.submit 'Envoyez', class: 'button__normal button__info' %>
+    </div>
+  </div>
+</div>
 <% end %>
