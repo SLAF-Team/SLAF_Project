@@ -1,19 +1,39 @@
 <%= form_for(:idioms, url:(idioms_path), action: "create", method: :post) do |f| %>
-  <br><%= f.label :title_en, "L'ignoble mot en franglais" %>
-  <br><%= f.text_area :title_en %>
-  <br><%= f.label :title_fr, "La belle traduction française" %>
-  <br><%= f.text_area :title_fr %>
-  <br><%= f.label :body, "Ton explication" %>
-  <br><%= f.text_area :body %>
-  <br><%= f.label :example, "Exemples d'utilisation" %>
-  <br><%= f.text_area :example %>
-  <br><%= f.label :grammatical_type, "verb" %>
-  <%= f.radio_button :grammatical_type, "Verbe" %>
-  <%= f.label :grammatical_type, "adverb" %>
-  <%= f.radio_button :grammatical_type, "Adverbe" %>
-  <%= f.label :grammatical_type, "adjective" %>
-  <%= f.radio_button :grammatical_type, "Adjectif" %>
-  <%= f.label :grammatical_type, "noun" %>
-  <%= f.radio_button :grammatical_type, "Nom" %>
-  <br><%= f.submit %>
+<div class="form">
+  <div class="form__content center" style="width: 33vw;">
+    <div>
+      <%= f.text_area :title_en, autofocus: true, autocomplete: "title_en", class: "form__control", placeholder: 'Mot en franglais' %>
+    </div>
+    <div>
+      <%= f.text_area :title_fr, autofocus: true, autocomplete: "title_fr", class: "form__control", placeholder: 'Mot en beau français' %>
+    </div>
+    <div>
+      <%= f.text_area :body, autofocus: true, autocomplete: "body", class: "form__control", placeholder: 'Ton explication' %>
+    </div>
+    <div>
+      <%= f.text_area :example, autofocus: true, autocomplete: "example", class: "form__control", placeholder: "Exemples d'utilisation" %>
+    </div>
+    <div class="row">
+    <div class="col-3">
+      <%= f.label :grammatical_type, "Verbe" %>
+      <%= f.radio_button :grammatical_type, "Verbe" %>
+    </div>
+    <div class="col-3">
+      <%= f.label :grammatical_type, "Adverbe" %>
+      <%= f.radio_button :grammatical_type, "Adverbe" %>
+    </div>
+    <div class="col-3">
+      <%= f.label :grammatical_type, "Adjectif" %>
+      <%= f.radio_button :grammatical_type, "Adjectif" %>
+    </div>
+    <div class="col-3">
+      <%= f.label :grammatical_type, "Nom" %>
+      <%= f.radio_button :grammatical_type, "Nom" %>
+    </div>
+    </div>
+    <div class="right form__button">
+      <%= f.submit "Soumettre", class: 'button__normal button__info' %>
+    </div>
+</div>
+</div>
 <% end %>

@@ -1,12 +1,12 @@
 <h1><%= @idiom.title_fr %> / <%= @idiom.title_en %><br></h1>
 <p>Définition: <%= @idiom.body %><p><br>
 <%= @idiom.example %><br>
-<p>Une expression proposée par <%= @idiom.user_id %><p>
+<p>Une expression proposée par <b><%= @idiom.user.alias %><p></b>
 
 <%= render 'comments_list' %>
 <%= render 'comments_form' %>
-<%= render 'like'%>
-<%= render 'unlike'%>
+<%= render 'like' if current_user != nil %>
+<%= render 'unlike' if current_user != nil %>
 
 
 <%= social_share_button_tag("S.L.A.F") %>
