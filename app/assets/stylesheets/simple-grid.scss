@@ -113,6 +113,90 @@ footer {
 .navbar__bottom {
   font-size: 16px;
 }
+
+.nav-link:hover{
+  border-left: 4px solid black;
+  padding-left: 4px;
+  transition-duration: 0.2s;
+}
+
+// Profile page
+.profile__title {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: $underline;
+  margin-bottom: 2vh;
+
+  * {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  h1, h2 {
+    margin-left: 20px;
+    color: #FFF;
+    font-size: 1.3em;
+  }
+
+  .button__normal {
+    margin-right: 20px;
+  }
+}
+
+.profile__title--bg-color-1 {
+  background-color: $underline;
+}
+
+.profile__title--bg-color-2 {
+  background-color: #C4C4C4;
+
+  h2 {
+    color: #000000;
+  }
+}
+
+.profile__info {
+  display: flex;
+  margin-bottom: 2vh;
+  // border: 3px solid green;
+}
+
+.profile-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 75px;
+}
+
+.profile-info-text-elt {
+  margin-bottom: 10px;
+}
+
+.pic-avatar {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  object-fit : cover;
+}
+
+.profile-info-pic {
+  margin-right: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.form-picture{
+
+}
+
+.avatar{
+
+}
+
 // buttons
 
 .button__search {

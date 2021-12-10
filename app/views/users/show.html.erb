@@ -1,43 +1,68 @@
 <div class="profile">
-  <div class="profile-title">
+  <div class="profile__title profile__title--bg-color-1">
     <h1>Mon profil</h1>
     <%= link_to "EDIT", edit_user_registration_path, class: 'button__normal button__info' %>
   </div>
-  <div class="profile-info">
-    <div class="profile-info-pic">
-      <%= form_tag user_avatars_path(@user), multipart: true do %>
-        <%= file_field_tag :avatar %>
-        <%= submit_tag "uploader l'avatar" %>
-      <% end %>
+
+  <div class="profile__info">
+
+    <div class="profile-info-text col-5">
+    
+      <div class= "profile-info-text-elt">
+        <div><%= @user.alias%> </div>
+      </div>
+
+      <div class= "profile-info-text-elt">      
+        <div><%= @user.first_name%> </div>
+      </div>
+
+      <div class= "profile-info-text-elt">
+        <div><%= @user.last_name%> </div>
+      </div>
+
+      <div class= "profile-info-text-elt">
+        <div><%= @user.email%> </div>
+      </div>
+
+    </div>
+
+    <div class="profile-info-pic col-7">
+    <div class='avatar'>
       <%if @user.avatar.attached?%>
-      <%= image_tag @user.avatar%>
+        <%= image_tag @user.avatar, class: 'pic-avatar'%>
       <%else%>
         <p>Il n'y a pas encore d'avatar lié à cet utilisateur</p>
       <%end%>
     </div>
-    <div class="profile-info-text">
-      <p>Alias : <%= @user.alias%> </p>
-      <p>Prénom : <%= @user.first_name%> </p>
-      <p>Nom : <%= @user.last_name%> </p>
-      <p>Email : <%= @user.email%> </p>
+      <div class='form-picture'>
+      <%= form_tag user_avatars_path(@user), multipart: true do %>
+        <%= file_field_tag :avatar %>
+        <%= submit_tag "uploader l'avatar" %>
+      <% end %>
+      </div>
     </div>
+
   </div>
+
   <div class="profile-my-idioms">
-    <h2>Mes créations</h2>
-    <% @idioms.each do |idiom| %>
-      <br><%= idiom.title_en %>
-      <br><%= idiom.title_fr %>
-      <br><%= link_to "Voir", idiom_path(idiom.id) %>
-      <br><%= link_to "Supprimer", idiom_path(idiom.id), :method => :delete, remote: 'true', data: { confirm: 'Sûr?' } %>
-    <% end %>
+
+    <div class="profile__title profile__title--bg-color-2">
+      <h2>Mes créations</h2>
+    </div>
+      <% @idioms.each do |idiom| %>
+        <br><%= idiom.title_en %>
+        <br><%= idiom.title_fr %>
+        <br><%= link_to "Voir", idiom_path(idiom.id) %>
+        <br><%= link_to "Supprimer", idiom_path(idiom.id), :method => :delete, remote: 'true', data: { confirm: 'Sûr?' } %>
+      <% end %>
   </div>
+    
   <div class="profile-my-likes">
-    <h2>Mes préférées</h2>
-    <% @likes.each do |like| %>
-    <br>Expression numéro <%= @likes.index(like) + 1 %>
-    <br><%= like.idiom.title_en %>
-    <br><%= like.idiom.title_fr %>
-    <br><%= link_to "Voir", idiom_path(like.idiom.id) %>
-    <% end %>
+      <h2>Mes préférées</h2>
+      <% @likes.each do |like| %>
+      <br>Expression numéro <%= @likes.index(like) + 1 %>
+      <br><%= like.idiom.title_en %>
+      <br><%= like.idiom.title_fr %>
+      <br><%= link_to "Voir", idiom_path(like.idiom.id) %>
+      <% end %>
   </div>
-</div>
