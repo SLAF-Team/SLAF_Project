@@ -169,7 +169,6 @@ footer {
   align-items: center;
   height: 10vh;
   background-color: $underline;
-  margin-bottom: 2vh;
   border: 1px solid black;
   border-radius: 5px;
   min-height: 76px;
@@ -200,6 +199,8 @@ footer {
 
 .profile__content {
   background-color: $background;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .profile__info {
