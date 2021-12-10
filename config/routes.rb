@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "idioms#index"
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: 'omniauth'}
   resources :idioms do
     resources :comments
   end
