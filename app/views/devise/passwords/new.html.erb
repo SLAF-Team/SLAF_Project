@@ -2,6 +2,7 @@
 <div class="profile__title profile__title--bg-color-1">
   <h2 class="center">Mot de passe oublié</h2>
 </div>
+
 <div class="form">
   <div class="form__content center">
   <div class="field">
@@ -11,9 +12,11 @@
   <div class="right form__button">
     <%= f.submit "Envoyez moi les instructions", class: 'button__normal button__info' %>
   </div>
+
     <div class="form__links">
       <%= render "devise/shared/links" %>
     </div>
+
 </div>
 </div>
 <% end %>

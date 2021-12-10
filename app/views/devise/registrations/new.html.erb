@@ -2,8 +2,10 @@
 <div class="profile__title profile__title--bg-color-1">
   <h2 class="center">S'inscrire</h2>
 </div>
+
 <div class="form">
   <div class="form__content center">
+
     <div class="field">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__control", placeholder: 'Email' %>
     </div>
@@ -23,6 +25,7 @@
     <div class="form__links">
       <%= render "devise/shared/links" %>
     </div>
+
   </div>
 </div>
 <% end %>
