@@ -1,27 +1,5 @@
 <h1>Toutes les expressions à valider</h1>
-<% @idioms.each do |idiom| %>
-    <%if idiom.validated == false%>
-    Français : <%=idiom.title_fr%><br>
-    Franglais : <%=idiom.title_en%><br>
-    Validation : <%=idiom.validated%><br>
-    <%= link_to 'Détails', idiom_path(idiom.id) %><br>
-    <%= link_to 'Editer', edit_admin_idiom_path(idiom.id)%><br>
-    <%= link_to 'Valider / Supprimer', edit_admin_idiom_path(idiom.id)%>
-    <hr>   
-    <%end%>
-<% end %>
+<%= render 'validate_expressions' %>
 
 <h1>Toutes les expressions</h1>
-<% @idioms.each do |idiom| %>
-    Français : <%=idiom.title_fr%><br>
-    Franglais : <%=idiom.title_en%><br>
-    Validation : <%=idiom.validated%><br>
-    <%= link_to 'Détails', idiom_path(idiom.id) %><br>
-    <%= link_to 'Editer', edit_admin_idiom_path(idiom.id)%><br>
-    <%if idiom.validated == false%>
-    <%= link_to 'Valider / Supprimer', edit_admin_idiom_path(idiom.id)%>
-    <%else%>
-
-    <%end%>
-    <hr>   
-<% end %>
+<%= render 'all_expressions' %>

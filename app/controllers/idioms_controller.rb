@@ -27,6 +27,10 @@ class IdiomsController < ApplicationController
     end
   end
 
+  def edit
+    @idiom = Idiom.find(params[:id])
+  end
+
   def update
     @idiom = Idiom.find(params[:id])
     puts params
