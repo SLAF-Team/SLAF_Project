@@ -5,7 +5,7 @@ class OmniauthController < ApplicationController
     if @user.persisted?
       sign_in_and_redirect @user
     else
-      flash[:error] = 'Connexion avec Facebook impossible. Veuillez créer un compte ou essayer plus tard.'
+      flash[:error] = 'Connexion avec Facebook impossible! Veuillez créer un compte ou essayer plus tard.'
       redirect_to new_user_registration_url
     end
   end
