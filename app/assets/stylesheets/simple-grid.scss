@@ -1,4 +1,4 @@
-// SIMPLE GRID - SASS/SCSS
+// SIMPLE GRID - SASS/SCSS/
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,500,600,700,700italic,800,900);
 
@@ -148,6 +148,8 @@ footer {
 }
 
 .list__unstyled {
+  display: flex;
+  flex-direction: column;
   padding-left: 0;
   list-style: none;
 }
@@ -169,7 +171,10 @@ footer {
   align-items: center;
   height: 10vh;
   background-color: $underline;
+<<<<<<< HEAD
   margin-bottom: 2vh;
+=======
+>>>>>>> e309c3d4fab94f92d8245e90a835ad8f8e65f7d8
   border: 1px solid black;
   border-radius: 5px;
   min-height: 76px;
@@ -200,6 +205,8 @@ footer {
 
 .profile__content {
   background-color: $background;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .profile__info {
