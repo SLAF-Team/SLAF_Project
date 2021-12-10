@@ -37,7 +37,7 @@
       <div class='form-picture'>
       <%= form_tag user_avatars_path(@user), multipart: true do %>
         <%= file_field_tag :avatar %>
-        <%= submit_tag "uploader l'avatar" %>
+        <%= submit_tag "Éditer l'avatar", class: 'button__normal button__info' %>
       <% end %>
       </div>
     </div>

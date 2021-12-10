@@ -158,6 +158,8 @@ footer {
 }
 
 .profile__info {
+  margin-left: 75px;
+  margin-right: 75px;
   display: flex;
   margin-bottom: 2vh;
   // border: 3px solid green;
@@ -167,7 +169,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 75px;
 }
 
 .profile-info-text-elt {
@@ -182,20 +183,15 @@ footer {
 }
 
 .profile-info-pic {
-  margin-right: 75px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
-.form-picture{
 
-}
-
-.avatar{
-
-}
 
 // buttons
 
