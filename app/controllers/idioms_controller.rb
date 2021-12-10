@@ -1,15 +1,15 @@
 class IdiomsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :new]
-  
+
   def show
     @idiom = Idiom.find(params[:id])
   end
 
   def index
-    @letters = *('A'..'Z')
-    @idioms_letter = Idiom.by_letter(params[:letter])
-    @pagy, @idioms = pagy(@idioms_letter.order(created_at: :desc))
-  end
+      @index_idioms = Idiom.where(validated: true)
+      @idioms_ = @index_idioms.search_by(params[:search])
+      @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
+    end
 
   def new
     @idiom = Idiom.new()
@@ -18,7 +18,7 @@ class IdiomsController < ApplicationController
   def create
     @idiom = Idiom.create(title_en: params[:idioms][:title_en], title_fr: params[:idioms][:title_fr],
       grammatical_type: params[:idioms][:grammatical_type], body: params[:idioms][:body], example: params[:idioms][:example], user: current_user)
-      
+
     if @idiom.save
       flash[:success] = 'Ton expression est désormais en cours de validation !'
       redirect_to idiom_path(@idiom.id)
@@ -28,9 +28,12 @@ class IdiomsController < ApplicationController
     end
   end
 
+  def edit
+    @idiom = Idiom.find(params[:id])
+  end
+
   def update
     @idiom = Idiom.find(params[:id])
-    puts params
       if @idiom.update(title_en: params[:idiom][:title_en], title_fr: params[:idiom][:title_fr],
         grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example: params[:idiom][:example], user: current_user)
       redirect_to idiom_path(@idiom.id)
@@ -42,7 +45,7 @@ class IdiomsController < ApplicationController
   def destroy
     @idiom = Idiom.find(params[:id])
     @idiom.destroy
-    redirect_back(fallback_location: root_path) 
+    redirect_back(fallback_location: root_path)
   end
 
 private

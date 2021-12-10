@@ -1,26 +1,21 @@
 class Admin::IdiomController < ApplicationController
-    def index
-        @idiom = Idiom.all
-        @user = User.all
-    end
 
     def show
         @idiom = Idiom.find(params[:id])
     end
 
+    def index
+        @idioms = Idiom.all
+        @user = User.all
+    end
+
+    def edit
+    end
+
     def update
         @idiom = Idiom.find(params[:id])
- 
-        if @idiom.update('title_en' => params[:title_en],
-                        'title_fr' => params[:title_fr],
-                        'body' => params[:body],
-                        'example' => params[:example],
-                        'grammatical_type' => params[:grammatical_type])
-        redirect_to admin_idiom_path(@idiom.id)
-        else
-          render :edit
-        end
-    
+        @idiom.update(validated: params[:submit])
+        redirect_to admin_idiom_index_path, success: 'Edition validé !'
     end
 
     def destroy

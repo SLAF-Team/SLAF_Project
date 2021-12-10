@@ -1,7 +1,8 @@
 <h1>Dashboard admin</h1>
 <br>
 
-<h4>Nombre de comptes crées : </h4><%= @user.all.count %><br />
-<%= link_to 'Gestion des utilisateurs', admin_user_index_path %>
-<h4>Nombre d'expressions créées : </h4><%= @idiom.all.count%><br />
-<%= link_to 'Gestion des idioms', admin_idiom_index_path %>
+<h4>Utilisateurs : <%= @user.all.count %></h4>
+<%= link_to 'Gérer tous les utilisateurs', admin_user_index_path %>
+<hr>
+<h4>Expressions créées : <%= @idiom.all.count%></h4>
+<%= link_to 'Gérer toutes les expressions', admin_idiom_index_path %>

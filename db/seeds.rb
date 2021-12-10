@@ -33,14 +33,15 @@ User.create(first_name: 'Armand',
     admin: true
 )
 
-50.times do
+200.times do
     Idiom.create(
-        title_en: Faker::Hipster.unique.word.capitalize,
+        title_en: Faker::Hipster.word.capitalize,
         title_fr: Faker::Space.star.capitalize,
         grammatical_type: Faker::Lorem.word,
-        body: Faker::Lorem.sentence(word_count: 3),
+        body: Faker::Lorem.sentence(word_count: 20),
         example:Faker::Lorem.sentence(word_count: 3, supplemental: true),
-        user: User.all.sample
+        user: User.all.sample,
+        validated: [true, false].sample
 )
 end
 

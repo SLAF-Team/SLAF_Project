@@ -1,6 +1,5 @@
-<% @idiom.each do |idiom|%>
-    <p>Title fr : <%=idiom.title_fr%></p>
-    <p>Author : <%=idiom.user.email%></p>
-    <%= link_to 'Voir', admin_idiom_path(idiom.id) %>
-<%end%>
+<h1>Toutes les expressions à valider</h1>
+<%= render 'validate_expressions' %>
 
+<h1>Toutes les expressions</h1>
+<%= render 'all_expressions' %>

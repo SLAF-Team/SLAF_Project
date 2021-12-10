@@ -7,17 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= render 'layouts/flash'%>
-    <%= render "devise/shared/error_messages", resource: resource %>
   </head>
-
   <body>
     <%= render 'layouts/navbar'%>
-    <div class="content">
-      <%= yield %>
-      <hr>
-      <%= render 'layouts/footer' if @pagy != nil %>
-    </div>
+    <main>
+      <%= render 'layouts/navbar_mobile'%>
+      <div class="content">
+        <%= render 'layouts/flash'%>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <%= yield %>
+        <%= render 'layouts/footer' if @pagy != nil %>
+      </div>
+    </main>
   </body>
 
 

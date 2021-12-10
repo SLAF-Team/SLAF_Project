@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'avatars/create'
   root to: "idioms#index"
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: 'omniauth'}
   resources :idioms do
     resources :comments
   end
@@ -19,7 +18,8 @@ Rails.application.routes.draw do
 
   resources :admin, only: [:index]
     namespace :admin do
-      root to: 'admin#index'
-      resources :user, :idiom
+      root 'admin#index'
+      resources :user
+      resources :idiom
     end
 end
