@@ -35,7 +35,7 @@ User.create(first_name: 'Armand',
 
 200.times do
     Idiom.create(
-        title_en: Faker::Hipster.unique.word.capitalize,
+        title_en: Faker::Hipster.word.capitalize,
         title_fr: Faker::Space.star.capitalize,
         grammatical_type: Faker::Lorem.word,
         body: Faker::Lorem.sentence(word_count: 20),
