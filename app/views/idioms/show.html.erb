@@ -5,8 +5,8 @@
 
 <%= render 'comments_list' %>
 <%= render 'comments_form' %>
-<%= render 'like'%>
-<%= render 'unlike'%>
+<%= render 'like' if current_user != nil %>
+<%= render 'unlike' if current_user != nil %>
 
 
 <%= social_share_button_tag("S.L.A.F") %>
