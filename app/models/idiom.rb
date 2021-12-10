@@ -11,14 +11,17 @@ class Idiom < ApplicationRecord
     validates :body, presence: true, length: { minimum: 15, maximum: 140 }
     validates :example, presence: true, length: { minimum: 15, maximum: 140 }
     validates :user, presence: true
-    
+
     def self.search_by(search)
+        @letters = *('A'..'Z')
         if search.blank?
             all
         elsif search == "top"
             order("likes_count DESC")
-        else
+        elsif @letters.include?(search)
             where('title_en LIKE ?', "%#{search}%")
+        else
+            where('LOWER(title_en) LIKE ?', "%#{search.downcase}%")
         end
     end
 
