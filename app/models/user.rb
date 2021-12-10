@@ -19,7 +19,8 @@ class User < ApplicationRecord
     end
 
     def aliases_attribution
+        num = rand(1..7)
         self.alias = "disrupt-#{SecureRandom.hex(2)}"
-        self.avatar.attach(io: File.open(Rails.root.join('app', 'assets', 'images', "avatar-1.jpeg")), filename: "avatar-1.jpeg", content_type: 'image/jpeg')
+        self.avatar.attach(io: File.open(Rails.root.join("app/assets/images/avatar-#{num}.jpeg")), filename: "avatar-#{num}.jpeg", content_type: 'image/jpeg')
     end
 end
