@@ -40,7 +40,6 @@
       <%= f.submit "Mettre à jour", class: 'button__normal button__info' %>
     </div>
   <% end %>
-
   <h3>Effacer mon compte ?</h3>
     <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'button__normal button__info' %>
     <div class="form__button">
