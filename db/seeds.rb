@@ -33,7 +33,7 @@ User.create(first_name: 'Armand',
     admin: true
 )
 
-200.times do
+100.times do
     Idiom.create(
         title_en: Faker::Hipster.word.capitalize,
         title_fr: Faker::Space.star.capitalize,
@@ -53,7 +53,7 @@ end
 )
 end
 
-30.times do
+80.times do
     Like.create(
         user: User.all.sample,
         idiom: Idiom.all.sample
