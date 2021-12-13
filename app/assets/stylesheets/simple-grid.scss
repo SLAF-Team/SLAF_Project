@@ -751,8 +751,8 @@ a {
 
 
 .status-tag-error{
-  color: white;
-  background-color: red;
+  color: #212529;
+  background-color: $warning;
   padding: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -762,8 +762,8 @@ a {
 }
 
 .status-tag-success{
-  color: white;
-  background-color: green;
+  color: #212529;
+  background-color: $success;
   padding: 5px;
   border-radius: 5px;
 }
