@@ -1,9 +1,4 @@
-<div class="card">
-    <% @idiom.comments.each do |comment|%>
-    <div class="show__body">
-        <%=comment.body%>
-    </div>
-    
+<% @idiom.comments.each do |comment|%>    
         <div class="card__bottom">
             <div class="show__links">
                 <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %> /
@@ -15,3 +10,4 @@
         </div>
     <%end%>
 </div>
+

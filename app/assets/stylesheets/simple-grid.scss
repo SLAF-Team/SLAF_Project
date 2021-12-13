@@ -32,52 +32,6 @@ $info-light: #FBFFC5;
 $info-bis: #36F1CD;
 $background: #E7E9E2;
 $background-light: #F9FBF6;
-$dark: #CECFCA;
-
-// show
-
-.show__body {
-  background-color: $dark;
-  padding: 0.6rem;
-  border-radius: 5px;
-  margin-bottom: 16px;
-}
-
-.show__title {
-  margin-top: 4rem;
-  margin-bottom: 2.5rem;
-}
-
-//alerts
-
-.alert {
-  border: 1.5px solid $primary;
-  border-radius: 5px;
-  font-weight: 700;
-  text-align: center;
-  padding: 0.8rem;
-}
-
-.alert__info {
-  background-color: $info-bis;
-  color: $background-light;
-}
-
-.alert__success {
-  background-color: $success;
-  color: $primary;
-}
-
-.alert__danger {
-  background-color: $danger;
-  color: $background-light;
-}
-
-.alert__warning {
-  background-color: $warning;
-  color: $background-light;
-}
-
 
 //alerts
 
@@ -111,10 +65,6 @@ $dark: #CECFCA;
 
 
 // _idioms-cards
-
-.show__links a {
-  color: $underline;
-}
 
 .card {
   padding: 25px;
@@ -166,7 +116,7 @@ footer {
 //_content
 
 .content {
-  overflow: scroll;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: $breakpoint-med) {
@@ -348,7 +298,6 @@ footer {
 
 .button__likes {
   display: inline-block;
-  margin-left: 12px;
   font-weight: 400;
   display: inline;
   line-height: 1.5;
@@ -615,26 +564,6 @@ footer {
   display: block;
 }
 
-.form__comment {
-    display: inline-block;
-    width: 97%;
-    height: 36px;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
-    color: #212529;
-    background-color: $background-light;
-    background-clip: padding-box;
-    border-radius: 9px;
-    border: 2px solid #000000;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
 // universal
 
 main {
@@ -695,22 +624,13 @@ h6 {
 
 p {
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.8;
-}
-
-span {
-  font-size: 1.125rem;
-  font-weight: 500;
 }
 
 a {
   text-decoration: none;
-  font-weight: 600;
-}
-
-b {
-  color: $underline;
+  font-weight: bold;
 }
 
 .font-light {
@@ -832,8 +752,8 @@ b {
 
 
 .status-tag-error{
-  color: white;
-  background-color: red;
+  color: #212529;
+  background-color: $warning;
   padding: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -843,8 +763,8 @@ b {
 }
 
 .status-tag-success{
-  color: white;
-  background-color: green;
+  color: #212529;
+  background-color: $success;
   padding: 5px;
   border-radius: 5px;
 }
