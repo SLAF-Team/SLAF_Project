@@ -1,8 +1,13 @@
-<% @idiom.comments.each do |comment|%>
-        <%=comment.body%>
-        <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %>
-        <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %>
-        <%=comment.created_at%><br>
-    <div class= "commentAjax">
-    </div>
-<%end%>
+<% @idiom.comments.each do |comment|%>    
+        <div class="card__bottom">
+            <div class="show__links">
+                <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %> /
+                <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %>
+            </div>
+            <div>
+                Par <b><%=comment.user.alias%></b>, <%=comment.created_at.strftime("le %d %b. %Y")%>
+            </div>
+        </div>
+    <%end%>
+</div>
+

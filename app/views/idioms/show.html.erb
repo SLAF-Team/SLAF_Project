@@ -1,29 +1,21 @@
-<h1><%= @idiom.title_fr %> / <%= @idiom.title_en %><br></h1>
-<p>Définition: <%= @idiom.body %><p><br>
-<%= @idiom.example %><br>
-<p>Une expression proposée par <b><%= @idiom.user.alias %><p></b>
+<div class="card">
+    <div class="center show__title">
+        <h1><b><%= @idiom.title_fr %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en %></h1><span><%= social_share_button_tag("S.L.A.F") %></span>
+    </div>
+    <div>
+        <p><span style="font-weight: bold;">Définition:</span> <%= @idiom.body %><p>
+        <%= @idiom.example %>
+    </div>
+    <div class="card__bottom">
+        <div>
+            <%= render 'like' if current_user != nil %>
+            <%= render 'unlike' if current_user != nil %>
+        </div>
+        <div>
+            <span>Une expression proposée par <b><%= @idiom.user.alias %></b></span>
+        </div>
+    </div>
+</div> 
 
-<% if false %>
-  <%= render 'comments_list' %>
-  <%= render 'comments_form' %>
-<% end %>
-
-  <%= form_for(:comments, url:(idiom_comments_path(@idiom)), action: "create", method: :post, remote: true) do |f| %>
-      <br><%= f.label :body, "Commentaire : " %>
-      <br><%= f.text_area :body, placeholder: 'Ton commentaire (2 - 100 carac.)' %>
-      <br><%= f.submit 'POSTER', class: 'button__small button__info' %>
-  <% end %>
-
-  <div id="commentAjax"></div>
-  <% @idiom.comments.each do |comment|%>
-          <%=comment.body%>
-          <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %>
-          <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %>
-          <%=comment.created_at%><br>
-  <%end%>
-
-
-<%= render 'like' if current_user != nil %>
-<%= render 'unlike' if current_user != nil %>
-
-<%= social_share_button_tag("S.L.A.F") %>
+<%= render 'comments_list' if @idiom.comments.length > 0 %>
+<%= render 'comments_form' if current_user != nil %>
