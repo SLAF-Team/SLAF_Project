@@ -1,4 +1,5 @@
 <div style="float: left;">
+  
   <% pre_unlike = @idiom.unlikes.find { |unlike| unlike.user_id == current_user.id} %>
   <% if pre_unlike %>
     <%= button_to idiom_unlike_path(@idiom, pre_unlike), method: :delete, class: "button__likes button__danger" do %>

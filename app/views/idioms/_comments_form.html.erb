@@ -1,8 +1,10 @@
 <%= form_for(:comments, url:(idiom_comments_path(@idiom)), action: "create", method: :post) do |f| %>
 <div class="card">
+    
     <div>
     <%= f.text_area :body, class: "form__comment", placeholder: 'Ton commentaire (2 - 100 carac.)' %>
     </div>
+
     <di class="card__bottom">
         <div class="card__row"></div>
         <div class="card__row">
@@ -10,4 +12,5 @@
         </div>
     </div>
 </div>
+
 <% end %>

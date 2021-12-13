@@ -3,6 +3,7 @@
     <div class="show__body">
         <%=comment.body%>
     </div>
+    
         <div class="card__bottom">
             <div class="show__links">
                 <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %> /
