@@ -32,6 +32,21 @@ $info-light: #FBFFC5;
 $info-bis: #36F1CD;
 $background: #E7E9E2;
 $background-light: #F9FBF6;
+$dark: #CECFCA;
+
+// show
+
+.show__body {
+  background-color: $dark;
+  padding: 0.6rem;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.show__title {
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
 
 //alerts
 
@@ -65,6 +80,10 @@ $background-light: #F9FBF6;
 
 
 // _idioms-cards
+
+.show__links a {
+  color: $underline;
+}
 
 .card {
   padding: 25px;
@@ -298,6 +317,7 @@ footer {
 
 .button__likes {
   display: inline-block;
+  margin-left: 12px;
   font-weight: 400;
   display: inline;
   line-height: 1.5;
@@ -564,6 +584,26 @@ footer {
   display: block;
 }
 
+.form__comment {
+    display: inline-block;
+    width: 97%;
+    height: 36px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    color: #212529;
+    background-color: $background-light;
+    background-clip: padding-box;
+    border-radius: 9px;
+    border: 2px solid #000000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 // universal
 main {
   margin-left: 295px;
@@ -623,13 +663,22 @@ h6 {
 
 p {
   font-size: 1.125rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.8;
+}
+
+span {
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+b {
+  color: $underline;
 }
 
 .font-light {
