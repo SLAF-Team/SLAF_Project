@@ -1,63 +1,20 @@
-<div class="profile">
-  <div class="profile__title profile__title--bg-color-1">
-    <h1>Mon profil</h1>
-    <%= link_to "EDIT", edit_user_registration_path, class: 'button__normal button__info' %>
-  </div>
+<div class="profile__title profile__title--bg-color-1">
+  <h1>Mon profil</h1>
+  <%= link_to "EDIT", edit_user_registration_path, class: 'button__normal button__info' %>
+</div>
 
-  <div class="profile__content">
-
-    <div class="profile__info">
-
-      <div class="profile-info-text col-5">
-      
-        <div class= "profile-info-text-elt">
-          <div><%= @user.alias%> </div>
-        </div>
-
-        <div class= "profile-info-text-elt">      
-          <div><%= @user.first_name%> </div>
-        </div>
-
-        <div class= "profile-info-text-elt">
-          <div><%= @user.last_name%> </div>
-        </div>
-
-        <div class= "profile-info-text-elt">
-          <div><%= @user.email%> </div>
-        </div>
-
-      </div>
-
-      <div class="profile-info-pic col-7">
-      <div class='avatar'>
-        <%if @user.avatar.attached?%>
-          <%= image_tag @user.avatar, class: 'pic-avatar'%>
-        <%else%>
-          <p>Il n'y a pas encore d'avatar lié à cet utilisateur</p>
-        <%end%>
-      </div>
-        <div class='form-picture'>
-        <%= form_tag user_avatars_path(@user), multipart: true do %>
-          <%= file_field_tag :avatar %>
-          <%= submit_tag "Éditer l'avatar", class: 'button__normal button__info' %>
-        <% end %>
-        </div>
-      </div>
-
-    </div>
-  
-  </div>
+<%= render 'profile'%>
 
   <div class="profile-my-idioms">
     <div class="profile__title profile__title--bg-color-2">
-      <h2>Mes créations</h2>
+      <h2>Mes Expressions</h2>
     </div>
       <%= render 'cards' %>  
   </div>
     
   <div class="profile-my-likes">
       <div class="profile__title profile__title--bg-color-2">
-        <h2>Mes préférées</h2>
+        <h2>Mon Florilège</h2>
       </div>
   <%= render 'likes' %>
   </div>
