@@ -1,0 +1,5 @@
+<%= comment.body %>
+
+<%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %>
+<%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %>
+<%=comment.created_at%><br>
