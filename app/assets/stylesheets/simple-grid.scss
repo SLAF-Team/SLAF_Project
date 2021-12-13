@@ -116,7 +116,7 @@ footer {
 //_content
 
 .content {
-  overflow: scroll;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: $breakpoint-med) {
