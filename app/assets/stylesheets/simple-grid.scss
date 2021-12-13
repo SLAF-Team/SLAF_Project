@@ -717,3 +717,22 @@ a {
     display: block;
   }
 }
+
+.status-tag-error{
+  color: #212529;
+  background-color: $warning;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.status-tag-success{
+  color: #212529;
+  background-color: $success;
+  padding: 5px;
+  border-radius: 5px;
+}
+
