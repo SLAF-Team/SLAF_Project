@@ -110,6 +110,12 @@ $dark: #CECFCA;
   justify-content: space-between;
 }
 
+.card__button__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 .card__row {
   display: inline;
   display: flex;
