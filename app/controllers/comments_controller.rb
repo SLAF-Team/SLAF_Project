@@ -7,10 +7,7 @@ class CommentsController < ApplicationController
 
     def create
         @comment = @idiom.comments.create(body: params[:comments][:body], user: current_user,idiom: params[@idiom])
-        respond_to do |format|
-            format.html { redirect_to idiom_path(@idiom.id) }
-            format.js { }
-        end
+        redirect_to idiom_path(@idiom.id)
     end
 
     def destroy
