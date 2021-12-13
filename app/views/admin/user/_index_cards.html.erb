@@ -1,5 +1,6 @@
 <% @user.each do |user|%>
-    <p>Email : <%=user.email%></p>
-    <p>Id : <%=user.id%></p>
-    <%=link_to 'Voir' ,admin_user_path(user.id)%>
+    <h3>Utilisateur numéro <%=user.id%><h3>
+    <p><%=user.alias%></p>
+    <p><%=user.email%></p>
+    <%=link_to 'Plus de détails', admin_user_path(user.id), class: "button__normal button__success"%>
 <%end%>
