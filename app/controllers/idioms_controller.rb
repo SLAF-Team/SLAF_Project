@@ -12,7 +12,6 @@ class IdiomsController < ApplicationController
     end
 
   def new
-    @idiom = Idiom.new()
   end
 
   def create
@@ -36,8 +35,11 @@ class IdiomsController < ApplicationController
     @idiom = Idiom.find(params[:id])
       if @idiom.update(title_en: params[:idiom][:title_en], title_fr: params[:idiom][:title_fr],
         grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example: params[:idiom][:example], user: current_user)
+      flash[:notice] = 'Edition réussie !'
       redirect_to idiom_path(@idiom.id)
       else
+      flash.now[:error] = @idiom.errors.full_messages.to_sentence
+      # Problem de redirect
       redirect_to idiom_path(@idiom.id)
       end
     end
