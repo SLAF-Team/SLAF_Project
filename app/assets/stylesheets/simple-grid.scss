@@ -33,6 +33,37 @@ $info-bis: #36F1CD;
 $background: #E7E9E2;
 $background-light: #F9FBF6;
 
+//alerts
+
+.alert {
+  border: 1.5px solid $primary;
+  border-radius: 5px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+.alert__info {
+  background-color: $info-bis;
+  color: $background-light;
+}
+
+.alert__success {
+  background-color: $success;
+  color: $primary;
+}
+
+.alert__danger {
+  background-color: $danger;
+  color: $background-light;
+}
+
+.alert__warning {
+  background-color: $warning;
+  color: $background-light;
+}
+
+
 // _idioms-cards
 
 .card {
