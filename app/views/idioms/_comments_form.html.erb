@@ -1,5 +1,13 @@
-<%= form_for(:comments, url:(idiom_comments_path(@idiom)), action: "create", method: :post, remote: true) do |f| %>
-    <br><%= f.label :body, "Commentaire : " %>
-    <br><%= f.text_area :body, placeholder: 'Ton commentaire (2 - 100 carac.)' %>
-    <br><%= f.submit 'POSTER', class: 'button__small button__info' %>
+<%= form_for(:comments, url:(idiom_comments_path(@idiom)), action: "create", method: :post) do |f| %>
+<div class="card">
+    <div>
+    <%= f.text_area :body, class: "form__comment", placeholder: 'Ton commentaire (2 - 100 carac.)' %>
+    </div>
+    <di class="card__bottom">
+        <div class="card__row"></div>
+        <div class="card__row">
+            <%= f.submit 'POSTER', class: 'button__small button__info' %>
+        </div>
+    </div>
+</div>
 <% end %>

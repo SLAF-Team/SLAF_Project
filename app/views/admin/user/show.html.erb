@@ -1,6 +1,6 @@
-<div class="profile__title profile__title--bg-color-1">
-<h1>Utilisateur <%= @user.id %></h1>
-  <%= link_to "Supprimer", admin_user_path(@user.id), :method => 'DELETE', :data => {:confirm => 'Tu confirmes vouloir supprimer ce profil ?'} , class: 'button__normal button__danger' %>
-  <%= link_to "Retour", admin_user_index_path, class: 'button__normal button__info' %>
-  </div>
-<%= render 'users/profile' %>
+<p> page show user </p>
+
+<%= @user.email %>
+
+<%= link_to 'Edit', edit_admin_user_path(@user.id)%>
+<%= link_to "Supprimer le profil", admin_user_path(@user.id), :method => 'DELETE', :data => {:confirm => 'Tu veut vraiment supprimer ce profil ?'} %>
