@@ -1,1 +1,1 @@
-<%= link_to("ALÉATOIRE", Idiom.order('random()').first, :class => "button__large button__info--bis") %>
+<%= link_to("ALÉATOIRE", Idiom.where(validated: true).order('random()').first, :class => "button__large button__info--bis") %>
