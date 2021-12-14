@@ -7,6 +7,7 @@ class Admin::IdiomController < ApplicationController
     def index
         @idioms = Idiom.all
         @user = User.all
+        @idioms_titles = Idiom.pluck(:title_en).sort.
     end
 
     def edit
