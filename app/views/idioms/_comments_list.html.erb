@@ -8,8 +8,8 @@
                 <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %> /
                 <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %>
             </div>
-            <div>
-                Par <b><%=comment.user.alias%></b>, <%=comment.created_at.strftime("le %d %b. %Y")%>
+            <div class="right">
+                Par <b><%=comment.user.alias%></b>, le&nbsp;<%=comment.created_at.strftime("%d")%>&nbsp;<%=comment.created_at.strftime("%b.")%>&nbsp;<%=comment.created_at.strftime("%Y")%>
             </div>
         </div>
     <%end%>
