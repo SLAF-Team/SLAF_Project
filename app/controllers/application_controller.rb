@@ -14,11 +14,15 @@ class ApplicationController < ActionController::Base
   def already_liked?
     Like.where(user: current_user, idiom: @idiom).exists?
   end
-  
+
   def already_unliked?
     Unlike.where(user: current_user, idiom: @idiom).exists?
   end
-  
+
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
+
   protected
 
   def configure_permitted_parameters
