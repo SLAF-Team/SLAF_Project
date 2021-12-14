@@ -1,15 +1,20 @@
 <%= form_for(:idioms, url:(idioms_path), action: "create", method: :post) do |f| %>
 <div class="form">
   <div class="form__content center" style="width: 33vw;">
+    <p>Un mot en franglais que vous entendez souvent et qui vous agace ?</p> 
+    <p>C'est l'occasion de le partager</p>
     <div>
       <%= f.text_area :title_en, autofocus: true, autocomplete: "title_en", class: "form__control", placeholder: 'Mot en franglais (max 50 carac.)' %>
     </div>
     <div>
       <%= f.text_area :title_fr, autofocus: true, autocomplete: "title_fr", class: "form__control", placeholder: 'Mot en beau français (max 50 carac.)' %>
     </div>
+      <p>N'hésitez pas à partager plus sur ce mot: sa définition, son usage...</p>
     <div>
-      <%= f.text_area :body, autofocus: true, autocomplete: "body", class: "form__control", placeholder: 'Ton explication (15 - 140 carac.)' %>
+      <%= f.text_area :body, autofocus: true, autocomplete: "body", class: "form__control", placeholder: 'Explication (15 - 140 carac.)' %>
     </div>
+      <p> Et à ajouter quelques exemples d'utilisation bien pensés.</p>
+      <p>En franglais et/ou en français</p>
     <div>
       <%= f.text_area :example, autofocus: true, autocomplete: "example", class: "form__control", placeholder: "Exemples d'utilisation (15 - 140 carac.)" %>
     </div>
