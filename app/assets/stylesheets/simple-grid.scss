@@ -448,6 +448,31 @@ footer {
   }
 
 
+  .button__normal-remove-account {
+    display: inline-block;
+    line-height: 1.5;
+    width: 200px;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #112233;
+    box-sizing: border-box;
+    min-height: 25px;
+    min-width: 30px;
+    box-shadow: -4px -4px 0px #112233;
+    border-radius: 9px;
+    padding: 0.275rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    }
+
+
 .button__letter {
   display: inline-block;
   line-height: 1.6;
