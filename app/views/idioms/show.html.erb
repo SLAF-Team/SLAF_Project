@@ -6,8 +6,8 @@
         <p><span style="font-weight: bold;">Définition:</span> <%= @idiom.body %><p>
         <%= @idiom.example %>
     </div>
-    <div class="card__bottom">
-        <div>
+    <div class="card__bottom--profile">
+        <div class="card__likes">
             <%= render 'like' if current_user != nil %>
             <%= render 'unlike' if current_user != nil %>
         </div>
