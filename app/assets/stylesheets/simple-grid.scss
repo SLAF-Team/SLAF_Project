@@ -993,11 +993,10 @@ span {
 }
 
 .navbar__mobile--close {
-  visibility: hidden;
+  display: none;
 }
 
 .navbar__mobile--open {
-  visibility: visible;
   display: inline;
   margin-left: 45vw;
 }
