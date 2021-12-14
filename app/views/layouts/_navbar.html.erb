@@ -3,10 +3,10 @@
   <div class="navbar__top">
       <a class="navbar__top--logo" href="/" id="menu__logo"><img id="navbar__logo" src="/logoslaf.png" alt="rss feed"></a>
       <div class="navbar__mobile--close" id="burger__button2">
-<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
-</svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+          <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+        </svg>
   </div>
       <ul class="list__unstyled">
         <%if current_user%>
@@ -21,14 +21,24 @@
         <% end %>
         <% end%>
       </ul>
-      <div class="navbar-browse" style="font-size: 22px; font-weight: bold;">
-        <span>Parcourir</span>
+      <div class="navbar-browse">
+        <span style="font-size: 17px; font-weight: bold;" id="parcourir__button">Parcourir&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16" id="browse__arrow">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+</span>
         <div class="row">
-            <% @letters.each do |letter| %>
+            <% @letters.first(6).each do |letter| %>
             <div class="col-2">
               <%= link_to letter, idioms_path(:search => letter), class: 'button__letter button__info' %>
             </div>
             <% end %>
+            <div class="display__numbers" id="parcourir__list">
+            <% @letters.last(20).each do |letter| %>
+            <div class="col-2">
+              <%= link_to letter, idioms_path(:search => letter), class: 'button__letter button__info' %>
+            </div>
+            <% end %>
+            </div>
         </div>
       </div>
       <div class="navbar__buttons">
