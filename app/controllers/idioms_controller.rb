@@ -39,7 +39,7 @@ class IdiomsController < ApplicationController
       redirect_to idiom_path(@idiom.id)
       else
       flash.now[:error] = @idiom.errors.full_messages.to_sentence
-      redirect_to edit_idiom_path(@idiom.id)
+      render :edit
       end
     end
 
@@ -48,7 +48,5 @@ class IdiomsController < ApplicationController
     @idiom.destroy
     redirect_back(fallback_location: root_path)
   end
-
-private
 
 end

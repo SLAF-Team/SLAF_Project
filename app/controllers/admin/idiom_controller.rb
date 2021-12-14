@@ -13,6 +13,8 @@ class Admin::IdiomController < ApplicationController
     end
 
     def update
+        puts "$"*50r
+        puts params
         @idiom = Idiom.find(params[:id])
         @idiom.update(validated: params[:submit])
         redirect_to admin_idiom_index_path, success: 'Edition validé !'

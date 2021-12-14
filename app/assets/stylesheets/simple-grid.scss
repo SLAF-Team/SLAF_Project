@@ -110,6 +110,12 @@ $dark: #CECFCA;
   justify-content: space-between;
 }
 
+.card__button__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 .card__row {
   display: inline;
   display: flex;
@@ -249,6 +255,7 @@ footer {
   background-color: $background;
   border: 1px solid black;
   border-radius: 5px;
+  padding: 2rem;
 }
 
 .profile__info {
@@ -262,10 +269,15 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 12px;
 }
 
 .profile-info-text-elt {
   margin-bottom: 5px;
+}
+
+.avatar {
+  margin-bottom: 12px;
 }
 
 .pic-avatar {
@@ -287,6 +299,28 @@ footer {
 
 
 // buttons
+
+.button__file {
+    position: relative;
+    overflow: hidden;
+    margin-right: 12px;
+}
+
+.button__file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
 
 .button__search {
   display: inline-block;

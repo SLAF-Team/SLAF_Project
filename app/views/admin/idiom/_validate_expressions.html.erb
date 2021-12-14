@@ -3,8 +3,7 @@
     <h3>Expression numéro <%=idiom.id%><h3>
     <p><%=idiom.title_fr%></p>
     <p><%=idiom.title_en%></p>
-    <%= link_to 'Détails', idiom_path(idiom.id), class: "button__normal button__success" %><br>
-    <%= link_to 'Editer', edit_admin_idiom_path(idiom.id), class: "button__normal button__success"%><br>
-    <hr>   
+    <%= link_to 'Détails & Actions', admin_idiom_path(idiom.id), class: "button__normal button__success"%>
     <%end%>
 <% end %>
+

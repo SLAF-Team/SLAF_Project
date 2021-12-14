@@ -15,6 +15,12 @@
             <span>Une expression proposée par <b><%= @idiom.user.alias %></b></span>
         </div>
     </div>
+    <div class="card__button__bottom">
+        <% if current_user != nil %>
+            <%= link_to "Editer", edit_idiom_path(@idiom.id), class: "button__normal button__info" if current_user.is_admin? || @idiom.user == current_user %>
+            <%= link_to "Supprimer", idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" if current_user.is_admin? || @idiom.user == current_user%>
+        <% end %>
+    </div>
 </div> 
 <%= render 'comments_list' if @idiom.comments.length > 0 %>
 <%= render 'comments_form' if current_user != nil %>
