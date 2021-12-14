@@ -1,3 +1,3 @@
 <footer class="footer center">
-	<%== pagy_nav(@pagy) %>
+<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
 </footer>
