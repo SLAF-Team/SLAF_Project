@@ -20,7 +20,7 @@ class Admin::IdiomController < ApplicationController
 
     def destroy
         Idiom.find(params[:id]).destroy
-        redirect_to admin_idiom_index_path
+        redirect_to admin_idiom_index_path, success: 'Expression supprimée avec succès !'
     end
 
     def edit

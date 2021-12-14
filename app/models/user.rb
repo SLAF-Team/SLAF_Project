@@ -7,7 +7,6 @@ class User < ApplicationRecord
             :recoverable, :rememberable, :validatable,
             :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
-
     has_one_attached :avatar
 
     has_many :idioms, :dependent => :destroy
@@ -31,4 +30,9 @@ class User < ApplicationRecord
             user.password = Devise.friendly_token[0, 20]
         end
     end
+
+    def is_admin?
+        self.admin?
+    end
+
 end
