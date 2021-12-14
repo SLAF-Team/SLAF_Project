@@ -1,10 +1,4 @@
 <div class="card">
-    <div class="card__button__bottom--admin">
-        <% if current_user != nil %>
-            <%= link_to "Editer", edit_idiom_path(@idiom.id), class: "button__normal button__info" if current_user.is_admin? || @idiom.user == current_user %>
-            <%= link_to "Supprimer", idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" if current_user.is_admin? || (@idiom.user == current_user && @idiom.validated?)%>
-        <% end %>
-    </div>
     <div class="center show__title">
         <h1><b><%= @idiom.title_fr %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en %></h1><span><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></span>
     </div>
@@ -20,6 +14,12 @@
         <div>
             <span>Une expression proposée par <b><%= @idiom.user.alias %></b></span>
         </div>
+    </div>
+    <div class="card__button__bottom">
+        <% if current_user != nil %>
+            <%= link_to "Editer", edit_idiom_path(@idiom.id), class: "button__normal button__info" if current_user.is_admin? || @idiom.user == current_user %>
+            <%= link_to "Supprimer", idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" if current_user.is_admin? || (@idiom.user == current_user && @idiom.validated?)%>
+        <% end %>
     </div>
 </div>
 <%= render 'comments_list' if @idiom.comments.length > 0 %>

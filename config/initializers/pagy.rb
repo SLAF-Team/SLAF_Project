@@ -205,7 +205,7 @@
 #
 # Examples:
 # load the "de" built-in locale:
-Pagy::I18n.load(locale: 'fr')
+# Pagy::I18n.load(locale: 'de')
 #
 # load the "de" locale defined in the custom file at :filepath:
 # Pagy::I18n.load(locale: 'de', filepath: 'path/to/pagy-de.yml')

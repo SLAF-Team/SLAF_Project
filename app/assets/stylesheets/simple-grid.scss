@@ -136,11 +136,6 @@ $dark: #CECFCA;
   margin-top: 20px;
 }
 
-.card__button__bottom--admin {
-  display: flex;
-  justify-content: space-between;
-}
-
 .card__row {
   display: inline;
   display: flex;
@@ -194,26 +189,9 @@ footer {
   position: fixed;
 }
 
-.navbar-open {
-  width: 260px;
-  padding: 1rem 1.5rem;
-  height: 95.6vh;
-  border: 1.5px solid black;
-  border-radius: 5px;
-  background-color: $background;
-  position: fixed;
-}
-
-@media only screen and (max-width: $breakpoint-small) {
+@media only screen and (max-width: $breakpoint-med) {
   .navbar {
     display: none;
-    padding: 1rem 1.5rem;
-  }
-  .navbar-open {
-    width: 91%;
-  }
-  .navbar__top--logo {
-    max-width: 30%;
   }
 }
 
@@ -248,7 +226,6 @@ footer {
   flex-direction: column;
   padding-left: 0;
   list-style: none;
-  padding-right: 0.4rem;
 }
 
 .navbar__bottom {
@@ -271,9 +248,9 @@ footer {
   border: 1px solid black;
   border-radius: 5px;
   min-height: 76px;
-  padding: 0.1rem 1.5rem;
 
   h1, h2 {
+    margin-left: 20px;
     color: #FFF;
     font-size: 28px;
     font-weight: 700;
@@ -372,7 +349,7 @@ footer {
 .button__search {
   display: inline-block;
   font-weight: 400;
-  margin-left: -45px;
+  margin-left: -50px;
   display: inline;
   line-height: 1.5;
   color: #212529;
@@ -448,6 +425,7 @@ footer {
 .button__normal {
   display: inline-block;
   line-height: 1.5;
+  width: 150px;
   color: #212529;
   text-align: center;
   text-decoration: none;
@@ -540,6 +518,30 @@ footer {
   font-size: 1.2rem;
   font-weight: 800;
 }
+
+.button__normal {
+  display: inline-block;
+  line-height: 1.5;
+  width: 70px;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.275rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  }
 
   .button__form {
     width: 150px;
@@ -738,6 +740,8 @@ main {
 
 html,
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   left: 0;
@@ -873,11 +877,8 @@ span {
   clear: both;
 }
 
-.col-2 {
-  width: ($width / 6) - ($gutter * 10 / 12);
-}
-
 .col-1,
+.col-2,
 .col-3,
 .col-4,
 .col-5,
@@ -990,15 +991,6 @@ span {
   max-width:100%;
 }
 
-.navbar__mobile--close {
-  display: none;
-}
-
-.navbar__mobile--open {
-  display: inline;
-  margin-left: 45vw;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -1045,25 +1037,7 @@ span {
   border-right: $danger 1px solid;
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
 }
-.loginbtn--google_oauth2:hover {
-  background: $danger;
-}
-
+.loginbtn--google_oauth2:hover,
 .loginbtn--google_oauth2:focus {
   background: $danger;
-}
-
-.display__numbers {
-  display: none;
-}
-
-.bi {
-  vertical-align: -0.125em;
-  transition: transform 0.25s;
-}
-
-.arrow__rotate {
-   transform: rotate(-180deg);
-   -webkit-transform: rotate(-180deg);
-   -ms-transform: rotate(-180deg);
 }
