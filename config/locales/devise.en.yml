@@ -4,8 +4,8 @@ en:
   devise:
     confirmations:
       confirmed: "Votre adresse email a été confirmée avec succès."
-      send_instructions: "Vous recevrez dans quelques minutes un mail contenant des instructions sur la manière de confirmer votre adresse email."
-      send_paranoid_instructions: "Si votre adresse email existe dans notre base de données, vous recevrez dans quelques minutes un mail contenant des instructions sur la manière de confirmer votre adresse email."
+      send_instructions: "Vous recevrez dans quelques minutes un mail pour confirmer votre adresse email."
+      send_paranoid_instructions: "Si votre adresse email existe dans notre base de données, vous recevrez dans quelques minutes un mail pour confirmer votre adresse email."
     failure:
       already_authenticated: "Vous êtes déjà connecté."
       inactive: "Votre compte n'est pas encore activé."
@@ -51,7 +51,7 @@ en:
       already_signed_out: "Vous êtes bien déconnecté"
     unlocks:
       send_instructions: "Vous recevrez un email contenant les instructions pour déverrouiller votre compte dans quelques minutes."
-      send_paranoid_instructions: "Si votre compte existe, vous recevrez un email contenant les instructions pour le déverrouiller dans quelques minutes."
+      send_paranoid_instructions: "Si votre compte existe, vous recevrez un email pour le déverrouiller dans quelques minutes."
       unlocked: "Votre compte a été déverrouillé avec succès. Veuillez vous connecter pour continuer."
   errors:
     messages:
