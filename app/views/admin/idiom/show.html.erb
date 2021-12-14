@@ -1,3 +1,8 @@
+<div class="profile__title profile__title--bg-color-1">
+<h1>Expression <%=@idiom.id %></h1>
+<%= link_to "Retour", admin_root_path, class: 'button__normal button__info' %>
+</div>
+
 <div class="card">
     <div class="center show__title">
         <h1><b><%= @idiom.title_fr %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en %></h1><span><%= social_share_button_tag("S.L.A.F") %></span>
@@ -8,19 +13,15 @@
     </div>
     <div class="card__bottom">
         <div>
-            <%= render 'idioms/like' %>
-            <%= render 'idioms/unlike' %>
-        </div>
-        <div>
             <span>Une expression proposée par <b><%= @idiom.user.alias %></b></span>
         </div>
     </div>
     <div class="card__button__bottom">
             <%= link_to "Editer", edit_admin_idiom_path(@idiom.id), class: "button__normal button__info" %>
             <%= link_to "Supprimer", admin_idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" %>
-            <%if @idiom.validated == false %>
-            <%= link_to "Valider", {:name => "submit", :value => "true"}, class: "button__small button__success" %><br>
-            <%= link_to "Refuser", {:name => "submit", :value => "false"}, class: "button__small button__danger" %><br>
-            <%end%>
+            <% if @idiom.validated == false %>
+            <%= link_to "Valider", admin_idiom_path(@idiom.id, submit: 'true'), method: 'patch', class: "button__normal button__success" %>
+            <%= link_to "Refuser", admin_idiom_path(@idiom.id, submit: 'false'), method: 'patch', class: "button__normal button__danger" %>
+            <% end %>
     </div>
 </div>

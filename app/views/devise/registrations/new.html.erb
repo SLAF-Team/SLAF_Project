@@ -3,8 +3,16 @@
   <h2 class="center">S'inscrire</h2>
 </div>
 
-<div class="form">
+    <div class="form">
   <div class="form__content center">
+
+    <div class="form__links">
+      <%= render "devise/shared/social" %>
+    </div>
+
+    <div>
+      <p>OU</p>
+    </div>
 
     <div class="field">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__control", placeholder: 'Email' %>
@@ -18,12 +26,13 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form__control", placeholder: 'Confirmation mot de passe' %>
     </div>
 
-    <div class="right form__button">
+    <div class="form__links-bottom">
+    <div class="center form__button">
       <%= f.submit "S'inscrire", class: 'button__normal button__info' %>
     </div>
 
     <div class="form__links">
-      <%= render "devise/shared/links" %>
+    <%= render "devise/shared/connect-linkto" %>
     </div>
 
   </div>
