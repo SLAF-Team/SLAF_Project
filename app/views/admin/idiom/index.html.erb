@@ -1,5 +1,10 @@
-<h1>Toutes les expressions à valider</h1>
+<div class="container">
+<h1>Tableau de bord - Les Expression</h1>
+<%= link_to "Retourner au tableau de bord Admin", admin_root_path, class: "button__normal button__info" %>
+
+<h2>Expressions à valider</h2>
 <%= render 'validate_expressions' %>
 
-<h1>Toutes les expressions</h1>
+<h2>Toutes les expressions</h2>
 <%= render 'all_expressions' %>
+</div>

@@ -1,0 +1,36 @@
+<div class="profile__content">
+  <div class="profile__info row">
+    <div class="profile-info-pic col-5">
+    <div class='avatar'>
+      <%if @user.avatar.attached?%>
+        <%= image_tag @user.avatar, class: 'pic-avatar'%>
+      <%else%>
+        <p>Il n'y a pas encore d'avatar lié à cet utilisateur</p>
+      <%end%>
+    </div>
+      <div class='form-picture'>
+      <%= form_tag user_avatars_path(@user), multipart: true do %>
+      <span class="button__normal button__info button__file">
+        Charger un avatar
+        <%= file_field_tag :avatar, class: 'button__normal button__info button__file' %>
+      </span>
+        <%= submit_tag "Éditer l'avatar", class: 'button__normal button__info' %>
+      <% end %>
+    </div>
+  </div>
+    <div class="profile-info-text col-7">
+      <div class= "profile-info-text-elt">
+        <span>Alias : </span><span style="font-weight: 700;"><%= @user.alias%></span>
+      </div>
+      <div class= "profile-info-text-elt">      
+        <span>Prénom : </span><span style="font-weight: 700;"><%= @user.first_name%></span>
+      </div>
+      <div class= "profile-info-text-elt">
+        <span>Nom : </span><span style="font-weight: 700;"><%= @user.last_name%></span>
+      </div>
+      <div class= "profile-info-text-elt">
+        <span>Email : </span><span style="font-weight: 700;"><%= @user.email%></span>
+      </div>
+    </div>
+  </div>
+</div>

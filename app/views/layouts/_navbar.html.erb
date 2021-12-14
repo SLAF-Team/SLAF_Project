@@ -1,7 +1,7 @@
 
 <div class="navbar">
   <div class="navbar__top">
-      <a href="/"><span style="font-size: 48px;">S.L.A.F</span></a>
+      <a class="navbar__top--logo" href="/"><img id="navbar__logo" src="/logoslaf.png" alt="rss feed"></a>
       <ul class="list__unstyled">
         <%if current_user%>
           <%= link_to "CRÉER UNE EXPRESSION", new_idiom_path, class: 'button__letter button__info', style: "margin-bottom: 15px;" %>

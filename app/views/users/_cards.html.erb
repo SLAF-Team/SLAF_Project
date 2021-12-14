@@ -1,5 +1,10 @@
 <% @idioms.each do |idiom| %>
 <div class="card">
+        <% if idiom.validated == false %>
+        <p><span class='status-tag-error'>En cours de validation</span></p>
+        <%else%>
+        <p><span class='status-tag-success'>Validée</span></p> 
+        <%end%>
     <div class="card__title">
         <span class="card__title--first"><%= idiom.title_en %></span><%= idiom.grammatical_type.capitalize[0..2] %>.<br>
     </div>
