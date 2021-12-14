@@ -271,9 +271,9 @@ footer {
   border: 1px solid black;
   border-radius: 5px;
   min-height: 76px;
+  padding: 0.1rem 1.5rem;
 
   h1, h2 {
-    margin-left: 20px;
     color: #FFF;
     font-size: 28px;
     font-weight: 700;
@@ -738,8 +738,6 @@ main {
 
 html,
 body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
   left: 0;
@@ -1053,4 +1051,19 @@ span {
 
 .loginbtn--google_oauth2:focus {
   background: $danger;
+}
+
+.display__numbers {
+  display: none;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  transition: transform 0.25s;
+}
+
+.arrow__rotate {
+   transform: rotate(-180deg);
+   -webkit-transform: rotate(-180deg);
+   -ms-transform: rotate(-180deg);
 }

@@ -15,3 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( app/views/comments/create.js.erb )
 Rails.application.config.assets.precompile += %w( burger.js )
+Rails.application.config.assets.precompile += %w( browse.js )
