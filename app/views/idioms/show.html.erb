@@ -18,7 +18,7 @@
     <div class="card__button__bottom">
         <% if current_user != nil %>
             <%= link_to "Editer", edit_idiom_path(@idiom.id), class: "button__normal button__info" if current_user.is_admin? || @idiom.user == current_user %>
-            <%= link_to "Supprimer", idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" if current_user.is_admin? || @idiom.user == current_user%>
+            <%= link_to "Supprimer", idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" if current_user.is_admin? || (@idiom.user == current_user && @idiom.validated?)%>
         <% end %>
     </div>
 </div> 
