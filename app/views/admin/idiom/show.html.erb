@@ -8,8 +8,12 @@
         <h1><b><%= @idiom.title_fr %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en %></h1><span><%= social_share_button_tag("S.L.A.F") %></span>
     </div>
     <div>
-        <p><span style="font-weight: bold;">Définition:</span> <%= @idiom.body %><p>
-        <%= @idiom.example %>
+        <p><span style="font-weight: bold;">Définition franglais :</span> <%= @idiom.body %><p>
+        <%= @idiom.example_en %>
+    </div>
+    <div>
+        <p><span style="font-weight: bold;">Définition français :</span> <%= @idiom.body %><p>
+        <%= @idiom.example_fr %>
     </div>
     <div class="card__bottom">
         <div>
