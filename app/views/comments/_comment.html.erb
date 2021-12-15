@@ -1,5 +1,0 @@
-<%= comment.body %>
-
-<%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' if current_user != nil && comment.user == current_user %>
-<%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) if current_user != nil && comment.user == current_user %>
-<%=comment.created_at%><br>
