@@ -270,6 +270,7 @@ footer {
 .list__unstyled {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   padding-left: 0;
   list-style: none;
   padding-right: 0.4rem;
@@ -1089,6 +1090,19 @@ ul {
   margin-left: 45vw;
 }
 
+.navbar__bottom {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar__bottom--right {
+text-align: right;
+display: flex;
+align-content:flex-end ;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -1153,9 +1167,9 @@ ul {
 }
 
 .arrow__rotate {
-   transform: rotate(-180deg);
-   -webkit-transform: rotate(-180deg);
-   -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
 }
 #parcourir__button {
   cursor: pointer;
