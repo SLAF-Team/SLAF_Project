@@ -106,6 +106,9 @@ $dark: #CECFCA;
 
 .card__body {
   margin-bottom: 2%;
+  @media only screen and (max-width: $breakpoint-med) {
+      margin-bottom: 5%;
+    }
 }
 
 .card__bottom {
@@ -186,7 +189,7 @@ footer {
 
 .navbar {
   width: 295px;
-  padding: 16px;
+  padding: 16px 8px 16px 16px;
   height: 100vh;
   border: 1.5px solid black;
   border-radius: 5px;
@@ -351,6 +354,7 @@ footer {
   width: 225px;
   height: 225px;
   border-radius: 50%;
+  border: 2px solid black;
   object-fit : cover;
 }
 
@@ -650,7 +654,8 @@ footer {
 // forms
 
 .form {
-  height: 80vh;
+  height: 75vh;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
