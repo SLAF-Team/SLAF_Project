@@ -14,13 +14,13 @@ class Idiom < ApplicationRecord
     validates :user, presence: true
 
     def self.search_by(search)
-        @letters = *('A'..'Z')
+        @all_letters = [*'A'..'Z']
         if search.blank?
             all
         elsif search == "top"
             order("likes_count DESC")
-        elsif @letters.include?(search)
-            where('title_en LIKE ?', "%#{search}%")
+        elsif @all_letters.include?(search)
+            where('LOWER(title_en) LIKE ?', "#{search.downcase}%")
         else
             where('LOWER(title_en) LIKE ?', "%#{search.downcase}%")
         end
