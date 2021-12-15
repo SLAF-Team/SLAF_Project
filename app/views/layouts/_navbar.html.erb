@@ -1,6 +1,8 @@
 <div class="navbar" id="burger__menu">
   <div class="navbar__top">
-      <a class="navbar__top--logo" href="/" id="menu__logo"><img id="navbar__logo" src="/logoslaf.png" alt="rss feed"></a>
+      <%= link_to idioms_path, class: 'navbar__top--logo', id: 'menu__logo'  do %>
+        <%= image_tag "/logoslaf.png", id: "navbar__logo" %>
+      <% end %>
       <div class="navbar__mobile--close" id="burger__button2">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>

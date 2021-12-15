@@ -34,6 +34,10 @@ $background: #E7E9E2;
 $background-light: #F9FBF6;
 $dark: #CECFCA;
 
+//button size
+$size: 20px;
+
+
 // show
 
 .show__body {
@@ -188,38 +192,23 @@ footer {
 // navbar
 
 .navbar {
-  width: 295px;
-  padding: 16px 8px 16px 16px;
-  height: 100vh;
+  width: 260px;
+  padding: 16px;
+  height: 95.6vh;
   border: 1.5px solid black;
   border-radius: 5px;
   background-color: $background;
   position: fixed;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#navbar__tagline {
-  color: $underline;
-  display: flex;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.1em;
 }
 
 .navbar-open {
+  width: 260px;
   padding: 1rem 1.5rem;
-  height: 100vh;
+  height: 95.6vh;
   border: 1.5px solid black;
   border-radius: 5px;
-  box-sizing: border-box;
   background-color: $background;
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 @media only screen and (max-width: $breakpoint-small) {
@@ -228,7 +217,7 @@ footer {
     padding: 1rem 1.5rem;
   }
   .navbar-open {
-    width: 100vw;
+    width: 91%;
   }
   .navbar__top--logo {
     max-width: 30%;
@@ -257,7 +246,7 @@ footer {
 
 .navbar__buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 18px;
 }
 
@@ -354,7 +343,6 @@ footer {
   width: 225px;
   height: 225px;
   border-radius: 50%;
-  border: 2px solid black;
   object-fit : cover;
 }
 
@@ -539,11 +527,6 @@ footer {
   padding: 0.125rem 0.425rem;
   font-size: 1.1rem;
   font-weight: 900;
-  @media only screen and (max-width: $breakpoint-small) {
-    min-height: 40px;
-    min-width: 40px;
-    font-size: 1.5rem;
-  }
 }
 
 .button__large {
@@ -561,16 +544,13 @@ footer {
   border: 1px solid #112233;
   box-sizing: border-box;
   min-height: 25px;
+  min-width: 30px;
   box-shadow: -6px -6px 0px #112233;
   border-radius: 9px;
   padding: 1.3rem 0.550rem;
   min-width: 110px;
   font-size: 1.2rem;
   font-weight: 800;
-  @media only screen and (max-width: $breakpoint-small) {
-    font-size: 1.5rem;
-    padding: 1.5rem 0.60rem;
-  }
 }
 
   .button__form {
@@ -651,11 +631,19 @@ footer {
 }
 
 
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+
 // forms
 
 .form {
-  height: 75vh;
-  box-sizing: border-box;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -737,7 +725,6 @@ footer {
     width: 85%;
     height: 2.3rem;
     padding: 0.375rem 0.75rem;
-    margin-bottom: 0.4em;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -760,7 +747,9 @@ footer {
 
 main {
   margin-left: 295px;
-  width: 100vw;
+  max-width: 100vw;
+  
+
 }
 
 @media only screen and (max-width: $breakpoint-small) {
@@ -815,7 +804,7 @@ h6 {
 p {
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 a {
@@ -835,10 +824,6 @@ i {
 span {
   font-size: 1.125rem;
   font-weight: 500;
-}
-
-ul {
-  margin-block-end: 0.5em;
 }
 
 .font-light {
@@ -1106,71 +1091,5 @@ ul {
    -ms-transform: rotate(-180deg);
 }
 
-#parcourir__button {
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-  @media only screen and (max-width: $breakpoint-small) {
-    font-size: 1.5rem;
-  }
-}
 
-#letter__tags {
-  margin-top: 1vh;
-}
 
-.avis {
-  font-size: 1.5rem;
-  font-weight: 700;
-  animation-name: colorPalette;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function:steps(1);
-}
-
-@keyframes colorPalette {
-  0% {
-    color: $underline;
-  }
-  25% {
-    color: $warning;
-  }
-  50% {
-    color: $success;
-  }
-  75% {
-    color: $info;
-  }
-  100% {
-    color: $danger;
-  }
-}
-
-.signin__buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.5vh;
-}
-
-.button__normal--signin {
-  display: inline-block;
-  line-height: 1.5;
-  margin-left: 30px;
-  color: #212529;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  border: 1px solid #112233;
-  box-sizing: border-box;
-  min-height: 25px;
-  min-width: 30px;
-  box-shadow: -4px -4px 0px #112233;
-  border-radius: 9px;
-  padding: 0.275rem 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  }
