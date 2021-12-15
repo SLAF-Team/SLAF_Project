@@ -172,8 +172,8 @@ Idiom.create(
     title_fr: 'investisseur providentiel',
     grammatical_type: 'nom',
     body: 'Investisseur privé à haute tolérance de risque misant sur les start-ups.',
-    example_en: "Mon app 'maison close & petit déjeuner' n'attend plus qu'un investisseur providentiel !",
-    example_fr: "Mon app 'Brothel & Breakfast' n'attend plus qu'un business angel !",
+    example_en: "Mon app 'Brothel & Breakfast' n'attend plus qu'un business angel !",
+    example_fr: "Mon app 'maison close & petit déjeuner' n'attend plus qu'un investisseur providentiel !",
     user: @admin_user,
     validated: true
 )
