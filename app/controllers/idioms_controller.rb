@@ -1,5 +1,5 @@
 class IdiomsController < ApplicationController
-  before_action :authenticate_user!, only: [ :new]
+  before_action :authenticate_user!, only: [:new]
 
   def show
     @idiom = Idiom.find(params[:id])
@@ -48,5 +48,5 @@ class IdiomsController < ApplicationController
     @idiom.destroy
     redirect_back(fallback_location: root_path)
   end
-
+  
 end

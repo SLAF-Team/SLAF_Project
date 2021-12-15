@@ -45,6 +45,7 @@ Idiom.create(
     validated: true
 )
 
+
 Idiom.create(
     title_en: 'pitcher',
     title_fr: 'présenter',
