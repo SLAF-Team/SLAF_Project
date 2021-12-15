@@ -88,7 +88,7 @@ $dark: #CECFCA;
 
 .card {
   padding: 25px;
-  @media only screen and (max-width: $breakpoint-med) {
+  @media only screen and (max-width: $breakpoint-small) {
       padding: 4vw;
     }
 }
@@ -106,7 +106,7 @@ $dark: #CECFCA;
 
 .card__body {
   margin-bottom: 2%;
-  @media only screen and (max-width: $breakpoint-med) {
+  @media only screen and (max-width: $breakpoint-small) {
       margin-bottom: 5%;
     }
 }
@@ -119,12 +119,12 @@ $dark: #CECFCA;
 .card__bottom--profile {
   display: flex;
   justify-content: space-between;
-  @media only screen and (max-width: $breakpoint-med) {
+  @media only screen and (max-width: $breakpoint-small) {
       flex-direction: column-reverse;
     }
 }
 
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-small) {
   .card__likes {
     margin-top: 5vh;
     margin-bottom: 2vh;
@@ -173,7 +173,7 @@ footer {
   overflow: hidden;
 }
 
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-small) {
   .content {
     width: 100%;
   }
@@ -245,7 +245,7 @@ footer {
   align-items: center;
 }
 
-@media only screen and (min-width: $breakpoint-med) {
+@media only screen and (min-width: $breakpoint-small) {
   .navbar__mobile {
     display: none;
   }
@@ -272,7 +272,7 @@ footer {
 .navbar__bottom {
   font-size: 16px;
 }
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-small) {
   .nav-link {
     font-size: 1.3rem;
   }
@@ -329,7 +329,7 @@ footer {
   display: flex;
   // border: 3px solid green;
 
-  @media only screen and (max-width: $breakpoint-med) {
+  @media only screen and (max-width: $breakpoint-small) {
     display: grid;
   }
 }
@@ -685,7 +685,7 @@ footer {
     appearance: none;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
-    @media only screen and (max-width: $breakpoint-med) {
+    @media only screen and (max-width: $breakpoint-small) {
       width: 80vw;
     }
 }
@@ -727,7 +727,7 @@ footer {
     -moz-appearance: none;
     appearance: none;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    @media only screen and (max-width: $breakpoint-med) {
+    @media only screen and (max-width: $breakpoint-small) {
       width: 92%;
     }
 }
@@ -763,7 +763,7 @@ main {
   width: 100vw;
 }
 
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-small) {
   main {
     margin-left: 0;
     width: 100vw;
