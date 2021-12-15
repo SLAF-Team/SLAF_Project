@@ -284,6 +284,16 @@ footer {
   margin-top: 18px;
 }
 
+.navbar__logo {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 1.2vh;
+  margin-bottom: 1vh;
+  @media only screen and (max-width: $breakpoint-small) {
+    display: none;
+  }
+}
+
 .list__unstyled {
   display: flex;
   flex-direction: column;
@@ -1114,8 +1124,8 @@ ul {
   justify-content: space-between;
 }
 
-.navbar__bottom--right {
-text-align: right;
+.navbar__bottom--left {
+text-align: left;
 display: flex;
 align-content:flex-end ;
 }
