@@ -14,3 +14,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 Rails.application.config.assets.precompile += %w( app/views/comments/create.js.erb )
+Rails.application.config.assets.precompile += %w( burger.js )
+Rails.application.config.assets.precompile += %w( browse.js )
+Rails.application.config.assets.precompile += %w( autocomplete.js )
+Rails.application.config.assets.precompile += %w( pages.css )
