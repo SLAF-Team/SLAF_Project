@@ -9,7 +9,7 @@ before_action :find_like, only: [:destroy]
     else
       @idiom.likes.create(user: current_user)
     end
-    redirect_to idiom_path(@idiom)
+    redirect_back(fallback_location: root_path)
   end
 
   def destroy
@@ -18,7 +18,7 @@ before_action :find_like, only: [:destroy]
     else
       @like.destroy
     end
-    redirect_to idiom_path(@idiom)
+    redirect_back(fallback_location: root_path)
   end
 
   private

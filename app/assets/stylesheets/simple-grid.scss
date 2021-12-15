@@ -102,10 +102,15 @@ $size: 20px;
 }
 
 .card__title--first {
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 2.1rem;
+  font-weight: 700;
   margin-right: 6px;
-  color: $underline;
+}
+
+.card__title--second {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-right: 6px;
 }
 
 .card__body {
@@ -118,6 +123,9 @@ $size: 20px;
 .card__bottom {
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: $breakpoint-small) {
+    margin-top: 1vh;
+  }
 }
 
 .card__bottom--profile {
@@ -152,6 +160,15 @@ $size: 20px;
   display: inline;
   display: flex;
   align-items: center;
+}
+
+.card__row--social {
+  display: inline;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: $breakpoint-small) {
+    display: none;
+  }
 }
 
 .card__row svg {
@@ -441,11 +458,11 @@ footer {
   background-color: transparent;
   border: 1px solid #112233;
   box-sizing: border-box;
-  min-height: 45px;
-  min-width: 45px;
+  min-height: 25px;
+  min-width: 30px;
   box-shadow: -4px -4px 0px #112233;
   border-radius: 9px;
-  padding: 0.575rem 0.575rem 0.375rem 0.575rem;
+  padding: 0.175rem 0.475rem;
   font-size: 0.75rem;
   font-weight: 700;
 }

@@ -22,8 +22,8 @@
     </div>
     <div class="card__bottom--profile">
         <div class="card__likes">
-            <%= render 'like' if current_user != nil %>
-            <%= render 'unlike' if current_user != nil %>
+            <%= render :partial => "like", :locals => { :idiom => @idiom } if current_user != nil %>
+            <%= render :partial => "unlike", :locals => { :idiom => @idiom } if current_user != nil %>
         </div>
         <div>
             <span>Une expression proposée par <b><%= @idiom.user.alias %></b></span>
