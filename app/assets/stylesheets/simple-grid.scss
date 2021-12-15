@@ -1118,3 +1118,59 @@ ul {
 #letter__tags {
   margin-top: 1vh;
 }
+
+.avis {
+  font-size: 1.5rem;
+  font-weight: 700;
+  animation-name: colorPalette;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function:steps(1);
+}
+
+@keyframes colorPalette {
+  0% {
+    color: $underline;
+  }
+  25% {
+    color: $warning;
+  }
+  50% {
+    color: $success;
+  }
+  75% {
+    color: $info;
+  }
+  100% {
+    color: $danger;
+  }
+}
+
+.signin__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5vh;
+}
+
+.button__normal--signin {
+  display: inline-block;
+  line-height: 1.5;
+  margin-left: 30px;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.275rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  }
