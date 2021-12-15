@@ -9,13 +9,14 @@
         <h1><b><%= @idiom.title_fr %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en %></h1><span><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></span>
     </div>
     <div>
-        <p><span style="font-weight: bold;">Explication :</span> <%= @idiom.body %><p>
+        <p><span style="font-weight: bold;">Explications !</span><p>
+        <%= @idiom.body %>
     </div>
     <div>
-        <p><span style="font-weight: bold;">Définition franglais :</span> <%= @idiom.example_fr %><p>
+      <p><span style="font-weight: bold;">Exemple impropre </span> <%= @idiom.example_fr %><p>
     </div>
     <div>
-        <p><span style="font-weight: bold;">Définition français :</span> <%= @idiom.example_en %><p>
+        <p><span style="font-weight: bold;">Exemple propre </span><%= @idiom.example_en %> <p>
     </div>
     <div class="card__bottom--profile">
         <div class="card__likes">
