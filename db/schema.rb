@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_10_101842) do
+ActiveRecord::Schema.define(version: 2021_12_15_101729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,12 +51,13 @@ ActiveRecord::Schema.define(version: 2021_12_10_101842) do
     t.string "title_fr"
     t.string "grammatical_type"
     t.text "body"
-    t.text "example"
     t.boolean "validated", default: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "likes_count"
+    t.text "example_fr"
+    t.text "example_en"
     t.index ["user_id"], name: "index_idioms_on_user_id"
   end
 

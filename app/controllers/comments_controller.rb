@@ -25,11 +25,11 @@ class CommentsController < ApplicationController
     def update
         @comment = Comment.find(params[:id])
         
-        if @comment.update(body: params[:comment][:body])
-            flash[:notice] = 'Edition réussie !'
-            redirect_to idiom_path(@idiom.id)
+        if @comment.update('body' => params[:comment][:body])
+        redirect_to idiom_path(@idiom.id), success: "Modification prise en compte"
+        puts '$' * 80
         else
-        flash[:error] = 'Commentaire trop petit ou trop grand !'
+        flash.now[:error] = 'Commentaire trop petit ou trop grand !'
         render :edit
         end
     end

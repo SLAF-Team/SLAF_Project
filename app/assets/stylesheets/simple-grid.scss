@@ -198,6 +198,14 @@ footer {
   justify-content: space-between;
 }
 
+#navbar__tagline {
+  color: $underline;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
 .navbar-open {
   padding: 1rem 1.5rem;
   height: 100vh;
