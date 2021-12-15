@@ -1,24 +1,34 @@
-import 'js-autocomplete/auto-complete.css';
-import autocomplete from 'js-autocomplete';
+(function () {
+  "use strict";
+  let inputField = document.getElementById('search');
+  let ulField = document.getElementById('suggestions');
+  inputField.addEventListener('input', changeAutoComplete);
+  ulField.addEventListener('click', selectItem);
 
-const autocompleteSearch = function() {
-  const idioms = JSON.parse(document.getElementById('search-data').dataset.idioms)
-  const searchInput = document.getElementById('search');
-
-  if (idioms && searchInput) {
-    new autocomplete({
-      selector: searchInput,
-      minChars: 1,
-      source: function(term, suggest){
-          term = term.toLowerCase();
-          const choices = idiomss;
-          const matches = [];
-          for (let i = 0; i < choices.length; i++)
-              if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
-          suggest(matches);
-      },
-    });
+  function changeAutoComplete({ target }) {
+    let data = target.value;
+    ulField.innerHTML = ``;
+    if (data.length) {
+      let autoCompleteValues = autoComplete(data);
+      autoCompleteValues.forEach(value => { addItem(value); });
+    }
   }
-};
 
-export { autocompleteSearch };
+  function autoComplete(inputValue) {
+    let titles = ["Benchmarking", "Iphone", "Coucou", "Toi"];
+    return titles.filter(
+      (value) => value.toLowerCase().includes(inputValue.toLowerCase())
+    );
+  }
+
+  function addItem(value) {
+    ulField.innerHTML = ulField.innerHTML + `<li>${value}</li>`;
+  }
+
+  function selectItem({ target }) {
+    if (target.tagName === 'LI') {
+      inputField.value = target.textContent;
+      ulField.innerHTML = ``;
+    }
+  }
+})();

@@ -12,23 +12,15 @@
           <%= link_to "CRÉER UNE EXPRESSION", new_idiom_path, class: 'button__letter button__info', style: "margin-bottom: 15px;" %>
         <% end %>
 
-<%# <%= form_tag(root_path, method: 'get', class: "form-inline") do %>
-  <%# <div id= "search-data" class="form-search search-data" data-skills="<%= @skills.to_json %>"> %>
-    <%# <%= text_field_tag :q, nil, autocomplete: :off, class: "form-control search-input", placeholder: "Search by programming language..." %> %>
-    <%# <%= submit_tag "Search", class: "btn btn-primary button-home" %> %>
-  <%# </div> %>
-<%# <% end %> %> %>
-
         <%= form_for "", html: {class: 'search__form'}, url: idioms_path, role: "search", method: :get do%>
-        <div id= "search-data" data-skills="<%= @idioms_titles.to_json %>">
-        <%= text_field_tag :search, @search, autocomplete: :off, placeholder: "Rechercher", class: 'search__form--control'%>
+        <%= text_field_tag :search, @search, placeholder: "Rechercher", class: 'search__form--control'%>
         <%= button_tag(type: "submit", class: "button__search button__danger") do %>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
             </svg>
         <% end %>
+         <li id="suggestions"></li>
         <% end%>
-      </ul>
       <div class="navbar-browse">
         <span style="font-size: 17px; font-weight: bold;" id="parcourir__button">Parcourir&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16" id="browse__arrow">
   <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
