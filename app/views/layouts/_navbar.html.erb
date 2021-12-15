@@ -7,11 +7,8 @@
           <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
         </svg>
       </div>
-      <div id="navbar__tagline">Dictionnaire des noms impropres</div>
       <ul class="list__unstyled">
-        <%if current_user%>
-          <%= link_to "CRÉER UNE EXPRESSION", new_idiom_path, class: 'button__letter button__info', style: "margin-bottom: 15px;" %>
-        <% end %>
+        <%= link_to "CRÉER UNE EXPRESSION", new_idiom_path, class: 'button__letter button__info', style: "margin-bottom: 15px;" %>
 
         <%= form_for "", html: {class: 'search__form'}, url: idioms_path, role: "search", method: :get do%>
         <%= text_field_tag :search, @search, placeholder: "Rechercher", class: 'search__form--control'%>
