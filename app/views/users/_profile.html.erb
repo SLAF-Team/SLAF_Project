@@ -11,10 +11,10 @@
       <div class='form-picture'>
       <%= form_tag user_avatars_path(@user), multipart: true do %>
       <span class="button__normal button__info button__file">
-        Nouvel avatar
+        Éditer l'Avatar
         <%= file_field_tag :avatar, class: 'button__normal button__info button__file' %>
       </span>
-        <%= submit_tag "Éditer l'avatar", class: 'button__normal button__info' %>
+        <%= submit_tag "Confirmer", class: 'button__normal button__info' %>
       <% end %>
     </div>
   </div>
