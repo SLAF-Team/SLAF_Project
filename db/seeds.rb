@@ -116,9 +116,9 @@ Idiom.create(
     title_en: 'assesser',
     title_fr: 'évaluer',
     grammatical_type: 'verbe',
-    body: "Populaire, m'ais n'ajoute en soit aucune plus-value. ",
-    example_fr: 'Tu seras évalué dans une semaine. ',
-    example_en: 'Tu seras assessé dans une semaine. ',
+    body: "Populaire, mais n'ajoute en soit aucune plus-value.",
+    example_fr: 'Tu seras évalué dans une semaine.',
+    example_en: 'Tu seras assessé dans une semaine.',
     user: @admin_user,
     validated: true
 )
@@ -359,7 +359,7 @@ Idiom.create(
     title_fr: "processus d'intégration",
     grammatical_type: 'nom',
     body: "Désigne la période d'intégration dans une entreprise, elle permet aux nouvelles recrues de se familiariser pleinement avec leur nouvelle famille corporate.",
-    example_fr: "L'onboarding et les team building n'ont pas impacté le taux de turnover comme prévu.  ",
+    example_fr: "L'onboarding et les team building n'ont pas impacté le taux de turnover comme prévu.",
     example_en: "Le processus d'intégration et les séminaires d'équipe n'ont pas eu l'effet escompté sur le taux de rotation. ",
     user: @admin_user,
     validated: true

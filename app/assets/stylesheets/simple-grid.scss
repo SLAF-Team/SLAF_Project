@@ -145,7 +145,8 @@ $size: 20px;
 
 .card__button__bottom--admin {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .card__row {
