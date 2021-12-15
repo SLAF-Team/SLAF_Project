@@ -14,9 +14,12 @@
       <%= f.text_area :body, autofocus: true, autocomplete: "body", class: "form__control", placeholder: 'Explication (15 - 140 carac.)' %>
     </div>
       <p> Et à ajouter quelques exemples d'utilisation bien pensés.</p>
-      <p>En franglais et/ou en français</p>
+      <p>En français et en franglais</p>
     <div>
-      <%= f.text_area :example, autofocus: true, autocomplete: "example", class: "form__control", placeholder: "Exemples d'utilisation (15 - 140 carac.)" %>
+      <%= f.text_area :example_fr, autofocus: true, autocomplete: "example", class: "form__control", placeholder: "Exemples d'utilisation en français (15 - 140 carac.)" %>
+    </div>
+    <div>
+      <%= f.text_area :example_en, autofocus: true, autocomplete: "example", class: "form__control", placeholder: "Exemples d'utilisation en franglais (15 - 140 carac.)" %>
     </div>
     <div class="row">
     <div class="col-3">

@@ -88,7 +88,7 @@ $dark: #CECFCA;
 
 .card {
   padding: 25px;
-  @media only screen and (max-width: $breakpoint-med) {
+  @media only screen and (max-width: $breakpoint-small) {
       padding: 4vw;
     }
 }
@@ -106,6 +106,9 @@ $dark: #CECFCA;
 
 .card__body {
   margin-bottom: 2%;
+  @media only screen and (max-width: $breakpoint-small) {
+      margin-bottom: 5%;
+    }
 }
 
 .card__bottom {
@@ -116,12 +119,12 @@ $dark: #CECFCA;
 .card__bottom--profile {
   display: flex;
   justify-content: space-between;
-  @media only screen and (max-width: $breakpoint-med) {
+  @media only screen and (max-width: $breakpoint-small) {
       flex-direction: column-reverse;
     }
 }
 
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-small) {
   .card__likes {
     margin-top: 5vh;
     margin-bottom: 2vh;
@@ -170,7 +173,7 @@ footer {
   overflow: hidden;
 }
 
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-small) {
   .content {
     width: 100%;
   }
@@ -186,7 +189,7 @@ footer {
 
 .navbar {
   width: 295px;
-  padding: 16px;
+  padding: 16px 8px 16px 16px;
   height: 100vh;
   border: 1.5px solid black;
   border-radius: 5px;
@@ -196,6 +199,14 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+#navbar__tagline {
+  color: $underline;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
 .navbar-open {
@@ -234,7 +245,7 @@ footer {
   align-items: center;
 }
 
-@media only screen and (min-width: $breakpoint-med) {
+@media only screen and (min-width: $breakpoint-small) {
   .navbar__mobile {
     display: none;
   }
@@ -261,7 +272,7 @@ footer {
 .navbar__bottom {
   font-size: 16px;
 }
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-small) {
   .nav-link {
     font-size: 1.3rem;
   }
@@ -318,7 +329,7 @@ footer {
   display: flex;
   // border: 3px solid green;
 
-  @media only screen and (max-width: $breakpoint-med) {
+  @media only screen and (max-width: $breakpoint-small) {
     display: grid;
   }
 }
@@ -343,6 +354,7 @@ footer {
   width: 225px;
   height: 225px;
   border-radius: 50%;
+  border: 2px solid black;
   object-fit : cover;
 }
 
@@ -642,7 +654,8 @@ footer {
 // forms
 
 .form {
-  height: 80vh;
+  height: 75vh;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -672,7 +685,7 @@ footer {
     appearance: none;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
-    @media only screen and (max-width: $breakpoint-med) {
+    @media only screen and (max-width: $breakpoint-small) {
       width: 80vw;
     }
 }
@@ -714,7 +727,7 @@ footer {
     -moz-appearance: none;
     appearance: none;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    @media only screen and (max-width: $breakpoint-med) {
+    @media only screen and (max-width: $breakpoint-small) {
       width: 92%;
     }
 }
@@ -750,7 +763,7 @@ main {
   width: 100vw;
 }
 
-@media only screen and (max-width: $breakpoint-med) {
+@media only screen and (max-width: $breakpoint-small) {
   main {
     margin-left: 0;
     width: 100vw;
@@ -802,7 +815,7 @@ h6 {
 p {
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 a {
@@ -1105,3 +1118,59 @@ ul {
 #letter__tags {
   margin-top: 1vh;
 }
+
+.avis {
+  font-size: 1.5rem;
+  font-weight: 700;
+  animation-name: colorPalette;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function:steps(1);
+}
+
+@keyframes colorPalette {
+  0% {
+    color: $underline;
+  }
+  25% {
+    color: $warning;
+  }
+  50% {
+    color: $success;
+  }
+  75% {
+    color: $info;
+  }
+  100% {
+    color: $danger;
+  }
+}
+
+.signin__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5vh;
+}
+
+.button__normal--signin {
+  display: inline-block;
+  line-height: 1.5;
+  margin-left: 30px;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.275rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  }

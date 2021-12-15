@@ -5,8 +5,10 @@
     </div>
         <div class="card__bottom">
             <div class="show__links">
-                <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE', class: "button__small button__danger" if current_user != nil && comment.user == current_user %>
-                <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id), class: "button__small button__info" if current_user != nil && comment.user == current_user %>
+                <% if current_user != nil && comment.user == current_user %>
+                    <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %> / 
+                    <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %>
+                <% end %>
             </div>
             <div class="right">
                 Par <b><%=comment.user.alias%></b>, le&nbsp;<%=comment.created_at.strftime("%d")%>&nbsp;<%=comment.created_at.strftime("%b.")%>&nbsp;<%=comment.created_at.strftime("%Y")%>

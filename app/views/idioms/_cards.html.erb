@@ -1,11 +1,11 @@
 <% @idioms.each do |idiom| %>
 <div class="card">
     <div class="card__title">
-        <span class="card__title--first"><%= idiom.title_en %></span><%= idiom.grammatical_type.capitalize[0..2] %>.<br>
+        <span class="card__title--first"><%= idiom.title_en.capitalize %></span><%= idiom.grammatical_type.capitalize[0..2] %>.<br>
     </div>
     <div class="card__body">
         <span style="font-weight: 700;">Traduction</span> : <%= idiom.title_fr %><br>
-        <span style="font-weight: 700;">Définition</span> : <%=idiom.body%>
+        <span style="font-weight: 700;">Explication</span> : <%=idiom.body%>
     </div>
     <div class="card__bottom">
         <div class="card__row">

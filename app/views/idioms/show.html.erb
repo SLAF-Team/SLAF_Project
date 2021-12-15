@@ -6,11 +6,17 @@
         <% end %>
     </div>
     <div class="center show__title">
-        <h1><b><%= @idiom.title_fr %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en %></h1><span><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></span>
+        <h1><b><%= @idiom.title_fr.capitalize %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en.capitalize %></h1><span><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></span>
     </div>
     <div>
-        <p><span style="font-weight: bold;">Définition:</span> <%= @idiom.body %><p>
-        <%= @idiom.example %>
+        <p><span style="font-weight: bold;">Explications !</span><p>
+        <%= @idiom.body %>
+    </div>
+    <div>
+      <p><span style="font-weight: bold;">Exemple impropre </span> <%= @idiom.example_en %><p>
+    </div>
+    <div>
+        <p><span style="font-weight: bold;">Exemple propre </span><%= @idiom.example_fr %> <p>
     </div>
     <div class="card__bottom--profile">
         <div class="card__likes">
@@ -24,3 +30,4 @@
 </div>
 <%= render 'comments_list' if @idiom.comments.length > 0 %>
 <%= render 'comments_form' if current_user != nil %>
+<%= render 'signin_signout' if current_user == nil %>

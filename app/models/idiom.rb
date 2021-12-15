@@ -9,17 +9,18 @@ class Idiom < ApplicationRecord
     validates :title_fr, presence: true, length: { minimum: 2, maximum: 50 }
     validates :grammatical_type, presence: true
     validates :body, presence: true, length: { minimum: 15, maximum: 140 }
-    validates :example, presence: true, length: { minimum: 15, maximum: 140 }
+    validates :example_fr, presence: true, length: { minimum: 15, maximum: 140 }
+    validates :example_en, presence: true, length: { minimum: 15, maximum: 140 }
     validates :user, presence: true
 
     def self.search_by(search)
-        @letters = *('A'..'Z')
+        @all_letters = [*'A'..'Z']
         if search.blank?
             all
         elsif search == "top"
             order("likes_count DESC")
-        elsif @letters.include?(search)
-            where('title_en LIKE ?', "%#{search}%")
+        elsif @all_letters.include?(search)
+            where('LOWER(title_en) LIKE ?', "#{search.downcase}%")
         else
             where('LOWER(title_en) LIKE ?', "%#{search.downcase}%")
         end
