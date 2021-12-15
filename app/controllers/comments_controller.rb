@@ -27,7 +27,6 @@ class CommentsController < ApplicationController
         
         if @comment.update('body' => params[:comment][:body])
         redirect_to idiom_path(@idiom.id), success: "Commentaire modifié."
-        puts '$' * 80
         else
         flash.now[:error] = 'Commentaire trop petit ou trop grand !'
         render :edit
