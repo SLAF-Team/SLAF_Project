@@ -16,7 +16,7 @@ class IdiomsController < ApplicationController
 
   def create
     @idiom = Idiom.create(title_en: params[:idioms][:title_en], title_fr: params[:idioms][:title_fr],
-      grammatical_type: params[:idioms][:grammatical_type], body: params[:idioms][:body], example: params[:idioms][:example], user: current_user)
+      grammatical_type: params[:idioms][:grammatical_type], body: params[:idioms][:body], example_fr: params[:idioms][:example_fr], example_en: params[:idioms][:example_en], user: current_user)
 
     if @idiom.save
       flash[:success] = 'Ton expression est désormais en cours de validation !'
@@ -34,7 +34,7 @@ class IdiomsController < ApplicationController
   def update
     @idiom = Idiom.find(params[:id])
       if @idiom.update(title_en: params[:idiom][:title_en], title_fr: params[:idiom][:title_fr],
-        grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example: params[:idiom][:example], user: current_user)
+        grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example_fr: params[:idiom][:example_fr], example_en: params[:idiom][:example_en], user: current_user)
       flash[:notice] = 'Edition réussie !'
       redirect_to idiom_path(@idiom.id)
       else
