@@ -5,7 +5,7 @@ class OmniauthController < ApplicationController
     if @user.persisted?
       sign_in_and_redirect @user
     else
-      flash[:error] = 'Connexion avec Facebook impossible. Veuillez créer un compte ou essayer plus tard.'
+      flash[:error] = 'Connexion via Facebook impossible. Crée un compte ou réessaie plus tard.'
       redirect_to new_user_registration_url
     end
   end
@@ -15,14 +15,14 @@ class OmniauthController < ApplicationController
     if @user.persisted?
       sign_in_and_redirect @user
     else
-      flash[:error] = 'Connexion avec Google impossible. Veuillez créer un compte ou réessayer plus tard.'
+      flash[:error] = 'Connexion via Google impossible. Crée un compte ou réessaie plus tard.'
       redirect_to new_user_registration_url
     end
     Rails.logger.info(@user.errors.inspect)
   end
 
   def failure
-    flash[:error] = 'Connexion impossible. Veuillez créer un compte ou réessayer plus tard.'
+    flash[:error] = 'Connexion impossible. Crée un compte ou réessaie plus tard.'
     redirect_to new_user_registration_url
   end
 

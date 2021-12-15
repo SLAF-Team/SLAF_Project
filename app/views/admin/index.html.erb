@@ -3,10 +3,10 @@
 <%= link_to "Retourner à l'accueil", root_path, class: "button__normal button__success" %>
 <br>
 
-<h4><%= @user.all.count %> utilisateurs crées</h4>
+<h4><%= @user.all.count %> Utilisateurs crées</h4>
 <%= link_to 'Gérer tous les utilisateurs', admin_user_index_path, class: "button__normal button__info" %>
 <hr>
-<h4><%= @idiom.all.count%> expressions proposées</h4>
+<h4><%= @idiom.all.count%> Expressions proposées</h4>
 <h5><%= @idiom.where(validated: true).count%> validées || <%= @idiom.where(validated: false).count%> en cours de validation</h5>
 <%= link_to 'Gérer toutes les expressions', admin_idiom_index_path, class: "button__normal button__info" %>
 </div>
