@@ -15,6 +15,13 @@
   }
 
   function autoComplete(inputValue) {
+    // insérer une fonction js fetch ici qui ira taper dans un fichier json contenant les title_en // function async // API
+      let titles = ["Benchmarking", "Iphone", "Coucou", "Toi"];
+      return titles.filter(
+        (value) => value.toLowerCase().includes(inputValue.toLowerCase())
+      );
+    }
+
     let titles = ["Benchmarking", "Iphone", "Coucou", "Toi"];
     return titles.filter(
       (value) => value.toLowerCase().includes(inputValue.toLowerCase())
