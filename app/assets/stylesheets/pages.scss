@@ -1,0 +1,129 @@
+main {
+  margin-left: 0px;
+	height: 100vh;//100% view height
+width: 100vw;// 100% view width
+
+}
+
+.home__menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 20%;
+	justify-content: space-between;
+	height: 100vh;//100% view height
+
+}
+
+.home__logo {
+  max-width: 30%;
+  max-height: 100%;
+  display: inline-block;
+  color: #212529;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: #304FFF;
+  border: 2px solid #112233;
+  box-sizing: border-box;
+  box-shadow: -6px -6px 0px #112233;
+  border-radius: 9px;
+  padding: 1.3rem 0.55rem;
+  margin-bottom: 0.3rem;
+}
+
+.home__tagline {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 0px;
+}
+
+.home__text{
+	text-align: center;
+	}
+/* Texte défilant */
+
+.home__defileparent {
+	display: block;
+	margin: 1em auto;
+	overflow: hidden;
+	position: relative;
+	table-layout: fixed;
+	width: 700px;
+}
+.home__defileparent--text {
+	display:block;
+	-webkit-animation:linear marqueelike 20s infinite ;
+	-moz-animation:linear marqueelike 20s infinite ;
+	-o-animation:linear marqueelike 20s infinite ;
+	-ms-animation:linear marqueelike 20s infinite ;
+	animation:linear marqueelike 20s infinite ;
+	margin-left:100%;
+	padding:0 5px;
+	text-align:left;
+	height:40px;
+
+}
+
+
+.home__defileparent--text:after {
+	content:attr(data-text);
+	position:absolute;
+	white-space:nowrap;
+	padding-left:10px;
+
+}
+
+@-webkit-keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+@-moz-keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+@-o-keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+@-ms-keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+@keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+
+@media only screen and (max-width: 860px) {
+.home__defileparent {
+	display: block;
+	margin: 1em auto;
+	overflow: hidden;
+	position: relative;
+	table-layout: fixed;
+	max-width: 100%;
+}
+
+.home__defileparent--text {
+	display:block;
+	-webkit-animation:linear marqueelike 15s infinite ;
+	-moz-animation:linear marqueelike 15s infinite ;
+	-o-animation:linear marqueelike 15s infinite ;
+	-ms-animation:linear marqueelike 15s infinite ;
+	animation:linear marqueelike 15s infinite ;
+	margin-left:-100%;
+	padding:0 5px;
+	text-align:left;
+	height:25px;
+	text-transform:uppercase;
+}
+}
+
+.home__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

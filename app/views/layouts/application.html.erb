@@ -28,18 +28,22 @@
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
   </head>
-  <body>
-    <%= render 'layouts/navbar'%>
-    <main>
-      <%= render 'layouts/navbar_mobile'%>
-      <div class="content">
-        <%= render 'layouts/flash'%>
-        <%= render "devise/shared/error_messages", resource: resource %>
-        <%= yield %>
-        <%= render 'layouts/footer' if @pagy != nil %>
-      </div>
-    </main>
-  </body>
-
-
+  <% unless action_name == "home" %>
+  <%= render 'layouts/navbar'%>
+  <% end %>
+  <main>
+    <% unless action_name == "home" %>
+    <%= render 'layouts/navbar_mobile'%>
+    <% end %>
+    <div class="content">
+      <%= render 'layouts/flash'%>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= yield %>
+      <% unless action_name == "home" %>
+      <%= render 'layouts/footer' if @pagy != nil %>
+      <% end %>
+    </div>
+  </main>
+  <%= javascript_include_tag "burger" %>
+  <%= javascript_include_tag "browse" %>
 </html>
