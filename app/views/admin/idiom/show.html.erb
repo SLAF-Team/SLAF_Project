@@ -2,24 +2,9 @@
 <h1>Expression <%=@idiom.id %></h1>
 <%= link_to "Retour", admin_root_path, class: 'button__normal button__info' %>
 </div>
-
 <div class="card">
-    <div class="center show__title">
-        <h1><b><%= @idiom.title_fr %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en %></h1><span><%= social_share_button_tag("S.L.A.F") %></span>
-    </div>
-    <div>
-        <p><span style="font-weight: bold;">Définition franglais :</span> <%= @idiom.body %><p>
-        <%= @idiom.example_en %>
-    </div>
-    <div>
-        <p><span style="font-weight: bold;">Définition français :</span> <%= @idiom.body %><p>
-        <%= @idiom.example_fr %>
-    </div>
-    <div class="card__bottom">
-        <div>
-            <span>Une expression proposée par <b><%= @idiom.user.alias %></b></span>
-        </div>
-    </div>
+<%= render 'idioms/show'%>
+
     <div class="card__button__bottom">
             <%= link_to "Éditer", edit_admin_idiom_path(@idiom.id), class: "button__normal button__info" %>
             <%= link_to "Supprimer", admin_idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" %>
