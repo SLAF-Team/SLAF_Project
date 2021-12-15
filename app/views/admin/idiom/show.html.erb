@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="card__button__bottom">
-            <%= link_to "Editer", edit_admin_idiom_path(@idiom.id), class: "button__normal button__info" %>
+            <%= link_to "Éditer", edit_admin_idiom_path(@idiom.id), class: "button__normal button__info" %>
             <%= link_to "Supprimer", admin_idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" %>
             <% if @idiom.validated == false %>
             <%= link_to "Valider", admin_idiom_path(@idiom.id, submit: 'true'), method: 'patch', class: "button__normal button__success" %>
