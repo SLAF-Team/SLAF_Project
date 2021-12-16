@@ -1,5 +1,5 @@
 class IdiomsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :create, :show]
 
   def show
     @idiom = Idiom.find(params[:id])
@@ -28,7 +28,11 @@ class IdiomsController < ApplicationController
   end
 
   def edit
+    if current_user.admin == true || current_user == @idiom.user
     @idiom = Idiom.find(params[:id])
+    else
+      redirect_to idiom_path
+    end
   end
 
   def update
@@ -48,5 +52,6 @@ class IdiomsController < ApplicationController
     @idiom.destroy
     redirect_back(fallback_location: root_path)
   end
-  
+
+
 end
