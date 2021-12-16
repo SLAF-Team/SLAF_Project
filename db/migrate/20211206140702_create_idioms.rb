@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateIdioms < ActiveRecord::Migration[5.2]
   def change
     create_table :idioms do |t|
@@ -6,7 +8,7 @@ class CreateIdioms < ActiveRecord::Migration[5.2]
       t.string :grammatical_type
       t.text :body
       t.text :example
-      t.boolean :validated, :default => false
+      t.boolean :validated, default: false
       t.belongs_to :user, index: true
       t.timestamps
     end
