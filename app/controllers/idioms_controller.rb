@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class IdiomsController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create show]
+  before_action :authenticate_user!, only: %i[new create]
 
   def show
     @idiom = Idiom.find(params[:id])
