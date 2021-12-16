@@ -7,13 +7,19 @@ class IdiomsController < ApplicationController
     @idiom = Idiom.find(params[:id])
   end
 
-  def index
-    @index_idioms = Idiom.where(validated: true)
+def index
+  @index_idioms = Idiom.where(validated: true)
+  if params[:user_id].nil?
     @idioms_ = @index_idioms.search_by(params[:search])
-    @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
+  else
+    @user = User.find(params[:user_id])
+    @idioms_ = @index_idioms.where(user: @user)
   end
+  @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
+end
 
-  def new; end
+  def new
+  end
 
   def create
     @idiom = Idiom.create(title_en: params[:idioms][:title_en], title_fr: params[:idioms][:title_fr],
