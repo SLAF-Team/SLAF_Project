@@ -40,7 +40,7 @@ Idiom.create(
   title_fr: 'analyse comparative',
   grammatical_type: 'nom',
   body: "Etymologiquement lié à l'architecture (point géodésique pour les amateurs) : ça fait tout de suite sérieux. On dit aussi parangonnage !",
-  example_fr: "Lisa, aurais tu l'obligeance de me fournir cette étude comparative je te prie ?",
+  example_fr: "Lisa, aurais-tu l'obligeance de me fournir cette étude comparative je te prie ?",
   example_en: 'Lisa, tu me ferais un petit benchmark stp ?',
   user: @admin_user,
   validated: true
@@ -83,8 +83,8 @@ Idiom.create(
   title_en: 'bankable',
   title_fr: 'rentable',
   grammatical_type: 'adjectif',
-  body: "Vient du jargon cinématographique, désigne une star qui va assurer une audience à un film de facto des financements. Par extension, se dit d’une idée, d'un secteur ou d’une start-up très à même d’attirer des investissements.",
-  example_fr: 'THP est extrêmement rentable.',
+  body: "Vient du jargon cinématographique ; désigne une star qui va assurer une audience à un film, et donc des financements. Par extension, se dit d’une idée, d'un secteur ou d’une start-up très à même d’attirer des investissements.",
+  example_fr: 'Le Projet Bidouillage est extrêmement rentable.',
   example_en: 'The Hacking Project est extrêmement bankable.',
   user: @admin_user,
   validated: true
@@ -94,7 +94,7 @@ Idiom.create(
   title_en: 'scalable',
   title_fr: 'extensible',
   grammatical_type: 'adjectif',
-  body: 'Fait partie du groupe des anglicismes les plus légitimes car difficiles à traduire. Un modèle dit "scalable" est facilement déployable à plus grande échelle.',
+  body: 'Fait partie des anglicismes les plus légitimes car difficiles à traduire. Un modèle dit "scalable" est facilement déployable à plus grande échelle.',
   example_fr: 'Mon appli de promenade de chiens est extensible !',
   example_en: 'Mon appli de dog-walking est scalable !',
   user: @admin_user,
@@ -136,7 +136,7 @@ Idiom.create(
 
 Idiom.create(
   title_en: 'dummy',
-  title_fr: 'factice, fictif',
+  title_fr: 'factice',
   grammatical_type: 'adjectif',
   body: 'Généralement utilisé avec des outils permettant de mettre en place des simulations, comme des données.',
   example_fr: 'Ces données factices ne seront pas compatibles avec ce logiciel.  ',
@@ -160,7 +160,7 @@ Idiom.create(
   title_en: 'feedback',
   title_fr: 'retour',
   grammatical_type: 'nom',
-  body: 'Utilisé plus souvent pour le sens de retour que celui de rétroaction. ',
+  body: "Utilisé le plus souvent au sens de retour qu'à celui de rétroaction.",
   example_fr: 'Elle attend le retour de son N+2.',
   example_en: 'Elle attend le feedback de son N+2.',
   user: @admin_user,
@@ -193,7 +193,7 @@ Idiom.create(
   title_en: 'one-to-one',
   title_fr: 'face-à-face',
   grammatical_type: 'nom',
-  body: "One-on-one est la traduction traditionnelle d'un entretien en face-à-face, one-to-one (ou 1-1) a au départ un sens différent,  plus lié à l'idée de transmission, mais son utilisation est maintenant acceptée au niveau informel.",
+  body: "One-on-one est la traduction traditionnelle d'un entretien en face-à-face. One-to-one (ou 1-1) a au départ un sens différent,  plus lié à l'idée de transmission, mais son utilisation est maintenant acceptée au niveau informel.",
   example_fr: "Quel est le sujet de l'entretien avec ton chef ?",
   example_en: "C'est quoi le topic du ton 1-1 avec ton manager ?",
   user: @admin_user,
@@ -204,7 +204,7 @@ Idiom.create(
   title_en: 'sugar daddy',
   title_fr: 'papa gâteau',
   grammatical_type: 'nom',
-  body: "Papa gâteau désignait au départ un père attentionné voire indulgent gâtant ces enfants. En raison de l'évolution de la langue, il désigne à present aussi un homme généralement plus âgé entretenant financièrement un ou une amante.",
+  body: "Papa gâteau désignait au départ un père attentionné voire indulgent gâtant ses enfants. En raison de l'évolution de la langue, il désigne à present aussi un homme généralement plus âgé entretenant financièrement un ou une amante.",
   example_fr: 'Ils ont découvert le profil de leur DF sur un site de papas gâteaux.',
   example_en: 'Ils ont découvert le profil de leur CFO sur un site de sugar daddies.',
   user: @admin_user,
@@ -213,11 +213,11 @@ Idiom.create(
 
 Idiom.create(
   title_en: 'looser',
-  title_fr: 'perdant / ratés',
+  title_fr: 'perdant / raté',
   grammatical_type: 'nom',
-  body: "Né d'une confusion entre lose et loose, looser signifie en fait 'plus ample / lâche' (comparatif), ce qui n'empêche pas son utilisation fréquente pour traduire perdant. ",
+  body: "Né d'une confusion entre lose et loose, looser signifie en fait 'plus ample / lâche' (comparatif), ce qui n'empêche pas son utilisation fréquente pour traduire perdant.",
   example_fr: 'La branche audit est remplie de ratés, viens faire du conseil avec nous.',
-  example_en: "L'audit, c'est que des loosers, viens faire du conseil avec nous. ",
+  example_en: "L'audit, c'est que des loosers, viens faire du conseil avec nous.",
   user: @admin_user,
   validated: true
 )
@@ -282,8 +282,8 @@ Idiom.create(
   title_fr: 'date butoir',
   grammatical_type: 'nom',
   body: 'Ce terme anglais, provenant du jargon militaire, désigne une ligne que les prisoniers de guerre ne doivent pas traverser. Il donne tout de suite plus de solennité aux contraintes temporelles du quotidien. ',
-  example_en: 'La deadline est dans 2 jours pour notre propale, on est mal...',
-  example_fr: 'La date butoir est dans deux jours, on va être justes !',
+  example_en: 'La deadline de notre propale est dans 2 jours, on est mal...',
+  example_fr: 'La date butoir de notre propale est dans deux jours, on va être justes !',
   user: @admin_user,
   validated: true
 )
@@ -322,7 +322,7 @@ Idiom.create(
 )
 
 Idiom.create(
-  title_en: 'De-livrable',
+  title_en: 'Dé-livrable',
   title_fr: 'production tangible',
   grammatical_type: 'nom',
   body: "Dérivé du verbe 'to deliver', un délivrable ou livrable ne s'entend pas au sens usuel français. Il représente un travail suffisamment correct pour légitimer la personne ou l'organisation qui l'a produit. ",
@@ -337,7 +337,7 @@ Idiom.create(
   title_fr: 'mettre en place',
   grammatical_type: 'verbe',
   body: 'Valide au scrabble (consécration).',
-  example_fr: "Nous metterons en place ce processus dès que nous aurons l'accord du conseil d'administration.",
+  example_fr: "Nous mettrons en place ce processus dès que nous aurons l'accord du conseil d'administration.",
   example_en: 'Nous implémenterons ce process dès que nous aurons le feu vert du board. ',
   user: @admin_user,
   validated: true
@@ -347,7 +347,7 @@ Idiom.create(
   title_en: 'workshop',
   title_fr: 'atelier collaboratif',
   grammatical_type: 'nom',
-  body: "Le worshop donne une impression de mise en pratique concrète sans passer par un terme aussi artisanal qu'atelier. ",
+  body: "Le worshop donne une impression de mise en pratique concrète sans passer par un terme aussi artisanal qu'atelier.",
   example_fr: 'Les RHs ont réservé un second atelier contre le harcèlement mardi aprèm. Obligatoire, cette fois. ',
   example_en: 'Les RHs ont booké un second worshop anti-harassment mardi aprèm, et mandatory cette fois. ',
   user: @admin_user,
@@ -378,11 +378,11 @@ Idiom.create(
 
 Idiom.create(
   title_en: 'soft skills',
-  title_fr: 'compétences non techniques',
+  title_fr: 'compétences relationnelles',
   grammatical_type: 'nom',
   body: 'À opposer aux hard skills, c.à.d. aux compétences techniques. Se dit des capacités qui vont vraiment vous permettre de vous hisser en haut de la corporate ladder sur le long-run.',
-  example_fr: 'Erwan produit des feuilles de calcul propres mais il a aucune compétence relationnelle. Un beau défi ! ',
-  example_en: "Erwan délivre des spreadsheets propres mais il n'a vraiment aucun soft skill. Quel challenge ! ",
+  example_fr: 'Erwan produit des feuilles de calcul propres mais ses compétences relationnelles sont limitées. Un beau défi ! ',
+  example_en: "Erwan délivre des spreadsheets propres mais ses soft skills sont limités. Quel challenge ! ",
   user: @admin_user,
   validated: true
 )
@@ -402,7 +402,7 @@ Idiom.create(
   title_en: 'à date',
   title_fr: 'à ce jour',
   grammatical_type: 'expression',
-  body: "Traduction littérale de 'to date'. Jusqu'à présent et à ce jour feraient l'affaire, mais ils sont bien trop longs à prononcer. ",
+  body: "Traduction littérale de 'to date'. 'Jusqu'à présent' et 'à ce jour' feraient l'affaire, mais ils sont bien trop longs à prononcer.",
   example_fr: 'Pour ce qui est des Indicateurs Clés de Performance, à ce jour, le Retour Sur Investissement est toujours problématique.',
   example_en: 'Pour ce qui est des KPIs, à date, le ROI est toujours problématique. ',
   user: @admin_user,
@@ -411,10 +411,10 @@ Idiom.create(
 
 Idiom.create(
   title_en: 'todo',
-  title_fr: 'tâches à faire',
+  title_fr: 'liste de tâches',
   grammatical_type: 'nom',
   body: "Version abrégée de la to-do list. Les tâches accomplies disparaissent et les problèmes s'accumulent, comme au tetris. ",
-  example_fr: "Leur liste de tâches à faire ressemble plus à une liste de Noël qu'à autre chose. De toute façon, ils ne délivrent pas.",
+  example_fr: "Leur liste de tâches ressemble plus à une liste de Noël qu'à autre chose. De toute façon, ils ne délivrent pas.",
   example_en: "Leur todo ressemble plus à une Christmas list qu'à autre chose. Anyway, ils shippent pas.",
   user: @admin_user,
   validated: true
@@ -437,7 +437,7 @@ Idiom.create(
   grammatical_type: 'nom',
   body: 'Lien indispensable entre la théorie et la pratique, notamment en marketing, le focus group donne un côté un peu plus scientifique au monde corporate.',
   example_fr: "Quelle tané le groupe de réflexion de ce matin... Ils n'ont pas du tout accroché avec notre IU 'hommage au minitel'.",
-  example_en: "Quel tanée le le focus group de ce matin. Ils n'ont pas du tout accroché avec notre UI 'minitel tribute'...",
+  example_en: "Quel tanée le focus group de ce matin. Ils n'ont pas du tout accroché avec notre UI 'minitel tribute'...",
   user: @admin_user,
   validated: true
 )

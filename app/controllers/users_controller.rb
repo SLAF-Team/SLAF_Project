@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
     def same_user?
         @user = User.find(params[:id])
-        current_user == @user ? nil : (redirect_to root_path)
+        current_user == @user ? nil : (redirect_to idioms_path)
     end
 
 end

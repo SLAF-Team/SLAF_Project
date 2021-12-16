@@ -10,7 +10,7 @@ class LikesController < ApplicationController
     else
       @idiom.likes.create(user: current_user)
     end
-    redirect_back(fallback_location: root_path)
+    redirect_back(fallback_location: idioms_path)
   end
 
   def destroy
@@ -19,7 +19,7 @@ class LikesController < ApplicationController
     else
       @like.destroy
     end
-    redirect_back(fallback_location: root_path)
+    redirect_back(fallback_location: idioms_path)
   end
 
   private
