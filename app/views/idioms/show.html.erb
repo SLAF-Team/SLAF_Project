@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="card__button__bottom--admin">
-        <% if current_user != nil %>
+        <% if @idiom.comments == current_user || current_user.admin == true %>
             <%= link_to "Éditer", edit_idiom_path(@idiom.id), class: "button__normal button__info" if @idiom.user == current_user %>
             <%= link_to "Supprimer", idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" if (@idiom.user == current_user && @idiom.validated?)%>
         <% end %>
