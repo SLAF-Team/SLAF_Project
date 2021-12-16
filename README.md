@@ -1,10 +1,11 @@
 ![](https://syndicatdelutteantifranglais.herokuapp.com/logoslaf.png)
 
 # Le Syndicat de lutte anti-franglais is finally alive
+_Le dictionnaire des noms impropres_
 
 ## Table of contents
 
-- [About TSP](#a-few-words-about-the-sloth-project)
+- [About SLAF!](#a-few-words-about-slaf)
 - [Main features](#main-features)
 - [API & Gems](#api-gems)
 - [The team](#the-slaf-team)
@@ -22,31 +23,30 @@ EXPLICATIONS
 
 
 ## Main Features
-A reprendre
 
 ### User classics
 - Sign-up, sign-in, log-in, log-out, password reset...
-- User profile
+- User profile 
 - Avatar pic
 
-### E-commerce classics
-- Items index
-- Items profile
-- Amazing shopping cart
-- Paiement validation
-- Paiement confirmation page
+### Discover about anglicisms
+- Index
+- Ramdom button
+- "Florilège" or the top liked ones
+- Searchbar
+- Anglicisms sorted by user
 
-### Real mails
+### A site designed for social share...
+- Share them with friends
+- Like, unlike
+- Comment
+
+### and contribution ! 
+- Contribute by posting your own anglicisms
+
+### Mailer
 - When creating an account
-- When ordering an item
-
-### Bonus
-- A very inviting home
-- Bought items displayed on user profile
-- Recommended items based on our algorithm
-- Tags & tag selection navbar
-- Light-hearted team page
-- FAQs
+- When validatin an anglicisms
 
 ---
 
@@ -93,8 +93,16 @@ Documentation available [here](https://github.com/huacnlee/social-share-button)
 
 ---
 
+## Inspired by 80s design
+
+Palette de couleur à ajouter mise en forme
+Inspiration
+Font
+
+---
+
 ## The SLAF Team
-_A votre service_
+_Madame, monsieur, à votre service!_
 
 Mathias P.
 > Vinyl & Front lover
