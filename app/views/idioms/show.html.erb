@@ -6,7 +6,7 @@
             <%= render :partial => "unlike", :locals => { :idiom => @idiom } if current_user != nil %>
         </div>
         <div>
-            <span>Une expression proposée par <b><%= @idiom.user.alias %></b></span>
+            <span>Une expression proposée par <b><%=link_to "#{@idiom.user.alias}", user_idioms_path(@idiom.user.id) %></b></span>
         </div>
     </div>
     <div class="card__button__bottom--admin">

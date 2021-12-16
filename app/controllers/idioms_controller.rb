@@ -53,4 +53,6 @@ class IdiomsController < ApplicationController
     @idiom.destroy
     redirect_back(fallback_location: root_path)
   end
+
 end
+
