@@ -1,8 +1,5 @@
-// colors
-$primary: #112233;
-$primary-light: #224364;
-$underline: #304FFF;
-$underline-light: #7085FF;
+@import "main";
+
 
 
 //screen
@@ -110,7 +107,7 @@ width: 100vw;// 100% view width
 	}
 
 
-/* Defile text */
+/* Defiling text */
 
 .home__defileparent {
 	display: block;
