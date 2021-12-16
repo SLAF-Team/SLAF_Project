@@ -11,6 +11,7 @@
                 <% end %>
             </div>
             <div class="right">
+                <%= image_tag comment.user.avatar, class: 'pic-avatar-com' %>
                 Par <b><%=comment.user.alias%></b>, le&nbsp;<%=comment.created_at.strftime("%d")%>&nbsp;<%=comment.created_at.strftime("%b.")%>&nbsp;<%=comment.created_at.strftime("%Y")%>
             </div>
         </div>
