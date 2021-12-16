@@ -35,13 +35,27 @@ width: 100vw;// 100% view width
 }
 
 .home__tagline {
-text-align: center;
-font-size: 2rem;
-margin-bottom: 0px;
+	color: #36F1CD;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 0px;
+	text-shadow:
+	-3px  -3px 0 #304FFF,
+	1px 1px 0 #304FFF,  
+	-1px 1px 0 #304FFF,
+	1px  -1px 0 #304FFF,
+	-1px  -1px 0 #304FFF;
+	letter-spacing: 0.45rem;
+
+	
 }
 
 .home__text{
 	text-align: center;
+	font-size: 1.4rem;
+	border: 3px solid #304FFF;
+	padding: 15px;
+	border-radius: 25px;
 	}
 /* Texte défilant */
 
