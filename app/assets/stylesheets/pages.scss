@@ -1,8 +1,74 @@
+// fonts
+$font-family: 'Lato', Helvetica, sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+$font-height: 1.5;
+
+// screen
+$width: 96%;
+$gutter: 4%;
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+
+// colors
+$primary: #112233;
+$primary-light: #224364;
+$underline: #304FFF;
+$underline-light: #7085FF;
+$warning: #FFBF00;
+$warning-light: #FFE494;
+$danger: #FF005C;
+$danger-light: #ff7ead;
+$success: #81F878;
+$success-light: #B8F3B3;
+$info: #EFFF00;
+$info-light: #FBFFC5;
+$info-bis: #36F1CD;
+$background: #E7E9E2;
+$background-light: #F9FBF6;
+$dark: #CECFCA;
+
 main {
   margin-left: 0px;
 	height: 100vh;//100% view height
 width: 100vw;// 100% view width
 
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+	h2 {
+		margin-block-start: 0.3em;
+	}
+}
+
+.button__large--home {
+  display: inline-block;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  box-shadow: -6px -6px 0px #112233;
+  border-radius: 9px;
+  padding: 1.3rem 0.550rem;
+  min-width: 110px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  @media only screen and (max-width: $breakpoint-small) {
+    font-size: 1.2rem;
+    padding: 1rem 0.40rem;
+    min-height: 25px;
+    min-width: 110px;
+  }
 }
 
 .home__menu{
@@ -13,6 +79,10 @@ width: 100vw;// 100% view width
   margin-right: 20%;
 	justify-content: space-between;
 	height: 100vh;//100% view height
+	@media only screen and (max-width: $breakpoint-small) {
+		margin-left: 1vh;
+		margin-right: 1vh;
+	}
 
 }
 
@@ -35,13 +105,27 @@ width: 100vw;// 100% view width
 }
 
 .home__tagline {
-text-align: center;
-font-size: 2rem;
-margin-bottom: 0px;
+	color: #36F1CD;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 0px;
+	text-shadow:
+	-3px  -3px 0 #304FFF,
+	1px 1px 0 #304FFF,  
+	-1px 1px 0 #304FFF,
+	1px  -1px 0 #304FFF,
+	-1px  -1px 0 #304FFF;
+	letter-spacing: 0.45rem;
+
+	
 }
 
 .home__text{
 	text-align: center;
+	font-size: 1.4rem;
+	border: 3px solid #304FFF;
+	padding: 15px;
+	border-radius: 25px;
 	}
 /* Texte défilant */
 
