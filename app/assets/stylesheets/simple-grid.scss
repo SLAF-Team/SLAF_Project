@@ -47,7 +47,7 @@ $size: 20px;
   background-color: $dark;
   padding: 0.6rem;
   border-radius: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 2vh;
 }
 
 .show__title {
@@ -87,6 +87,11 @@ $size: 20px;
 
 
 // _idioms-cards
+
+.show__links {
+  display: flex;
+  align-items: center;
+}
 
 .show__links a {
   color: $underline;
@@ -398,11 +403,12 @@ footer {
 }
 
 .pic-avatar-com {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 1px solid black;
   object-fit : cover;
+  margin-right: 0.4vw;
 }
 
 .profile-info-pic {
@@ -1004,6 +1010,8 @@ ul {
 
 .right {
   text-align: right;
+  display: flex;
+  align-items: center;
 }
 
 .center {

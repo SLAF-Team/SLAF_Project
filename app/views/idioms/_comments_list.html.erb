@@ -6,13 +6,13 @@
         <div class="card__bottom">
             <div class="show__links">
                 <% if current_user != nil && comment.user == current_user %>
-                    <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %> / 
+                    <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %>&nbsp;/&nbsp;
                     <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %>
                 <% end %>
             </div>
             <div class="right">
                 <%= image_tag comment.user.avatar, class: 'pic-avatar-com' %>
-                Par <b><%=comment.user.alias%></b>, le&nbsp;<%=comment.created_at.strftime("%d")%>&nbsp;<%=comment.created_at.strftime("%b.")%>&nbsp;<%=comment.created_at.strftime("%Y")%>
+                Par&nbsp;<b><%=comment.user.alias%></b>, le&nbsp;<%=comment.created_at.strftime("%d")%>&nbsp;<%=comment.created_at.strftime("%b.")%>&nbsp;<%=comment.created_at.strftime("%Y")%>
             </div>
         </div>
     <%end%>
