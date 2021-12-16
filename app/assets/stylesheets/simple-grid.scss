@@ -2,8 +2,11 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,500,600,700,700italic,800,900);
 
+
+
 // fonts
-$font-family: 'Lato', Helvetica, sans-serif;
+$font-family: 'Lato', sans-serif;
+$font-title: 'Lato', sans-serif;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-heavy: 700;
@@ -23,13 +26,13 @@ $underline: #304FFF;
 $underline-light: #7085FF;
 $warning: #FFBF00;
 $warning-light: #FFE494;
-$danger: #FF005C;
+$danger: #fe019a;
 $danger-light: #ff7ead;
-$success: #81F878;
+$success: #4efd54;
 $success-light: #B8F3B3;
 $info: #EFFF00;
 $info-light: #FBFFC5;
-$info-bis: #36F1CD;
+$info-bis: #15F4EE;
 $background: #E7E9E2;
 $background-light: #F9FBF6;
 $dark: #CECFCA;
@@ -105,6 +108,7 @@ $size: 20px;
   font-size: 2.1rem;
   font-weight: 700;
   margin-right: 6px;
+  font-family: $font-title;
 }
 
 .card__title--second {
@@ -242,6 +246,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 99;
 }
 
 
@@ -407,6 +412,7 @@ footer {
 // buttons
 
 .button__file {
+  position: relative;
     overflow: hidden;
     margin-right: 12px;
 }
@@ -613,22 +619,27 @@ footer {
 
 .button__info {
   background-color: $info;
+  font-family: $font-title;
 }
 
 .button__info--bis {
   background-color: $info-bis;
+  font-family: $font-title;
 }
 
 .button__danger {
   background-color: $danger;
+  font-family: $font-title;
 }
 
 .button__success {
   background-color: $success;
+  font-family: $font-title;
 }
 
 .button__subdued{
   background-color: $background;
+  font-family: $font-title;
 }
 
 .button__small:active {
@@ -875,26 +886,32 @@ body {
 
 h1 {
   font-size: 2.5rem;
+  font-family: $font-title;
 }
 
 h2 {
   font-size: 2rem;
+  font-family: $font-title;
 }
 
 h3 {
   font-size: 1.375rem;
+  font-family: $font-title;
 }
 
 h4 {
   font-size: 1.125rem;
+  font-family: $font-title;
 }
 
 h5 {
   font-size: 1rem;
+  font-family: $font-title;
 }
 
 h6 {
   font-size: 0.875rem;
+  font-family: $font-title;
 }
 
 p {
