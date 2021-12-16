@@ -1,35 +1,36 @@
+# frozen_string_literal: true
+
 class IdiomsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show]
+  before_action :authenticate_user!, only: %i[new create show]
 
   def show
     @idiom = Idiom.find(params[:id])
   end
 
   def index
-      @index_idioms = Idiom.where(validated: true)
-      @idioms_ = @index_idioms.search_by(params[:search])
-      @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
-    end
-
-  def new
+    @index_idioms = Idiom.where(validated: true)
+    @idioms_ = @index_idioms.search_by(params[:search])
+    @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
   end
+
+  def new; end
 
   def create
     @idiom = Idiom.create(title_en: params[:idioms][:title_en], title_fr: params[:idioms][:title_fr],
-      grammatical_type: params[:idioms][:grammatical_type], body: params[:idioms][:body], example_fr: params[:idioms][:example_fr], example_en: params[:idioms][:example_en], user: current_user)
+                          grammatical_type: params[:idioms][:grammatical_type], body: params[:idioms][:body], example_fr: params[:idioms][:example_fr], example_en: params[:idioms][:example_en], user: current_user)
 
     if @idiom.save
       flash[:success] = 'Ton expression est désormais en cours de validation !'
       redirect_to idiom_path(@idiom.id)
     else
-    flash.now[:error] = @idiom.errors.full_messages.to_sentence
-    render :new
+      flash.now[:error] = @idiom.errors.full_messages.to_sentence
+      render :new
     end
   end
 
   def edit
     if current_user.admin == true || current_user == @idiom.user
-    @idiom = Idiom.find(params[:id])
+      @idiom = Idiom.find(params[:id])
     else
       redirect_to idiom_path
     end
@@ -37,21 +38,19 @@ class IdiomsController < ApplicationController
 
   def update
     @idiom = Idiom.find(params[:id])
-      if @idiom.update(title_en: params[:idiom][:title_en], title_fr: params[:idiom][:title_fr],
-        grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example_fr: params[:idiom][:example_fr], example_en: params[:idiom][:example_en], user: current_user)
+    if @idiom.update(title_en: params[:idiom][:title_en], title_fr: params[:idiom][:title_fr],
+                     grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example_fr: params[:idiom][:example_fr], example_en: params[:idiom][:example_en], user: current_user)
       flash[:notice] = 'Edition réussie !'
       redirect_to idiom_path(@idiom.id)
-      else
+    else
       flash.now[:error] = @idiom.errors.full_messages.to_sentence
       render :edit
-      end
     end
+  end
 
   def destroy
     @idiom = Idiom.find(params[:id])
     @idiom.destroy
     redirect_back(fallback_location: root_path)
   end
-
-
 end

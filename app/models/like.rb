@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 class Like < ApplicationRecord
-    belongs_to :user
-    belongs_to :idiom, counter_cache: true
+  belongs_to :user
+  belongs_to :idiom, counter_cache: true
 end
