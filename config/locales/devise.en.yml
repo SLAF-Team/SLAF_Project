@@ -3,7 +3,7 @@
 en:
   devise:
     confirmations:
-      confirmed: "Votre adresse email a été confirmée avec succès."
+      confirmed: "Votre adresse email a bien été confirmée."
       send_instructions: "Vous recevrez dans quelques minutes un mail pour confirmer votre adresse email."
       send_paranoid_instructions: "Si votre adresse email existe dans notre base de données, vous recevrez dans quelques minutes un mail pour confirmer votre adresse email."
     failure:
@@ -18,37 +18,37 @@ en:
       unconfirmed: "Vous devez confirmer votre adresse email avant de continuer."
     mailer:
       confirmation_instructions:
-        subject: "Instructions de confirmation"
+        subject: "Instructions de confirmation."
       reset_password_instructions:
-        subject: "Instructions pour la réinitialisation du mot de passe"
+        subject: "Instructions de réinitialisation du mot de passe."
       unlock_instructions:
-        subject: "Instructions de déverrouillage"
+        subject: "Instructions de déverrouillage."
       email_changed:
-        subject: "Email modifié"
+        subject: "Email modifié."
       password_change:
-        subject: "Mot de passe modifié"
+        subject: "Mot de passe modifié."
     omniauth_callbacks:
       failure: "Impossible de vous authentifier à partir de %{kind} parce que \"%{reason}\"."
-      success: "Authentification réussie à partir de %{kind} compte."
+      success: "Authentification réussie à partir du compte %{kind}."
     passwords:
       no_token: "Vous ne pouvez pas accéder à cette page sans provenir d'un e-mail de réinitialisation de mot de passe. Si vous venez d'un e-mail de réinitialisation de mot de passe, assurez-vous d'avoir utilisé l'URL complète fournie."
-      send_instructions: "Vous recevrez un email contenant des instructions sur la façon de réinitialiser votre mot de passe dans quelques minutes."
-      send_paranoid_instructions: "Si votre adresse email existe dans notre base de données, vous recevrez un lien de récupération du mot de passe à votre adresse email dans quelques minutes."
-      updated: "Votre mot de passe a été modifié avec succès. Vous êtes maintenant connecté."
-      updated_not_active: "Votre mot de passe a été modifié avec succès."
+      send_instructions: "Vous recevrez un email contenant des instructions pour réinitialiser votre mot de passe dans quelques minutes."
+      send_paranoid_instructions: "Si votre adresse email existe dans notre base de données, vous recevrez un lien de récupération du mot de passe de votre adresse email dans quelques minutes."
+      updated: "Votre mot de passe a bien été modifié. Vous êtes maintenant connecté."
+      updated_not_active: "Votre mot de passe a bien été modifié."
     registrations:
-      destroyed: "Au revoir ! Votre compte a été annulé avec succès. Nous espérons vous revoir bientôt."
-      signed_up: "Bienvenue ! Vous vous êtes inscrit avec succès."
-      signed_up_but_inactive: "Vous vous êtes inscrit avec succès. Cependant, nous n'avons pas pu vous connecter car votre compte n'est pas encore activé."
-      signed_up_but_locked: "Vous vous êtes inscrit avec succès. Cependant, nous n'avons pas pu vous connecter car votre compte est verrouillé."
+      destroyed: "Au revoir ! Votre compte a bien été annulé. Nous espérons vous revoir bientôt."
+      signed_up: "Bienvenue ! Vous êtes bien inscrit."
+      signed_up_but_inactive: "Vous êtes bien inscrit. Cependant, nous n'avons pas pu vous connecter car votre compte n'est pas encore activé."
+      signed_up_but_locked: "Vous êtes bien inscrit. Cependant, nous n'avons pas pu vous connecter car votre compte est verrouillé."
       signed_up_but_unconfirmed: "Un message contenant un lien de confirmation a été envoyé à votre adresse email. Veuillez suivre le lien pour activer votre compte."
-      update_needs_confirmation: "Vous avez mis à jour votre compte avec succès, mais nous devons vérifier votre nouvelle adresse email. Veuillez vérifier votre e-mail et suivre le lien de confirmation pour confirmer votre nouvelle adresse e-mail."
-      updated: "Votre compte a été mis à jour avec succès."
-      updated_but_not_signed_in: "Votre compte a été mis à jour avec succès, mais comme votre mot de passe a été modifié, vous devez vous reconnecter."
+      update_needs_confirmation: "Vous avez bien mis à jour votre compte, mais nous devons vérifier votre nouvelle adresse email. Veuillez vérifier votre e-mail et suivre le lien de confirmation pour confirmer votre nouvelle adresse e-mail."
+      updated: "Votre compte a bien été mis à jour."
+      updated_but_not_signed_in: "Votre compte a bien été mis à jour, mais comme votre mot de passe a été modifié, vous devez vous reconnecter."
     sessions:
-      signed_in: "Connexion réussite avec succès."
-      signed_out: "Deconnexion réussie"
-      already_signed_out: "Vous êtes bien déconnecté"
+      signed_in: "Connexion réussie."
+      signed_out: "Déconnexion réussie."
+      already_signed_out: "Vous êtes bien déconnecté."
     unlocks:
       send_instructions: "Vous recevrez un email contenant les instructions pour déverrouiller votre compte dans quelques minutes."
       send_paranoid_instructions: "Si votre compte existe, vous recevrez un email pour le déverrouiller dans quelques minutes."
@@ -56,10 +56,10 @@ en:
   errors:
     messages:
       already_confirmed: "A déjà été confirmé, veuillez essayer de vous connecter"
-      confirmation_period_expired: "Doit être confirmée dans les %{period}, veuillez en demander à nouveau"
-      expired: "A expiré, veuillez en demander un nouveau"
-      not_found: "Non trouvé"
-      not_locked: "N'était pas verrouillé"
+      confirmation_period_expired: "Doit être confirmée dans les %{period}, veuillez en demander à nouveau."
+      expired: "A expiré, veuillez en demander un nouveau."
+      not_found: "Non trouvé."
+      not_locked: "N'était pas verrouillé."
       not_saved:
-        one: "1 erreur interdit ce %{resource} d'être sauvé:"
-        other: "%{count} erreurs interdit ce %{resource} d'être sauvé:"
+        one: "1 erreur empêche l'enregistrement de %{resource} : "
+        other: "%{count} erreurs empêchent l'enregistrement de %{resource} :"
