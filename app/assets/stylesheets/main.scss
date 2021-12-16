@@ -635,7 +635,7 @@ align-content:flex-end ;
 		background: $underline;
 	}
 	25% {
-		background: $warning;
+		background: $danger;
 	}
 	50% {
 		background: $success;
@@ -644,7 +644,7 @@ align-content:flex-end ;
 		background: $info;
 	}
 	100% {
-		background: $danger;
+		background: $info-bis;
 	}
 }
 
