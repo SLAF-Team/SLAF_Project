@@ -3,6 +3,7 @@
 <% else %>
 <div class="profile__title profile__title--bg-color-1">
   <h1>Les expressions de <%= @user.alias %> </h1>
+  <%= link_to "Toutes les expressions", idioms_path, class: 'button__normal button__info' %>
 </div>
 <%= render 'cards' %>
 <% end %>
