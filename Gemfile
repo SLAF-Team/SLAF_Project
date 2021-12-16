@@ -76,4 +76,3 @@ gem 'omniauth-rails_csrf_protection'
 gem 'rails-i18n'
 gem 'rubocop'
 gem 'rubocop-rails'
-
