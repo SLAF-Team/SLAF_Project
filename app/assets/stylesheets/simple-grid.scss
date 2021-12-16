@@ -627,6 +627,10 @@ footer {
   background-color: $success;
 }
 
+.button__subdued{
+  background-color: $background;
+}
+
 .button__small:active {
   box-shadow: -2px -2px #666;
   transform: translateY(-2px) translateX(-2px);
