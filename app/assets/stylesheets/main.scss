@@ -626,7 +626,7 @@ align-content:flex-end ;
   animation-name: backgroundColorPalette;
 	animation-duration: 0.8s;
 	animation-iteration-count: infinite;
-	animation-direction: alternate;
+	animation-direction: normal;
 	animation-timing-function:steps(1);
 }
 
@@ -634,16 +634,16 @@ align-content:flex-end ;
 	0% {
 		background: $underline;
 	}
-	25% {
+	20% {
 		background: $danger;
 	}
-	50% {
+	40% {
 		background: $success;
 	}
-	75% {
+	60% {
 		background: $info;
 	}
-	100% {
+	80% {
 		background: $info-bis;
 	}
 }
