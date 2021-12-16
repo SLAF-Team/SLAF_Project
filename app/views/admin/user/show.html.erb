@@ -1,6 +1,11 @@
 <div class="profile__title profile__title--bg-color-1">
 <h1>Utilisateur <%= @user.id %></h1>
   <%= link_to "Supprimer", admin_user_path(@user.id), :method => 'DELETE', :data => {:confirm => 'Tu confirmes vouloir supprimer ce profil ?'} , class: 'button__normal button__danger' %>
+  <%if @user.admin == false%>
+  <%= link_to 'Promouvoir admin', admin_user_path(@user.id), :method => 'PUT', :data => {:confirm => "Tu confirmes vouloir passer cette user au rang d'amin ?" }, class: 'button__normal button__danger'%>
+  <%else%>
+  <%= link_to "Retirer le rang d'admin", admin_user_path(@user.id), :method => 'PUT', :data => {:confirm => "Tu confirmes supprimer les droits d'administrateur à cette user ?" }, class: 'button__normal button__danger'%>
+  <%end%>
   <%= link_to "Retour", admin_user_index_path, class: 'button__normal button__info' %>
   </div>
 <%= render 'users/profile' %>
