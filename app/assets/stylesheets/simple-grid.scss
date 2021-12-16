@@ -2,7 +2,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,500,600,700,700italic,800,900);
 
-
+@font-face {
+   font-family: 'MP16REG';
+   src: url('/assets/MP16TO1.ttf')
+}
 
 // fonts
 $font-family: 'Lato', sans-serif;
@@ -111,7 +114,7 @@ $size: 20px;
 
 .card__title--first {
   font-size: 2.1rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-right: 6px;
   font-family: $font-title;
 }
