@@ -1,3 +1,93 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "main";
+
+// Profile page
+.profile__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: $underline;
+  border: 1px solid black;
+  border-radius: 5px;
+  min-height: 76px;
+  padding: 0.1rem 1.5rem;
+
+  h1, h2 {
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+}
+
+.profile__title--bg-color-1 {
+  background-color: $underline;
+}
+
+.profile__title--bg-color-2 {
+  background-color: #C4C4C4;
+
+  h2 {
+    color: #000000;
+  }
+}
+
+.profile__content {
+  background-color: $background;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2vw;
+}
+
+.profile__info {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  display: flex;
+  // border: 3px solid green;
+
+  @media only screen and (max-width: $breakpoint-small) {
+    display: grid;
+  }
+}
+
+.profile-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 12px;
+  margin-bottom: 3vh;
+}
+
+.profile-info-text-elt {
+  margin-bottom: 5px;
+}
+
+.avatar {
+  margin-bottom: 12px;
+}
+
+.pic-avatar {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  border: 2px solid black;
+  object-fit : cover;
+}
+
+.pic-avatar-com {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid black;
+  object-fit : cover;
+  margin-right: 0.4vw;
+}
+
+.profile-info-pic {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
