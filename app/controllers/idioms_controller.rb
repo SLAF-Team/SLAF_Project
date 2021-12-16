@@ -57,7 +57,7 @@ end
   def destroy
     @idiom = Idiom.find(params[:id])
     @idiom.destroy
-    redirect_back(fallback_location: root_path)
+    redirect_back(fallback_location: idioms_path)
   end
 
 end

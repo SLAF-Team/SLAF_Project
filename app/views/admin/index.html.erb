@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Tableau de bord Admininistrateur</h1>
-    <%= link_to "Retourner à l'accueil", root_path, class: "button__normal button__success" %>
+    <%= link_to "Retourner à l'accueil", idioms_path, class: "button__normal button__success" %>
     <br>
     <h4><%= @user.all.count %> Utilisateurs crées</h4>
     <%= link_to 'Gérer tous les utilisateurs', admin_user_index_path, class: "button__normal button__info" %>
