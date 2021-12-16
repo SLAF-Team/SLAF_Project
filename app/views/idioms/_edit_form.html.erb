@@ -4,6 +4,7 @@
 </div>
 <div class="form" style="height: 88vh;">
   <div class="form__content center">
+    <p>Un mot en <b>franglais</b> que tu entends souvent et qui t'agace ?</p> 
     <div class="field">
     <%= f.text_field :title_en, autofocus: true, autocomplete: "title_en", class: "form__control" %>
     </div>
@@ -11,11 +12,11 @@
     <div class="field">
     <%= f.text_field :title_fr, autofocus: true, autocomplete: "title_fr", class: "form__control" %>
     </div>
-
+    <p>N'hésite pas à partager plus sur ce mot: son <b>origine</b>, sa <b>définition</b>, le pourquoi du comment de son <b>usage</b>...</p>
     <div class="field">
     <%= f.text_field :body, autofocus: true, autocomplete: "body", class: "form__control" %>
     </div>
-
+    <p> Et à ajouter quelques <b>exemples</b> d'utilisation bien tournés.</p>
     <div class="field">
     <%= f.text_field :example_fr, autofocus: true, autocomplete: "example_fr", class: "form__control" %>
     </div>
@@ -23,7 +24,7 @@
     <div class="field">
     <%= f.text_field :example_en, autofocus: true, autocomplete: "example_en", class: "form__control" %>
     </div>
-
+    <p> Pour finir, un peu de <b>grammaire</b>.</p>
   <div class="row">
     <div class="col-3">
       <%= f.label :grammatical_type, "Verbe" %>
