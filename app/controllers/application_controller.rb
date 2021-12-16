@@ -23,6 +23,10 @@ class ApplicationController < ActionController::Base
     { host: ENV["DOMAIN"] || "localhost:3000" }
   end
 
+  def is_admin?
+    current_user.admin?
+  end
+
   protected
 
   def configure_permitted_parameters
