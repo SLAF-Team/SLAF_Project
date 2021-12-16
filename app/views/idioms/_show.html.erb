@@ -1,5 +1,5 @@
 <div class="center show__title">
-        <h1><b><%= @idiom.title_en.capitalize %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><span class="card__title--second" style="font-size: 32px;"><%= @idiom.title_fr.capitalize %></span></h1><span><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></span>
+        <h1><b style="font-weight: 800;"><%= @idiom.title_en.capitalize %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><span class="card__title--second" style="font-size: 32px;"><%= @idiom.title_fr.capitalize %></span></h1><span><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></span>
     </div>
 
 <div class="card__body">
