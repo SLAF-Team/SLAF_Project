@@ -8,7 +8,7 @@ before_action :find_unlike, only: [:destroy]
     else
       @idiom.unlikes.create(user: current_user)
     end
-    redirect_to idiom_path(@idiom)
+    redirect_back(fallback_location: root_path)
   end
     
   def destroy
@@ -17,7 +17,7 @@ before_action :find_unlike, only: [:destroy]
     else
       @unlike.destroy
     end
-    redirect_to idiom_path(@idiom)
+    redirect_back(fallback_location: root_path)
   end
   
 private

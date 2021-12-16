@@ -102,10 +102,15 @@ $size: 20px;
 }
 
 .card__title--first {
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 2.1rem;
+  font-weight: 700;
   margin-right: 6px;
-  color: $underline;
+}
+
+.card__title--second {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-right: 6px;
 }
 
 .card__body {
@@ -118,6 +123,9 @@ $size: 20px;
 .card__bottom {
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: $breakpoint-small) {
+    margin-top: 1vh;
+  }
 }
 
 .card__bottom--profile {
@@ -145,13 +153,23 @@ $size: 20px;
 
 .card__button__bottom--admin {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .card__row {
   display: inline;
   display: flex;
   align-items: center;
+}
+
+.card__row--social {
+  display: inline;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: $breakpoint-small) {
+    display: none;
+  }
 }
 
 .card__row svg {
@@ -266,9 +284,20 @@ footer {
   margin-top: 18px;
 }
 
+.navbar__logo {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 1.2vh;
+  margin-bottom: 1vh;
+  @media only screen and (max-width: $breakpoint-small) {
+    display: none;
+  }
+}
+
 .list__unstyled {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   padding-left: 0;
   list-style: none;
   padding-right: 0.4rem;
@@ -441,11 +470,11 @@ footer {
   background-color: transparent;
   border: 1px solid #112233;
   box-sizing: border-box;
-  min-height: 45px;
-  min-width: 45px;
+  min-height: 25px;
+  min-width: 30px;
   box-shadow: -4px -4px 0px #112233;
   border-radius: 9px;
-  padding: 0.575rem 0.575rem 0.375rem 0.575rem;
+  padding: 0.175rem 0.475rem;
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -562,7 +591,6 @@ footer {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  background-color: transparent;
   border: 1px solid #112233;
   box-sizing: border-box;
   min-height: 25px;
@@ -597,6 +625,10 @@ footer {
 
 .button__success {
   background-color: $success;
+}
+
+.button__subdued{
+  background-color: $background;
 }
 
 .button__small:active {
@@ -1088,6 +1120,19 @@ ul {
   margin-left: 45vw;
 }
 
+.navbar__bottom {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar__bottom--left {
+text-align: left;
+display: flex;
+align-content:flex-end ;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -1152,9 +1197,9 @@ ul {
 }
 
 .arrow__rotate {
-   transform: rotate(-180deg);
-   -webkit-transform: rotate(-180deg);
-   -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
 }
 #parcourir__button {
   cursor: pointer;
