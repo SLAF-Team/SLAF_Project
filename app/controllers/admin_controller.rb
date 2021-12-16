@@ -15,6 +15,6 @@ class AdminController < ApplicationController
   private
 
   def check_if_admin
-    redirect_to root_path if current_user.admin == false
+    redirect_to idioms_path if current_user.admin == false
   end
 end
