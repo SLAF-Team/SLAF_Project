@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root to: 'pages#home'
-  devise_for :users, controllers: {omniauth_callbacks: 'omniauth'}
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth' }
   resources :idioms do
     resources :comments
   end
@@ -17,9 +19,9 @@ Rails.application.routes.draw do
   ### Admin
 
   resources :admin, only: [:index]
-    namespace :admin do
-      root 'admin#index'
-      resources :user
-      resources :idiom
-    end
+  namespace :admin do
+    root 'admin#index'
+    resources :user
+    resources :idiom
+  end
 end

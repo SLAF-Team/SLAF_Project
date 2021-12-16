@@ -1,7 +1,8 @@
-class OmniauthController < ApplicationController
+# frozen_string_literal: true
 
+class OmniauthController < ApplicationController
   def facebook
-  @user = User.create_from_provider_data(request.env['omniauth.auth'])
+    @user = User.create_from_provider_data(request.env['omniauth.auth'])
     if @user.persisted?
       sign_in_and_redirect @user
     else
@@ -11,7 +12,7 @@ class OmniauthController < ApplicationController
   end
 
   def google_oauth2
-  @user = User.create_from_provider_data(request.env['omniauth.auth'])
+    @user = User.create_from_provider_data(request.env['omniauth.auth'])
     if @user.persisted?
       sign_in_and_redirect @user
     else
@@ -25,6 +26,4 @@ class OmniauthController < ApplicationController
     flash[:error] = 'Connexion impossible. Crée un compte ou réessaie plus tard.'
     redirect_to new_user_registration_url
   end
-
 end
-
