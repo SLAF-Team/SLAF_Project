@@ -6,11 +6,11 @@
         <p><span class='status-tag-success'>Validée</span></p> 
         <%end%>
     <div class="card__title">
-        <span class="card__title--first"><%= idiom.title_en %></span><%= idiom.grammatical_type.capitalize[0..2] %>.<br>
+        <span class="card__title--first"><%= idiom.title_en.capitalize %></span><%= idiom.grammatical_type.capitalize[0..2] %>.<br>
     </div>
     <div class="card__body">
-        <span style="font-weight: 700;">Traduction</span> : <%= idiom.title_fr %><br>
-        <span style="font-weight: 700;">Définition</span> : <%=idiom.body%>
+        <span >Traduction</span> : <%= idiom.title_fr.capitalize %><br>
+        <span >Définition</span> : <%=idiom.body%>
     </div>
     <div class="card__bottom">
         <div class="card__row">

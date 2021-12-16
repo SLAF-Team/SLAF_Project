@@ -622,6 +622,10 @@ footer {
   font-family: $font-title;
 }
 
+.button__info--index:hover {
+  background-color: $info;
+}
+
 .button__info--bis {
   background-color: $info-bis;
   font-family: $font-title;
@@ -654,6 +658,37 @@ footer {
 
 .button__likes:active {
   box-shadow: -2px -2px #666;
+  transform: translateY(-2px) translateX(-2px);
+}
+
+.button__likes--index {
+  display: inline-block;
+  font-weight: 400;
+  display: inline;
+  margin-left: 12px;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -2px -2px 0px #112233;
+  border-radius: 9px;
+  padding: 0.175rem 0.475rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.button__likes--index:active {
+  box-shadow: -1px -1px #666;
   transform: translateY(-2px) translateX(-2px);
 }
 
