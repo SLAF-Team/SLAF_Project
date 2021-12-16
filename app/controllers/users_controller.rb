@@ -12,7 +12,6 @@ before_action :authenticate_user!, :same_user?
         @user = User.find(params[:id])
     end
 
-
     def same_user?
         @user = User.find(params[:id])
         current_user == @user ? nil : (redirect_to root_path)

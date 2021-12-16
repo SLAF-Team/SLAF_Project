@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
     resources :avatars, only: [:create]
   end
-  resources :team, only: [:show]
-  resources :faq, only: [:show]
+  resources :users do
+    resources :idioms, only: [:index]
+  end
   resources :idioms do
     resources :likes
     resources :unlikes

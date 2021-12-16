@@ -6,10 +6,15 @@ class IdiomsController < ApplicationController
   end
 
   def index
+    if params[:user_id].nil?
       @index_idioms = Idiom.where(validated: true)
       @idioms_ = @index_idioms.search_by(params[:search])
-      @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
+    else
+      @user = User.find(params[:user_id])
+      @idioms_ = Idiom.where(user: @user)
     end
+    @pagy, @idioms = pagy(@idioms_.order(created_at: :desc))
+  end
 
   def new
   end
@@ -52,6 +57,5 @@ class IdiomsController < ApplicationController
     @idiom.destroy
     redirect_back(fallback_location: root_path)
   end
-
 
 end
