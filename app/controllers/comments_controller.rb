@@ -19,7 +19,11 @@ class CommentsController < ApplicationController
     end
 
     def edit
+        if current_user.admin == true || current_user == @idiom.user
         @comment = Comment.find(params[:id])
+        else
+        redirect_to idiom_path
+        end
     end
 
     def update
