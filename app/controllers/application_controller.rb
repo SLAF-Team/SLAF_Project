@@ -25,10 +25,6 @@ class ApplicationController < ActionController::Base
     { host: ENV['DOMAIN'] || 'localhost:3000' }
   end
 
-  def is_admin?
-    current_user.admin?
-  end
-
   def after_sign_in_path_for(resource)
     idioms_path
   end

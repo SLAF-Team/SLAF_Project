@@ -1,11 +1,11 @@
-@import "main";
-
+@import "simple-grid";
 
 //screen
 main {
   margin-left: 0px;
 	height: 100vh;//100% view height
 width: 100vw;// 100% view width
+background-color: $background;
 }
 
 @media only screen and (max-width: 33.75em) {
@@ -84,19 +84,22 @@ width: 100vw;// 100% view width
 
 .home__tagline {
 	color: $underline;
+	font-family: $font-idioms;
 	text-align: center;
 	font-size: 2rem;
 	font-weight: 900;
 	margin-bottom: 0px;
 	text-align: center;
-	font-size: 2rem;
 	margin-bottom: 0px;
-	letter-spacing: 0.45rem;
-}
+	letter-spacing: 0.2rem;
+	@media only screen and (max-width: 33.75em) {
+		font-size: 1.3rem;
+	}
+  }
 
 .home__text{
 	text-align: center;
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	padding: 15px;
 	border-radius: 25px;
 	}
@@ -127,6 +130,7 @@ width: 100vw;// 100% view width
 	padding:0 5px;
 	text-align:left;
 	height:40px;
+	font-family: monospace;
 }
 
 .home__defileparent--text:after {

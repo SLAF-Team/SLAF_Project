@@ -12,12 +12,8 @@ module Admin
 
     def update
       @user = User.find(params[:id])
-
-      if @user.update('admin' => true, 'admin' => false)
-        redirect_to admin_user_path(@user.id)
-      else
-        render :edit
-      end
+      @user.update(admin: params[:submit])
+      redirect_to admin_user_path(@user.id), success: 'Édition validé !'
     end
 
     def destroy
