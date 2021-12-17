@@ -1,5 +1,43 @@
-@import "main";
+// font
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,500,600,700,700italic,800,900);
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400;700;900&display=swap');
+@font-face {font-family: 'MP16REG';src: url('/assets/MP16TO1.ttf')}
 
+$font-family: 'Lato', sans-serif ;
+$font-title: 'Lato', sans-serif;
+$font-idioms: 'Fraunces';
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+$font-height: 1.5;
+
+// screen
+$width: 96%;
+$gutter: 4%;
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+
+//default button size
+$size: 20px;
+
+// colors
+$primary: #112233;
+$primary-light: #224364;
+$underline: #304FFF;
+$underline-light: #7085FF;
+$warning: #FFBF00;
+$warning-light: #FFE494;
+$danger: #fe019a;
+$danger-light: #ff7ead;
+$success: #4efd54;
+$success-light: #B8F3B3;
+$info: #EFFF00;
+$info-light: #FBFFC5;
+$info-bis: #15F4EE;
+$background: #fff3ef;
+$background-light: #F9FBF6;
+$dark: #fff3ef;
 
 // SIMPLE GRID PARAMETERS
 
