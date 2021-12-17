@@ -1,7 +1,9 @@
 <nav class="navbar__mobile">
 	<div class="navbar__mobile--logo">
-		<a href="/"><img id="navbar__mobile--img" src="/logoslaf.png" alt="rss feed"></a>
-	</div>
+		<%= link_to root_path do %>
+			<%= image_tag "/logoslaf.png", id: "navbar__mobile--img" %>
+		<% end %>
+		</div>
 	<div class="navbar__mobile--burger" id="burger__button">
 		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
 		  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
