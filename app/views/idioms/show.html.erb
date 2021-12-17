@@ -11,8 +11,8 @@
         </div>
     <div class="card__bottom--profile">
         <div class="card__likes">
-            <%= render :partial => "like", :locals => { :idiom => @idiom } if current_user != nil %>
-            <%= render :partial => "unlike", :locals => { :idiom => @idiom } if current_user != nil %>
+            <%= render :partial => "like", :locals => { :idiom => @idiom } %>
+            <%= render :partial => "unlike", :locals => { :idiom => @idiom } %>
         </div>
         <div><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></div>
     </div>
