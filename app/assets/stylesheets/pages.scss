@@ -85,6 +85,7 @@ width: 100vw;// 100% view width
 
 .home__tagline {
 	color: $underline;
+	font-family: $font-idioms;
 	text-align: center;
 	font-size: 2rem;
 	font-weight: 900;
@@ -92,12 +93,12 @@ width: 100vw;// 100% view width
 	text-align: center;
 	font-size: 2rem;
 	margin-bottom: 0px;
-	letter-spacing: 0.45rem;
+	letter-spacing: 0.2rem;
 }
 
 .home__text{
 	text-align: center;
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	padding: 15px;
 	border-radius: 25px;
 	}
@@ -129,6 +130,7 @@ width: 100vw;// 100% view width
 	padding:0 5px;
 	text-align:left;
 	height:40px;
+	font-family: monospace;
 }
 
 .home__defileparent--text:after {
