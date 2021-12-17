@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module ApplicationHelper
   def class_for_flash(type)
     case type
