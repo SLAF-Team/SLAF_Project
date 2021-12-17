@@ -1,15 +1,9 @@
 <div class="center show__title">
-        <h1><b><%= @idiom.title_fr.capitalize %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><%= @idiom.title_en.capitalize %></h1><span><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></span>
+        <h1><b style="font-weight: 800;"><%= @idiom.title_en.capitalize %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><span class="card__title--second" style="font-size: 32px;"><%= @idiom.title_fr.capitalize %></span></h1><span><%= social_share_button_tag("On ne dit pas #{@idiom.title_en} mais #{@idiom.title_fr} ! Merci le @SLAF_FR") %></span>
     </div>
-    <div>
-        <p><span style="font-weight: bold;">Explications !</span></p>
-        <p><%= @idiom.body %></p>
-    </div>
-    <div>
-        <p><span style="font-weight: bold;">Exemple impropre </span></p>
-        <p><%= @idiom.example_en %></p>
-    </div>
-    <div>
-        <p><span style="font-weight: bold;">Exemple propre </span></p>
-        <p><%= @idiom.example_fr %></p>
-    </div>
+
+<div class="card__body">
+    <p><%=@idiom.body%><p>
+    <i>"<%=@idiom.example_en%>"</i>
+    <p><i>"<%=@idiom.example_fr%>"</i><p>
+</div>

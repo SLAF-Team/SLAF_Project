@@ -6,11 +6,11 @@
             <%= render :partial => "unlike", :locals => { :idiom => @idiom } if current_user != nil %>
         </div>
         <div>
-            <span>Une expression proposée par <b><%= @idiom.user.alias %></b></span>
+            <span>Une expression proposée par <b><%=link_to "#{@idiom.user.alias}", user_idioms_path(@idiom.user.id) %></b></span>
         </div>
     </div>
     <div class="card__button__bottom--admin">
-        <% if current_user != nil %>
+        <% if current_user != nil && (@idiom.comments == current_user || current_user.admin == true) %>
             <%= link_to "Éditer", edit_idiom_path(@idiom.id), class: "button__normal button__info" if @idiom.user == current_user %>
             <%= link_to "Supprimer", idiom_path(@idiom.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" if (@idiom.user == current_user && @idiom.validated?)%>
         <% end %>

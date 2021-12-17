@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AdminController < ApplicationController
   before_action :authenticate_user!, only: [:index]
   before_action :check_if_admin
@@ -8,15 +10,11 @@ class AdminController < ApplicationController
     @admin = current_user.admin
   end
 
-  def update
-  end
+  def update; end
 
   private
 
   def check_if_admin
-    if current_user.admin == false
-      redirect_to root_path
-    end
+    redirect_to idioms_path if current_user.admin == false
   end
-
 end

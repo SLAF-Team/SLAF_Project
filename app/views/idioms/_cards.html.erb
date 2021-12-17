@@ -16,8 +16,8 @@
     </div>
     <div class="card__bottom">
         <div class="card__row">
-            <%= render :partial => "like", :locals => { :idiom => idiom } %>
-            <%= render :partial => "unlike", :locals => { :idiom => idiom } %>
+            <%= render :partial => "like", :locals => { :idiom => idiom } if current_user != nil %>
+            <%= render :partial => "unlike", :locals => { :idiom => idiom } if current_user != nil %>
         </div>
         <div class="card__row">
         <%= link_to "VOIR", idiom_path(idiom.id), class: 'button__normal button__info' %>

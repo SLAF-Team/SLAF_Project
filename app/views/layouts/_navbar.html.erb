@@ -14,7 +14,7 @@
 
         <%= form_for "", html: {class: 'search__form'}, url: idioms_path, role: "search", method: :get do%>
         <%= text_field_tag :search, @search, placeholder: "Rechercher", class: 'search__form--control'%>
-        <%= button_tag(type: "submit", class: "button__search button__subdued") do %>
+        <%= button_tag(type: "submit", class: "button__search button__danger") do %>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
             </svg>
@@ -22,7 +22,7 @@
           <li id="suggestions"></li>
         <% end%>
       <div class="navbar-browse">
-        <span id="parcourir__button">Parcourir&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16" id="browse__arrow">
+        <span id="browse__button">Parcourir&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16" id="browse__arrow">
   <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
 </svg>
 </span>
@@ -32,7 +32,7 @@
               <%= link_to letter, idioms_path(:search => letter), class: 'button__letter button__info' %>
             </div>
             <% end %>
-            <div class="display__numbers" id="parcourir__list">
+            <div class="display__numbers" id="browse__list">
             <% @letters.last(20).each do |letter| %>
             <div class="col-2">
               <%= link_to letter, idioms_path(:search => letter), class: 'button__letter button__info' %>
@@ -49,7 +49,7 @@
     <div class="navbar__bottom">
       <div class="navbar__bottom--left">
         <ul class="list__unstyled">
-          <li><%= link_to "Accueil", root_path, class: 'nav-link' %></li>
+          <li><%= link_to "Accueil", idioms_path, class: 'nav-link' %></li>
           <% if user_signed_in? %>
             <li><%= link_to "Profil", user_path(current_user.id), class: 'nav-link' %></li>
             <li><%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete, class: 'nav-link' %></li>
@@ -64,7 +64,7 @@
       </div>
       <div class="navbar__logo">
         <div class="">
-        <a href="mailto:admin@syndicatdelutteantifranglais.club"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></a></svg>
+        <a href="mailto:contact@syndicatdelutteantifranglais.club"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></a></svg>
         <a href="https://github.com/SLAF-Project/SLAF_Project" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></a></svg>
         </div>
       </div>
