@@ -49,12 +49,12 @@
     <div class="navbar__bottom">
       <div class="navbar__bottom--left">
         <ul class="list__unstyled">
-          <li><%= link_to "Accueil", idioms_path, class: 'nav-link' %></li>
+          <li><%= link_to "Accueil", root_path, class: 'nav-link' %></li>
           <% if user_signed_in? %>
             <li><%= link_to "Profil", user_path(current_user.id), class: 'nav-link' %></li>
             <li><%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete, class: 'nav-link' %></li>
             <%if current_user.admin == true%>
-              <li><%=link_to 'Admin dashboard', admin_index_path, class: 'nav-link'%></li>
+              <li><%=link_to "Panneau d'administration", admin_index_path, class: 'nav-link'%></li>
             <%end%>
           <% else %>
             <li><%= link_to "S'inscrire", new_user_registration_path, class: 'nav-link' %></li>

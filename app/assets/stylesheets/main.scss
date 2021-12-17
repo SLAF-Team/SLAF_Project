@@ -1,41 +1,4 @@
-
-// font
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,500,600,700,700italic,800,900);
-
-$font-family: 'Lato', sans-serif;
-$font-title: 'Lato', sans-serif;
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-heavy: 700;
-$font-height: 1.5;
-
-// screen
-$width: 96%;
-$gutter: 4%;
-$breakpoint-small: 33.75em; // 540px
-$breakpoint-med: 45em; // 720px
-$breakpoint-large: 60em; // 960px
-
-//default button size
-$size: 20px;
-
-// colors
-$primary: #112233;
-$primary-light: #224364;
-$underline: #304FFF;
-$underline-light: #7085FF;
-$warning: #FFBF00;
-$warning-light: #FFE494;
-$danger: #fe019a;
-$danger-light: #ff7ead;
-$success: #4efd54;
-$success-light: #B8F3B3;
-$info: #EFFF00;
-$info-light: #FBFFC5;
-$info-bis: #15F4EE;
-$background: #E7E9E2;
-$background-light: #F9FBF6;
-$dark: #CECFCA;
+@import "simple-grid";
 
 // universal
 main {
@@ -66,17 +29,21 @@ body {
   line-height: $font-height;
 }
 
+
+
 // show
 .show__body {
   background-color: $dark;
   padding: 0.6rem;
   border-radius: 5px;
   margin-bottom: 2vh;
+  font-family: $font-family;
 }
 
 .show__title {
   margin-top: 4rem;
   margin-bottom: 2.5rem;
+
 }
 
 //alerts
@@ -234,6 +201,8 @@ footer {
 
 .navbar__bottom {
   font-size: 16px;
+  font-family: $font-family;
+
 }
 @media only screen and (max-width: $breakpoint-small) {
   .nav-link {
@@ -320,6 +289,7 @@ align-content:flex-end ;
 }
 
 // buttons
+
 .button__file {
   position: relative;
     overflow: hidden;
@@ -563,6 +533,34 @@ align-content:flex-end ;
   transform: translateY(-2px) translateX(-2px);
 }
 
+.button__normal--admin {
+  display: inline-block;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 1vw;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.275rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  }
+
+.button__normal--admin:active {
+  box-shadow: -2px -2px #666;
+  transform: translateY(-2px) translateX(-2px);
+}
+
 .button__likes:active {
   box-shadow: -2px -2px #666;
   transform: translateY(-2px) translateX(-2px);
@@ -638,14 +636,6 @@ align-content:flex-end ;
 .button__search:active {
   box-shadow: -2px -2px #666;
   transform: translateY(-2px) translateX(-2px);
-}
-
-.social-share-button {
-  .ssb-icon {
-    background-size: $size $size;
-    height: $size;
-    width: $size;
-  }
 }
 
 /* Facebook */
@@ -771,7 +761,6 @@ align-content:flex-end ;
     height: 2.35rem;
     padding: 0.375rem 0.75rem;
     margin-bottom: 0.4em;
-
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;

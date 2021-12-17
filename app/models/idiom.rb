@@ -10,9 +10,9 @@ class Idiom < ApplicationRecord
   validates :title_en, presence: true, length: { minimum: 2, maximum: 50 }
   validates :title_fr, presence: true, length: { minimum: 2, maximum: 50 }
   validates :grammatical_type, presence: true
-  validates :body, presence: true, length: { minimum: 15, maximum: 140 }
-  validates :example_fr, presence: true, length: { minimum: 15, maximum: 140 }
-  validates :example_en, presence: true, length: { minimum: 15, maximum: 140 }
+  validates :body, presence: true, length: { minimum: 15, maximum: 300 }
+  validates :example_fr, presence: true, length: { minimum: 15, maximum: 200 }
+  validates :example_en, presence: true, length: { minimum: 15, maximum: 200 }
   validates :user, presence: true
 
   def self.search_by(search)
