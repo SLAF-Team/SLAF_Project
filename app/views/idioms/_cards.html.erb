@@ -4,7 +4,7 @@
         <div class="card__title">
         <div class="card__title--main"><b class="card__title--first show__links"><%= link_to "#{idiom.title_en.capitalize}", idiom_path(idiom.id), {:style=>'font-weight: 800;font-family: "Fraunces"'} %></b><span><%= idiom.grammatical_type.capitalize[0..2] %>.</div></span><span class="card__title--second" style="font-weight: 800; font-family: 'Fraunces'"><%= idiom.title_fr.capitalize %></span>
         </div>
-        <div class="card__row--social" style="padding-right: 1.6vw;">
+        <div class="card__row--social" style="padding-right: 0.9vw;">
             <%= social_share_button_tag("On ne dit pas #{idiom.title_en} mais #{idiom.title_fr} ! Merci le @SLAF_FR") %>
         </div>
     </div>
