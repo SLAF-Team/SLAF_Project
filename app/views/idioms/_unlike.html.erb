@@ -1,6 +1,5 @@
 <div style="float: left;">
-  
-  <% pre_unlike = idiom.unlikes.find { |unlike| unlike.user_id == current_user.id} %>
+  <% pre_unlike = idiom.unlikes.find { |unlike| unlike.user_id == current_user.id} rescue nil %>
   <% if pre_unlike %>
     <%= button_to idiom_unlike_path(idiom, pre_unlike), method: :delete, class: "button__likes--index button__info--index" do %>
     <span style="font-size: 16px;"><%= idiom.unlikes.count %></span>
