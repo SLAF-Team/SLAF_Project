@@ -5,9 +5,13 @@
     </div>
         <div class="card__bottom">
             <div class="show__links">
-                <% if current_user != nil && comment.user == current_user %>
+                <% if current_user != nil && current_user.is_admin? %>
                     <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %>&nbsp;/&nbsp;
-                    <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %>
+                    <%= link_to 'Modérer', edit_idiom_comment_path(@idiom.id, comment.id)%><br>
+                <% end %>
+                <% if current_user != nil && comment.user == current_user && !current_user.is_admin? %>
+                    <%= link_to 'Supprimer', idiom_comment_path(@idiom.id, comment.id), method: 'DELETE' %>&nbsp;/&nbsp;
+                    <%= link_to 'Modifier', edit_idiom_comment_path(@idiom.id, comment.id) %><br>
                 <% end %>
             </div>
             <div class="right">
