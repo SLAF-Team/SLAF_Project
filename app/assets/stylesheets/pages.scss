@@ -1,6 +1,5 @@
 @import "main";
 
-
 //screen
 main {
   margin-left: 0px;
@@ -89,9 +88,11 @@ width: 100vw;// 100% view width
 	font-weight: 900;
 	margin-bottom: 0px;
 	text-align: center;
-	font-size: 2rem;
 	margin-bottom: 0px;
 	letter-spacing: 0.45rem;
+	@media only screen and (max-width: 33.75em) {
+		font-size: 1.3rem;
+	}
 }
 
 .home__text{

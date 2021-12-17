@@ -563,6 +563,34 @@ align-content:flex-end ;
   transform: translateY(-2px) translateX(-2px);
 }
 
+.button__normal--admin {
+  display: inline-block;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 1vw;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid #112233;
+  box-sizing: border-box;
+  min-height: 25px;
+  min-width: 30px;
+  box-shadow: -4px -4px 0px #112233;
+  border-radius: 9px;
+  padding: 0.275rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  }
+
+.button__normal--admin:active {
+  box-shadow: -2px -2px #666;
+  transform: translateY(-2px) translateX(-2px);
+}
+
 .button__likes:active {
   box-shadow: -2px -2px #666;
   transform: translateY(-2px) translateX(-2px);
@@ -638,14 +666,6 @@ align-content:flex-end ;
 .button__search:active {
   box-shadow: -2px -2px #666;
   transform: translateY(-2px) translateX(-2px);
-}
-
-.social-share-button {
-  .ssb-icon {
-    background-size: $size $size;
-    height: $size;
-    width: $size;
-  }
 }
 
 /* Facebook */
