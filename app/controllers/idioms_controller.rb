@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class IdiomsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
 
@@ -33,7 +31,7 @@ end
     )
 
     if @idiom.save
-      flash[:success] = 'Ton expression est désormais en cours de validation !'
+      flash[:success] = 'Ton expression est en cours de validation !'
       redirect_to idiom_path(@idiom.id)
     else
       flash.now[:error] = @idiom.errors.full_messages.to_sentence

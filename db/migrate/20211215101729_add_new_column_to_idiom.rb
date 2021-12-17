@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class AddNewColumnToIdiom < ActiveRecord::Migration[5.2]
   def change
     add_column :idioms, :example_fr, :text

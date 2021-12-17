@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Idiom < ApplicationRecord
   before_create :default_likes
   belongs_to :user
@@ -22,9 +20,9 @@ class Idiom < ApplicationRecord
     elsif search == 'top'
       order('likes_count DESC')
     elsif @all_letters.include?(search)
-      where('LOWER(title_en) LIKE ?', "#{search.downcase}%")
+      where('title_en ILIKE ?', "#{search}%")
     else
-      where('LOWER(title_en) LIKE ?', "%#{search.downcase}%")
+      where('title_en ILIKE ?', "%#{search}%")
     end
   end
 

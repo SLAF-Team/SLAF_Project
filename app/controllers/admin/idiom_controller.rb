@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Admin
   class IdiomController < ApplicationController
     def show
@@ -11,7 +9,8 @@ module Admin
       @user = User.all
     end
 
-    def edit; end
+    def edit
+    end
 
     def update
       @idiom = Idiom.find(params[:id])

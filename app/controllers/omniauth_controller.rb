@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class OmniauthController < ApplicationController
   def facebook
     @user = User.create_from_provider_data(request.env['omniauth.auth'])

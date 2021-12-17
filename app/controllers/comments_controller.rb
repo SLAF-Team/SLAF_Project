@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class CommentsController < ApplicationController
   before_action :find_idiom
 
@@ -8,16 +6,15 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @idiom.comments.create(body: params[:comments][:body], user: current_user, idiom: params[@idiom])
+    @comment = @idiom.comments.create(
+      body: params[:comments][:body], 
+      user: current_user, 
+      idiom: params[@idiom]
+    )
     respond_to do |format|
       format.html { redirect_to idiom_path(@idiom.id) }
       format.js {}
     end
-  end
-
-  def destroy
-    @idiom.comments.find(params[:id]).destroy
-    redirect_to idiom_path(@idiom.id)
   end
 
   def edit
@@ -39,9 +36,15 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @idiom.comments.find(params[:id]).destroy
+    redirect_to idiom_path(@idiom.id)
+  end
+
   private
 
   def find_idiom
     @idiom = Idiom.find(params[:idiom_id])
   end
+  
 end
