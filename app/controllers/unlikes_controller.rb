@@ -15,7 +15,7 @@ class UnlikesController < ApplicationController
 
   def destroy
     if !already_unliked?
-      flash[:notice] = "Tu ne peux détester qu'une fois"
+      flash[:notice] = "Tu ne peux détester qu'une fois."
     else
       @unlike.destroy
     end

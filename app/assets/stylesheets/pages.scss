@@ -1,7 +1,6 @@
 @import "main";
 
 
-
 //screen
 main {
   margin-left: 0px;
@@ -51,7 +50,7 @@ width: 100vw;// 100% view width
   transform: translateY(-3px) translateX(-3px);
 }
 
-.home__menu{
+.home__menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,9 +105,7 @@ width: 100vw;// 100% view width
 		max-width: 100%;
 	}
 
-
 /* Defiling text */
-
 .home__defileparent {
 	display: block;
 	margin: 1em auto;
@@ -141,23 +138,23 @@ width: 100vw;// 100% view width
 @-webkit-keyframes marqueelike {
 	0%, 100% {margin-left:0;}
 	99.99% {margin-left:-100%;}
- }
+}
 @-moz-keyframes marqueelike {
 	0%, 100% {margin-left:0;}
 	99.99% {margin-left:-100%;}
- }
+}
 @-o-keyframes marqueelike {
 	0%, 100% {margin-left:0;}
 	99.99% {margin-left:-100%;}
- }
+}
 @-ms-keyframes marqueelike {
 	0%, 100% {margin-left:0;}
 	99.99% {margin-left:-100%;}
- }
+}
 @keyframes marqueelike {
 	0%, 100% {margin-left:0;}
 	99.99% {margin-left:-100%;}
- }
+}
 
 @media only screen and (max-width: 860px) {
 .home__defileparent {

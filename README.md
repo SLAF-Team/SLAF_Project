@@ -29,24 +29,24 @@ EXPLICATIONS
 - User profile 
 - Avatar pic
 
-### Discover about anglicisms
+### Learn more about Anglicisms
 - Index
 - Ramdom button
 - "Florilège" or the top liked ones
-- Searchbar
+- Search bar
 - Anglicisms sorted by user
 
-### A site designed for social share...
+### A site designed for social sharing...
 - Share them with friends
 - Like, unlike
 - Comment
 
-### and contribution ! 
-- Contribute by posting your own anglicisms
+### and contributions ! 
+- Contribute by posting your own Anglicisms
 
 ### Mailer
 - When creating an account
-- When validatin an anglicisms
+- When validating an Anglicism
 
 ---
 
