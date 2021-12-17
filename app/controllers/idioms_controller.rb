@@ -22,8 +22,15 @@ end
   end
 
   def create
-    @idiom = Idiom.create(title_en: params[:idioms][:title_en], title_fr: params[:idioms][:title_fr],
-                          grammatical_type: params[:idioms][:grammatical_type], body: params[:idioms][:body], example_fr: params[:idioms][:example_fr], example_en: params[:idioms][:example_en], user: current_user)
+    @idiom = Idiom.create(
+      title_en: params[:idioms][:title_en],
+      title_fr: params[:idioms][:title_fr],
+      grammatical_type: params[:idioms][:grammatical_type],
+      body: params[:idioms][:body],
+      example_fr: params[:idioms][:example_fr],
+      example_en: params[:idioms][:example_en],
+      user: current_user
+    )
 
     if @idiom.save
       flash[:success] = 'Ton expression est désormais en cours de validation !'
@@ -44,9 +51,16 @@ end
 
   def update
     @idiom = Idiom.find(params[:id])
-    if @idiom.update(title_en: params[:idiom][:title_en], title_fr: params[:idiom][:title_fr],
-                     grammatical_type: params[:idiom][:grammatical_type], body: params[:idiom][:body], example_fr: params[:idiom][:example_fr], example_en: params[:idiom][:example_en], user: current_user)
-      flash[:notice] = 'Edition réussie !'
+    if @idiom.update(
+      title_en: params[:idiom][:title_en],
+      title_fr: params[:idiom][:title_fr],
+      grammatical_type: params[:idiom][:grammatical_type],
+      body: params[:idiom][:body],
+      example_fr: params[:idiom][:example_fr],
+      example_en: params[:idiom][:example_en],
+      user: current_user
+    )
+      flash[:notice] = 'Édition réussie !'
       redirect_to idiom_path(@idiom.id)
     else
       flash.now[:error] = @idiom.errors.full_messages.to_sentence
@@ -61,4 +75,3 @@ end
   end
 
 end
-
