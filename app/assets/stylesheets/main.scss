@@ -1,9 +1,12 @@
 
 // font
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,500,600,700,700italic,800,900);
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400;700;900&display=swap');
+@font-face {font-family: 'MP16REG';src: url('/assets/MP16TO1.ttf')}
 
-$font-family: 'Lato', sans-serif;
+$font-family: 'Lato', sans-serif ;
 $font-title: 'Lato', sans-serif;
+$font-idioms: 'Fraunces';
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-heavy: 700;
@@ -33,9 +36,9 @@ $success-light: #B8F3B3;
 $info: #EFFF00;
 $info-light: #FBFFC5;
 $info-bis: #15F4EE;
-$background: #E7E9E2;
-$background-light: #F9FBF6;
-$dark: #CECFCA;
+$background: #fff3ef;
+$background-light: #fff3ef;
+$dark: #fff3ef;
 
 // universal
 main {
@@ -66,17 +69,21 @@ body {
   line-height: $font-height;
 }
 
+
+
 // show
 .show__body {
   background-color: $dark;
   padding: 0.6rem;
   border-radius: 5px;
   margin-bottom: 2vh;
+  font-family: $font-family;
 }
 
 .show__title {
   margin-top: 4rem;
   margin-bottom: 2.5rem;
+
 }
 
 //alerts
@@ -234,6 +241,8 @@ footer {
 
 .navbar__bottom {
   font-size: 16px;
+  font-family: $font-family;
+
 }
 @media only screen and (max-width: $breakpoint-small) {
   .nav-link {
@@ -320,6 +329,7 @@ align-content:flex-end ;
 }
 
 // buttons
+
 .button__file {
   position: relative;
     overflow: hidden;
@@ -791,7 +801,6 @@ align-content:flex-end ;
     height: 2.35rem;
     padding: 0.375rem 0.75rem;
     margin-bottom: 0.4em;
-
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
