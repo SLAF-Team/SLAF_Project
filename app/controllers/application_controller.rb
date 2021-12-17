@@ -29,9 +29,14 @@ class ApplicationController < ActionController::Base
     current_user.admin?
   end
 
+  def after_sign_in_path_for(resource)
+    idioms_path
+  end
+
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update, keys: %i[first_name last_name alias])
   end
+
 end

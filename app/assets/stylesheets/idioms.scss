@@ -1,3 +1,99 @@
-// Place all the styles related to the Idioms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "main";
+
+// _idioms-cards
+.show__links {
+  display: flex;
+  align-items: center;
+}
+
+.show__links a {
+  color: $underline;
+}
+
+.card {
+  padding: 25px;
+  @media only screen and (max-width: $breakpoint-small) {
+      padding: 4vw;
+    }
+}
+
+.card__title {
+  margin-bottom: 1%;
+}
+
+.card__title--first {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-right: 6px;
+  font-family: $font-title;
+}
+
+.card__title--second {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-right: 6px;
+}
+
+.card__body {
+  margin-bottom: 2%;
+  @media only screen and (max-width: $breakpoint-small) {
+      margin-bottom: 5%;
+    }
+}
+
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: $breakpoint-small) {
+    margin-top: 1vh;
+  }
+}
+
+.card__bottom--profile {
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: $breakpoint-small) {
+      flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  .card__likes {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.card__button__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card__button__bottom--admin {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card__row {
+  display: inline;
+  display: flex;
+  align-items: center;
+}
+
+.card__row--social {
+  display: inline;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: $breakpoint-small) {
+    display: none;
+  }
+}
+
+.card__row svg {
+  margin-right: 4px;
+  margin-left: 4px;
+}
