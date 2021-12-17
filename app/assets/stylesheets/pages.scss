@@ -5,6 +5,7 @@ main {
   margin-left: 0px;
 	height: 100vh;//100% view height
 width: 100vw;// 100% view width
+background-color: $background;
 }
 
 @media only screen and (max-width: 33.75em) {
