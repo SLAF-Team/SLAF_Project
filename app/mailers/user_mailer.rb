@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
     @user = user
 
-    @url  = 'http://slaf.fr/login'
+    @url  = 'http://syndicatdelutteantifranglais.club'
 
     mail(to: @user.email, subject: "L'équipe S.L.A.F te souhaite la bienvenue !")
   end
