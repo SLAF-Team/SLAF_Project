@@ -1,7 +1,7 @@
 module Admin
   class UserController < ApplicationController
     def index
-      @user = User.all
+      @user = User.all.sort_by(&:created_at).reverse
     end
 
     def show

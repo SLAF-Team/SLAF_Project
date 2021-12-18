@@ -22,5 +22,6 @@ Rails.application.routes.draw do
     root 'admin#index'
     resources :user
     resources :idiom
+    resources :comment
   end
 end

@@ -1,9 +1,12 @@
 <div class="center show__title">
         <h1><b style="font-weight: 800;font-family: 'Fraunces'"><%= @idiom.title_en.capitalize %></b><span>&nbsp;&nbsp;<%= @idiom.grammatical_type.capitalize[0..2] %>.</span><br><span class="card__title--second" style="font-size: 32px;font-family: 'Fraunces'"><%= @idiom.title_fr.capitalize %></span></h1><br>
-    </div>
+</div>
 
 <div class="card__body">
     <p><%=@idiom.body%><p>
     <i>"<%=@idiom.example_en%>"</i>
     <p><i>"<%=@idiom.example_fr%>"</i><p>
+</div>
+<div class="right">
+    <span>Une expression proposée par <b><%=link_to "#{@idiom.user.alias}", user_idioms_path(@idiom.user.id) %></b></span>
 </div>
