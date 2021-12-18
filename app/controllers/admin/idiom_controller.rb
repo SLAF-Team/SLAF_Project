@@ -5,7 +5,7 @@ module Admin
     end
 
     def index
-      @idioms = Idiom.all
+      @idioms = Idiom.all.sort_by(&:created_at).reverse
     end
 
     def edit
