@@ -6,10 +6,10 @@ module Admin
 
     def index
       @idioms = Idiom.all
-      @user = User.all
     end
 
     def edit
+      @idiom = Idiom.find(params[:id])
     end
 
     def update
@@ -21,10 +21,6 @@ module Admin
     def destroy
       Idiom.find(params[:id]).destroy
       redirect_to admin_idiom_index_path, success: 'Expression supprimée avec succès !'
-    end
-
-    def edit
-      @idiom = Idiom.find(params[:id])
     end
   end
 end
