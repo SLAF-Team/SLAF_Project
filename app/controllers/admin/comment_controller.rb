@@ -5,7 +5,7 @@ class Admin::CommentController < ApplicationController
   end
 
   def index
-    @comments = Comment.all
+    @comments = Comment.all.sort_by(&:created_at).reverse
   end
 
   def edit
