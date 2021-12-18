@@ -3,8 +3,9 @@ class AdminController < ApplicationController
   before_action :check_if_admin
 
   def index
-    @user = User.all
-    @idiom = Idiom.all
+    @users = User.all
+    @idioms = Idiom.all
+    @comments = Comment.all
     @admin = current_user.admin
   end
 

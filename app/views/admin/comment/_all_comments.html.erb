@@ -1,0 +1,7 @@
+<% @comments.each do |comment| %>
+    <h3><%=comment.idiom.title_fr%> // <%=comment.idiom.title_en%><h3>    
+    <p><%= link_to "#{comment.user.alias}", admin_user_path(comment.user.id) %></p>
+    <p><%= comment.body %></p>
+    <%= link_to 'Modérer', edit_admin_comment_path(comment.id), class: "button__normal button__success"%>
+    <%= link_to "Supprimer", admin_comment_path(comment.id), :method => 'DELETE', :data => {:confirm => 'Sûr ?'}, class: "button__normal button__danger" %>
+<% end %>
