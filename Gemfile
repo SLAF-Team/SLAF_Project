@@ -78,3 +78,5 @@ gem 'rubocop-rails'
 #Active Storage fix attempt
 gem 'image_processing'
 gem 'mini_magick'
+
+gem 'better_errors'
