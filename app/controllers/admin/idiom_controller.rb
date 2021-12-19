@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Admin
   class IdiomController < ApplicationController
     def show
@@ -7,11 +5,12 @@ module Admin
     end
 
     def index
-      @idioms = Idiom.all
-      @user = User.all
+      @idioms = Idiom.all.sort_by(&:created_at).reverse
     end
 
-    def edit; end
+    def edit
+      @idiom = Idiom.find(params[:id])
+    end
 
     def update
       @idiom = Idiom.find(params[:id])
@@ -22,10 +21,6 @@ module Admin
     def destroy
       Idiom.find(params[:id]).destroy
       redirect_to admin_idiom_index_path, success: 'Expression supprimée avec succès !'
-    end
-
-    def edit
-      @idiom = Idiom.find(params[:id])
     end
   end
 end

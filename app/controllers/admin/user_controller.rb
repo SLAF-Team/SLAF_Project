@@ -1,9 +1,7 @@
-# frozen_string_literal: true
-
 module Admin
   class UserController < ApplicationController
     def index
-      @user = User.all
+      @user = User.all.sort_by(&:created_at).reverse
     end
 
     def show
@@ -13,7 +11,7 @@ module Admin
     def update
       @user = User.find(params[:id])
       @user.update(admin: params[:submit])
-      redirect_to admin_user_path(@user.id), success: 'Édition validé !'
+      redirect_to admin_user_path(@user.id), success: 'Édition validée !'
     end
 
     def destroy
