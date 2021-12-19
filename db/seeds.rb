@@ -12,15 +12,6 @@ Comment.destroy_all
 Like.destroy_all
 Unlike.destroy_all
 
-# Admin user
-User.create(first_name: 'Armand',
-            last_name: 'Richelieu',
-            email: 'richelieu.armand@yopmail.com',
-            password: '123soleil',
-            password_confirmation: '123soleil',
-            alias: 'Le recteur',
-            admin: true)
-@admin_user = User.find_by(first_name: 'Armand', last_name: 'Richelieu')
 
 Idiom.create(
   title_en: 'ship',
