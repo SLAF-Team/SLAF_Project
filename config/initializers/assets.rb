@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Be sure to restart your server when you modify this file.
 
 # Version of your assets, change this if you want to expire all your assets.
@@ -20,3 +18,4 @@ Rails.application.config.assets.precompile += %w[burger.js]
 Rails.application.config.assets.precompile += %w[browse.js]
 Rails.application.config.assets.precompile += %w[autocomplete.js]
 Rails.application.config.assets.precompile += %w[pages.css]
+Rails.application.config.assets.precompile += %w[randombtn.js]

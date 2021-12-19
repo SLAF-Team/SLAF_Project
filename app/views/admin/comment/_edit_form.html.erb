@@ -1,0 +1,12 @@
+<%= form_with model: @comment, url: (admin_comment_path(@comment.id)), method: :patch, local: true do |form|%>
+<div class="form" style="height: 88vh;">
+  <div class="form__content center">
+    <div class="field">
+    <br><%= form.text_field :body, class: "form__control" %>
+    </div>
+    <div class="right form__button">
+      <br><%= form.submit 'Envoyer', class: 'button__normal button__info' %>
+    </div>
+  </div>
+</div>
+<% end %>

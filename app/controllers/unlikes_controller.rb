@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 class UnlikesController < ApplicationController
   before_action :find_idiom
   before_action :find_unlike, only: [:destroy]
 
   def create
     if already_liked?
-      flash[:notice] = 'Quelle intéressante contradiction !'
+      flash[:notice] = 'Une intéressante contradiction !'
     else
       @idiom.unlikes.create(user: current_user)
     end
@@ -14,11 +12,7 @@ class UnlikesController < ApplicationController
   end
 
   def destroy
-    if !already_unliked?
-      flash[:notice] = "Tu ne peux détester qu'une fois."
-    else
-      @unlike.destroy
-    end
+    @unlike.destroy
     redirect_back(fallback_location: idioms_path)
   end
 
