@@ -131,7 +131,7 @@ We are a little polyamorous so we also fell in love with <span style="font-famil
 ## The SLAF Team
 _Madame, monsieur, à votre service!_
 
-[Mathias P.](https://fonts.google.com/specimen/Fraunces) ||[Violette M.](https://github.com/VioMrqs) || [Laurent C.](https://github.com/Laurent-Ch) || [Antoine O.](https://github.com/SuperOrteg) || [Lucas O.](https://github.com/Luucas51)
+[Mathias P.](https://github.com/mrprst/) ||[Violette M.](https://github.com/VioMrqs) || [Laurent C.](https://github.com/Laurent-Ch) || [Antoine O.](https://github.com/SuperOrteg) || [Lucas O.](https://github.com/Luucas51)
 
 ---
 
