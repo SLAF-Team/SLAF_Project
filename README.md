@@ -26,7 +26,7 @@ This app is deliberatelly off the wall but well... We like it like that!
 
 ## Test our app
 
-Discover it **<span style="color:#4efd54">live</span>** : https://www.syndicatdelutteantifranglais.club/
+Discover it **<span style="color:#4efd54">live</span>** : https://syndicatdelutteantifranglais.club/
 
 Discover it on **<span style="color:#4efd54">Heroku</span>** : https://syndicatdelutteantifranglais.herokuapp.com/
 
