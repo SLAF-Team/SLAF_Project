@@ -10,20 +10,7 @@
     <div>
       <%= f.text_area :title_fr, autofocus: true, autocomplete: "title_fr", class: "form__control--new", placeholder: 'Mot en beau français (max 50 carac.)' %>
     </div>
-      <p>N'hésite pas à partager plus sur ce mot: son <b>origine</b>, sa <b>définition</b>, le pourquoi du comment de son <b>usage</b>...</p>
-      <i>Exemple : Faire sens est la traduction littérale de l'expression 'to make sense'. Faire sens n'a pas de sens, un comble."</i>
-    <div>
-      <%= f.text_area :body, autofocus: true, autocomplete: "body", class: "form__control--new", placeholder: "Explication (15 - 300 carac.)"%>
-    </div>
-      <p> Et à ajouter quelques <b>exemples</b> d'utilisation bien tournés.</p>
-    <div>
-      <%= f.text_area :example_fr, autofocus: true, autocomplete: "example", class: "form__control--new", placeholder: "Exemple d'utilisation en français (15 - 200 carac.)" %>
-    </div>
-      <p> PS : un peu d'<b>h</b>umour ne fait jamais de mal.</p>
-    <div>
-      <%= f.text_area :example_en, autofocus: true, autocomplete: "example", class: "form__control--new", placeholder: "Exemple d'utilisation en franglais (15 - 200 carac.)" %>
-    </div>
-      <p> Pour finir, un peu de <b>grammaire</b>.</p>
+      <p> Un peu de <b>grammaire</b>..</p>
     <div class="row">
     <div class="col-3">
       <%= f.label :grammatical_type, "Verbe" %>
@@ -41,6 +28,19 @@
       <%= f.label :grammatical_type, "Nom" %>
       <%= f.radio_button :grammatical_type, "Nom" %>
     </div>
+    </div>
+      <p>N'hésite pas à partager plus sur ce mot: son <b>origine</b>, sa <b>définition</b>, le pourquoi du comment de son <b>usage</b>...</p>
+      <i>Exemple : Faire sens est la traduction littérale de l'expression 'to make sense'. Faire sens n'a pas de sens, un comble."</i>
+    <div>
+      <%= f.text_area :body, autofocus: true, autocomplete: "body", class: "form__control--new", placeholder: "Explication (15 - 300 carac.)"%>
+    </div>
+      <p> Et à ajouter quelques <b>exemples</b> d'utilisation bien tournés.</p>
+    <div>
+      <%= f.text_area :example_en, autofocus: true, autocomplete: "example", class: "form__control--new", placeholder: "Exemple d'utilisation en franglais (15 - 200 carac.)" %>
+    </div>
+      <p> PS : un peu d'<b>h</b>umour ne fait jamais de mal.</p>
+    <div>
+      <%= f.text_area :example_fr, autofocus: true, autocomplete: "example", class: "form__control--new", placeholder: "Exemple d'utilisation en français (15 - 200 carac.)" %>
     </div>
     <div class="right form__button">
       <%= f.submit "Soumettre", class: 'button__normal button__info' %>
