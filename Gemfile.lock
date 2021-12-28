@@ -55,6 +55,13 @@ GEM
     arel (9.0.0)
     ast (2.4.2)
     bcrypt (3.1.16)
+<<<<<<< HEAD
+=======
+    better_errors (2.9.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
+>>>>>>> 35bbbafd45de2988ad153c69c66d4fda7c768b87
     bindex (0.8.1)
     bootsnap (1.9.3)
       msgpack (~> 1.0)
@@ -73,6 +80,10 @@ GEM
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+<<<<<<< HEAD
+=======
+    coderay (1.1.3)
+>>>>>>> 35bbbafd45de2988ad153c69c66d4fda7c768b87
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -148,7 +159,11 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     nio4r (2.5.8)
+<<<<<<< HEAD
     nokogiri (1.12.5-x86_64-darwin)
+=======
+    nokogiri (1.12.5-arm64-darwin)
+>>>>>>> 35bbbafd45de2988ad153c69c66d4fda7c768b87
       racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
@@ -298,11 +313,19 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+<<<<<<< HEAD
   x86_64-darwin-18
+=======
+  arm64-darwin-20
+>>>>>>> 35bbbafd45de2988ad153c69c66d4fda7c768b87
   x86_64-linux
 
 DEPENDENCIES
   activerecord-session_store
+<<<<<<< HEAD
+=======
+  better_errors
+>>>>>>> 35bbbafd45de2988ad153c69c66d4fda7c768b87
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
@@ -340,4 +363,8 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
+<<<<<<< HEAD
    2.2.33
+=======
+   2.2.31
+>>>>>>> 35bbbafd45de2988ad153c69c66d4fda7c768b87
