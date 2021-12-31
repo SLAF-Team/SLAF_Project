@@ -1,0 +1,17 @@
+<% @comments.each do |comment| %>
+<div class="card">
+    <div class="card__title">
+        <span class="card__title--first">"<%= comment.body %>"<br>
+    </div>
+    <div class="card__body">
+            <span >Expression</span> : <%= comment.idiom.title_en.capitalize %><br>
+    </div>
+    <div class="card__bottom">
+        <div class="card__row">
+        </div>
+        <div class="card__row">
+    <%= link_to 'Voir', idiom_path(comment.idiom.id), class: 'button__normal button__info'%>
+        </div>
+    </div>
+</div>
+<%end%>
