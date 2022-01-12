@@ -11,10 +11,9 @@
     <%= image_tag "/logoslaf.png", id: "navbar__home" %>
   <% end %>
   <h2 class="home__tagline">LE DICTIONNAIRE<br>DES NOMS IMPROPRES</h2>
-  <p class="home__text">Bienvenue sur le <b>S</b>yndicat de <b>L</b>utte <b>A</b>nti <b>F</b>ranglais (<b>SLAF</b>) : <br>le premier dictionnaire de traduction des anglicismes.<br>Viens donc nous faire part des anglicismes<br>que tu rencontres au bureau ou chez la boulangère.</p>
+  <p class="home__text">Bienvenue sur le <b>S</b>yndicat de <b>L</b>utte <b>A</b>nti <b>F</b>ranglais (<b>SLAF</b>) <br>le premier dictionnaire de traduction des anglicismes.</p>
   <div class="home__buttons">
-    <%= link_to "CRÉER UNE EXPRESSION", new_idiom_path, class: 'button__large--home button__info', style: "margin-right: 15px;" %>
-    <%= link_to "PARCOURIR LE SITE", idioms_path, class: 'button__large--home button__success' %>
+    <%= link_to "DÉCOUVRIR", idioms_path, class: 'button__large--home button__success' %>
   </div>
   <div class="home__defileparent">
     <span class="home__defileparent--text" syle="font-family=monospace"
